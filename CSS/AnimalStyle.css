@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*@import: Es la regla que indica que se va a importar una hoja de estilo.
+url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"): Es la URL de la hoja de estilo que se 
+va a importar. 
+
+La URL tiene varios parámetros:
+    family=Poppins: Este parámetro indica que se va a importar la fuente “Poppins”.
+
+    wght@400;500: Este parámetro indica los pesos de la fuente que se van a importar. 
+
+    display=swap: Este parámetro indica que si la fuente no se ha cargado, se debe mostrar el texto en una fuente de respaldo.
+    Una vez que la fuente “Poppins” se haya cargado, se actualizará el texto para mostrarlo en “Poppins”.
+*/
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+/*:root: Es un selector CSS que selecciona el elemento raíz del documento. Las variables definidas en :root son accesibles 
+globalmente en todo el documento CSS.
+
+--first-color, --title-color, --text-color, --body-color, --container-color: Estas son variables CSS personalizadas que 
+almacenan diferentes colores en formato HSL (Hue, Saturation, Lightness). Puedes usar estas variables en lugar de los valores 
+de color directos en tu CSS.
+
+--body-font: Esta variable almacena la fuente que se utilizará en el cuerpo del documento. En este caso, se utilizará la fuente
+ “Poppins”, y si no está disponible, se utilizará cualquier fuente sans-serif disponible.
+
+--h2-font-size, --small-font-size: Estas variables almacenan diferentes tamaños de fuente que se pueden utilizar en el documento. 
+Puedes usar var (--h2-font-size) para establecer el tamaño de fuente de un encabezado H2.*/
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+    :root {
+      --h2-font-size: 1.5rem;
+      --small-font-size: .875rem;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  
+  body {
+    margin: 0;
+    padding-top: 100px;
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--text-color);
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+/* Estilos generales Index */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #013117;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 95px;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1, header h3 {
+    margin: 0 auto;
+    color: #CBDD16;
+    font-family: sans-serif;
+}
+
+.menu {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.barra {
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav #toggle, nav label {
+    display: none;
+}
+
+/* Medidas */
+@media (max-width: 40.625em) {
+    nav .menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+    nav label {
+        display: inline-flex;
+        color: white;
+        cursor: pointer;
+    }
+    nav #toggle:checked ~ .menu {
+        height: 80%;
+    }
+}
+
+#img_login {
+    width: 45px;
+    height: 45px;  
+}
+
+#img_logo {
+    width: 130px;
+    height: 65px; 
+    margin-left: 20%; 
+}
+#iconoMenu {
+    height: 30px;
+    width: 30px;
+    margin-left: 2%;
+}
+
+/*Fin del style del menu*/
+
+/* Animacion hover de elementos Nav superior */
+.menu-item {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu-item:before,
+.menu-item:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #CBDD16;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:before {
+    top: 0;
+    left: 0;
+    transform-origin: left;
+}
+
+.menu-item:after {
+    bottom: 0;
+    right: 0;
+    transform-origin: right;
+}
+
+.menu-item:hover:before,
+.menu-item:hover:after {
+    transform: scaleX(1);
+}
+
+.menu-item:hover {
+    color: #CBDD16;
+}
+
+/* Animales dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+.dropdown-content div:hover li{
+    color: white;
+    background-color: #3e8e41;
+    transform: scale(1.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.dropdown-content li {
+    display: flex; /* Usar display flex para alinear elementos en línea */
+    align-items: center; /* Alinear verticalmente los elementos */
+}
+
+.dropdown-content li img {
+    margin-right: 5px; /* Margen derecho para separar la imagen del texto */
+}
+
+#fuente {
+    color: #CBDD16;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+/*   main */
+.main {
+    width: 100%;
+}
+
+.context {
+    width: 1300px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.context__img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.context__img img {
+    object-fit: cover;
+    width: 80%;
+    border-radius: 5%;
+}
+
+.context__text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.context__text h4 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    width: 90%;
+}
+
+.context__text p {
+    font-size: 14px;
+    width: 85%;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #013117;
+    color: #ffffff;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    clear: both;
+}
+
+.item-imagenes {
+    display: inline-block;
+    margin-top: auto;
+    object-fit: cover;
+    margin-right: 4%;
+    margin-bottom: 2%;
+    
+}
+[id="terca"].item-imagenes {
+    width: 20%;
+    height: 10%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  
+  .item a {
+    text-decoration: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: hsl(203, 92%, 97%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border: 3px solid hsl(203, 92%, 97%);
+    overflow: hidden;
+  }
+  
+  .item a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 0;
+    scale: 1 0;
+    transform-origin: bottom;
+    transition: scale 0.5s ease;
+  }
+  
+  .item:hover a::before {
+    scale: 1 1;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    color: hsl(203, 92%, 8%);
+    transition: 0.5s ease;
+    z-index: 2;
+  }
+  
+  .item a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  .item:nth-child(1) {
+    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
+  }
+  .item:nth-child(2) {
+    --bg-color: #0077b5;
+  }
+  .item:nth-child(3) {
+    --bg-color: #ff0000;
+  }
+  .item:nth-child(4) {
+    --bg-color: #000;
+  }
+
+/*Hover para el copyright del footer*/
+.copyright {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.p {
+    font-size: 16px;
+    margin: 3px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: #fff;
+}
+.p:hover {
+    transform: translateY(-50px);
+    text-shadow: 0px 40px 200px #fff;
+}

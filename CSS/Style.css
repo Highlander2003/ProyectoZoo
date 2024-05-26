@@ -1,0 +1,825 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*@import: Es la regla que indica que se va a importar una hoja de estilo.
+url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"): Es la URL de la hoja de estilo que se 
+va a importar. 
+
+La URL tiene varios parámetros:
+    family=Poppins: Este parámetro indica que se va a importar la fuente “Poppins”.
+
+    wght@400;500: Este parámetro indica los pesos de la fuente que se van a importar. 
+
+    display=swap: Este parámetro indica que si la fuente no se ha cargado, se debe mostrar el texto en una fuente de respaldo.
+    Una vez que la fuente “Poppins” se haya cargado, se actualizará el texto para mostrarlo en “Poppins”.
+*/
+
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+/*:root: Es un selector CSS que selecciona el elemento raíz del documento. Las variables definidas en :root son accesibles 
+globalmente en todo el documento CSS.
+
+--first-color, --title-color, --text-color, --body-color, --container-color: Estas son variables CSS personalizadas que 
+almacenan diferentes colores en formato HSL (Hue, Saturation, Lightness). Puedes usar estas variables en lugar de los valores 
+de color directos en tu CSS.
+
+--body-font: Esta variable almacena la fuente que se utilizará en el cuerpo del documento. En este caso, se utilizará la fuente
+ “Poppins”, y si no está disponible, se utilizará cualquier fuente sans-serif disponible.
+
+--h2-font-size, --small-font-size: Estas variables almacenan diferentes tamaños de fuente que se pueden utilizar en el documento. 
+Puedes usar var (--h2-font-size) para establecer el tamaño de fuente de un encabezado H2.*/
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+    :root {
+      --h2-font-size: 1.5rem;
+      --small-font-size: .875rem;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    margin: 0;
+    padding-top: 95px;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+/*
+.container: Este es un selector de clase que selecciona todos los elementos con la clase .container.
+
+width: 80%;: Esta propiedad establece el ancho del elemento seleccionado al 80% del ancho de su elemento contenedor.
+
+margin: 0 auto;: Esta propiedad es una forma abreviada para establecer los márgenes superior e inferior (0) y los márgenes 
+izquierdo y derecho (auto) del elemento seleccionado. auto significa que los márgenes se distribuyen equitativamente.
+
+padding: 20px 0;: Esta propiedad es una forma abreviada para establecer el relleno superior e inferior (20px) y el relleno 
+izquierdo y derecho (0) del elemento seleccionado.
+*/
+/* Estilos del encabezado */
+header {
+    background-color: #013117;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 95px;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1, header h3 {
+    margin: 0 auto;
+    color: #CBDD16;
+    font-family: sans-serif;
+}
+
+.barra {
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav #toggle, nav label {
+    display: none;
+}
+
+/* Medidas */
+@media (max-width: 40.625em) {
+    nav .menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+    nav label {
+        display: inline-flex;
+        color: white;
+        cursor: pointer;
+    }
+    nav #toggle:checked ~ .menu {
+        height: 80%;
+    }
+}
+
+#img_login {
+    width: 45px;
+    height: 45px;  
+}
+
+#img_logo {
+    width: 130px;
+    height: 65px; 
+    margin-left: 20%; 
+}
+
+#iconoMenu {
+    height: 30px;
+    width: 30px;
+    margin-left: 2%;
+}
+
+.menu {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Animacion hover de elementos Nav superior */
+.menu-item {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu-item:before, .menu-item:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #CBDD16;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:before {
+    top: 0;
+    left: 0;
+    transform-origin: left;
+}
+
+.menu-item:after {
+    bottom: 0;
+    right: 0;
+    transform-origin: right;
+}
+
+.menu-item:hover:before, .menu-item:hover:after {
+    transform: scaleX(1);
+}
+
+.menu-item:hover {
+    color: #CBDD16;
+}
+
+/* Animales dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+.dropdown-content div:hover li{
+    color: white;
+    background-color: #3e8e41;
+    transform: scale(1.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.dropdown-content li {
+    display: flex; /* Usar display flex para alinear elementos en línea */
+    align-items: center; /* Alinear verticalmente los elementos */
+}
+
+.dropdown-content li img {
+    margin-right: 5px; /* Margen derecho para separar la imagen del texto */
+}
+
+/* Estilos de las secciones */
+.section {
+    padding: 50px 0;
+}
+/*
+.section: Este es un selector de clase que selecciona todos los elementos con la clase .section.
+
+padding: 50px 0;: Esta propiedad es una forma abreviada para establecer el relleno superior e inferior (50px) y el relleno izquierdo y derecho (0) del elemento seleccionado.
+*/
+
+/* Style del recuadro con la frase*/
+.divfrase {
+    background-color: #529756;
+}
+/*
+.divfrase: Este es un selector de clase que selecciona todos los elementos con la clase .divfrase.
+
+background-color: #529756;: Esta propiedad establece el color de fondo del elemento seleccionado. El color se especifica utilizando el modelo de color hexadecimal, donde #529756 es un tono de verde.
+*/
+
+.frase {
+    width: 80%; /* Ancho del div */
+    color: ffffff;
+    margin: auto; /* Centrar horizontalmente */
+    padding: 20px; /* Espacio interno */
+    text-align: center; /* Alineación del texto al centro */
+    background-color: #529756;
+}
+/*
+.frase: Este es un selector de clase que selecciona todos los elementos con la clase .frase.
+
+width: 80%;: Esta propiedad establece el ancho del elemento seleccionado al 80% del ancho de su elemento contenedor.
+
+color: ffffff;: Esta propiedad establece el color del texto dentro de los elementos seleccionados. El color se especifica utilizando el modelo de color hexadecimal, donde ffffff es blanco.
+
+margin: auto;: Esta propiedad es una forma abreviada para establecer los márgenes superior e inferior y los márgenes izquierdo y derecho del elemento seleccionado. auto significa que los márgenes se distribuyen equitativamente, lo que centra horizontalmente el elemento en su contenedor.
+
+padding: 20px;: Esta propiedad es una forma abreviada para establecer el relleno superior e inferior (20px) y el relleno izquierdo y derecho (20px) del elemento seleccionado.
+
+text-align: center;: Esta propiedad establece la alineación horizontal del texto. center significa que el texto se centrará dentro de su elemento contenedor.
+
+background-color: #529756;: Esta propiedad establece el color de fondo del elemento seleccionado. El color se especifica utilizando el modelo de color hexadecimal, donde #529756 es un tono de verde.
+*/
+
+/* Media query para hacer el div responsive */
+@media screen and (max-width: 768px) {
+    .frase {
+        width: 90%; /* Reducir el ancho en pantallas más pequeñas */
+        padding: 15px; /* Reducir el espacio interno en pantallas más pequeñas */
+    }
+}
+/*
+@media screen and (max-width: 768px): Esta es una consulta de medios que aplica las reglas de CSS contenidas dentro de ella solo cuando la condición de la consulta de medios es verdadera. En este caso, las reglas se aplicarán solo cuando el tipo de medio sea screen (es decir, se esté viendo en una pantalla) y el ancho de la ventana del navegador sea de 768px o menos.
+
+.frase: Este es un selector de clase que selecciona todos los elementos con la clase .frase.
+
+width: 90%;: Esta propiedad establece el ancho del elemento seleccionado al 90% del ancho de su elemento contenedor. Esto reducirá el ancho del elemento en pantallas más pequeñas.
+
+padding: 15px;: Esta propiedad es una forma abreviada para establecer el relleno superior e inferior (15px) y el relleno izquierdo y derecho (15px) del elemento seleccionado. Esto reducirá el espacio interno del elemento en pantallas más pequeñas.
+*/
+#fuente {
+    color: #CBDD16;
+}
+/*
+#fuente: Este es un selector de id que selecciona el elemento con el id #fuente.
+
+color: #CBDD16;: Esta propiedad establece el color del texto dentro del elemento seleccionado. El color se especifica utilizando el modelo de color hexadecimal, donde #CBDD16 es un tono de verde.
+*/
+
+.section h2 {
+    margin-top: 0;
+}
+/*
+.section h2: Este es un selector de CSS que selecciona todos los elementos <h2> que están dentro de los elementos con la clase .section.
+
+margin-top: 0;: Esta propiedad establece el margen superior del elemento seleccionado a 0. Esto puede ser útil para eliminar cualquier espacio adicional por encima de los elementos <h2> en las secciones.
+*/
+
+/* Main */
+.main {
+    width: 100%;
+}
+/*
+.main: Este es un selector de clase que selecciona todos los elementos con la clase .main.
+
+width: 100%;: Esta propiedad establece el ancho del elemento seleccionado al 100% del ancho de su elemento contenedor. Esto puede ser útil para hacer que un elemento ocupe todo el ancho disponible.
+*/
+
+/* Carrosuel del index*/
+.carousel-inner {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*
+margin: auto;: Esta línea centra el elemento .carousel-inner horizontalmente en su contenedor. Esto se logra al establecer automáticamente los márgenes izquierdo y derecho del elemento.
+
+display: flex;: Esta línea establece el tipo de visualización del elemento a Flexbox, que es un modelo de diseño que permite a los elementos hijos de un contenedor ser alineados y distribuidos dentro de este contenedor de manera flexible.
+
+align-items: center;: Esta línea alinea verticalmente los elementos hijos en el centro del elemento .carousel-inner. Esto sólo funciona porque el elemento tiene display: flex;.
+
+justify-content: center;: Esta línea alinea horizontalmente los elementos hijos en el centro del elemento .carousel-inner. Al igual que align-items: center;, esto sólo funciona porque el elemento tiene display: flex;.
+*/
+.carousel-item {
+    text-align: center;
+}
+/*
+text-align: center;: Esta línea alinea el texto del elemento .carousel-item en el centro. Esto es útil cuando se quiere centrar el texto dentro de un elemento del carrusel. Por ejemplo, si tienes un carrusel de testimonios o citas, este código aseguraría que el texto esté centrado dentro de cada elemento del carrusel.
+*/
+.context, .contact {
+    width: 1300px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+/*
+width: 1300px;: Esta línea establece el ancho del elemento a 1300 píxeles.
+
+height: 500px;: Esta línea establece la altura del elemento a 500 píxeles.
+
+margin: 0 auto;: Esta línea centra el elemento horizontalmente en su contenedor. Esto se logra al establecer automáticamente los márgenes izquierdo y derecho del elemento, mientras que el margen superior e inferior se establece en 0.
+
+display: flex;: Esta línea establece el tipo de visualización del elemento a Flexbox, que es un modelo de diseño que permite a los elementos hijos de un contenedor ser alineados y distribuidos dentro de este contenedor de manera flexible.
+
+flex-direction: row;: Esta línea establece la dirección principal en la que se muestran los elementos hijos. En este caso, los elementos hijos se mostrarán en una fila.
+*/
+.context__img, .contact__img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*
+width: 50%;: Esta línea establece el ancho del elemento al 50% del ancho de su contenedor. Esto significa que el elemento ocupará la mitad del ancho de su contenedor.
+
+display: flex;: Esta línea establece el tipo de visualización del elemento a Flexbox, que es un modelo de diseño que permite a los elementos hijos de un contenedor ser alineados y distribuidos dentro de este contenedor de manera flexible.
+
+justify-content: center;: Esta línea alinea horizontalmente los elementos hijos en el centro del elemento. Al igual que align-items: center;, esto sólo funciona porque el elemento tiene display: flex;.
+
+align-items: center;: Esta línea alinea verticalmente los elementos hijos en el centro del elemento. Esto sólo funciona porque el elemento tiene display: flex;.
+*/
+
+.context__img img, .contact__img img {
+    object-fit: cover;
+    width: 80%;
+    border-radius: 190px 200px 40px 200px;
+}
+/*
+object-fit: cover;: Esta línea asegura que la imagen cubra completamente el área de contenido del elemento padre sin distorsionar su aspecto. Si las proporciones de la imagen difieren de las del elemento,la imagen se recortará para llenar el elemento.
+
+width: 80%;: Esta línea establece el ancho de la imagen al 80% del ancho de su contenedor. Esto significa que la imagen ocupará el 80% del ancho de su contenedor. 
+
+border-radius: 190px 200px 40px 200px;: Esta línea da a la imagen un borde redondeado. Los cuatro valores representan los radios de las esquinas superior izquierda,superior derecha,inferior derecha e inferior izquierda,respectivamente. Esto puede ser útil para dar a las imágenes una apariencia suavizada o estilizada.
+*/
+
+.context__text, .contact__text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+/*
+width: 50%;: Esta línea establece el ancho del elemento al 50% del ancho de su contenedor. Esto significa que el elemento ocupará la mitad del ancho de su contenedor. 
+
+height: 100%;: Esta línea establece la altura del elemento al 100% de la altura de su contenedor. Esto significa que el elemento ocupará toda la altura de su contenedor. 
+
+display: flex;: Esta línea establece el tipo de visualización del elemento a Flexbox,
+que es un modelo de diseño que permite a los elementos hijos de un contenedor ser alineados y distribuidos dentro de este contenedor de manera flexible. 
+
+flex-direction: column;: Esta línea establece la dirección principal en la que se muestran los elementos hijos. En este caso,los elementos hijos se mostrarán en una columna. 
+
+align-items: start;: Esta línea alinea los elementos hijos al inicio del eje transversal del elemento. En este caso,como la dirección del flex es una columna,los elementos hijos se alinearán al inicio del eje horizontal del elemento. 
+
+justify-content: center;: Esta línea alinea los elementos hijos en el centro del eje principal del elemento. En este caso,como la dirección del flex es una columna,los elementos hijos se alinearán en el centro del eje vertical del elemento.
+*/
+.context__text h4 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    width: 90%;
+}
+/*
+margin-bottom: 30px;: Esta línea establece el margen inferior del elemento h4 a 30 píxeles. Esto puede ser útil para asegurar un espaciado adecuado entre este elemento y cualquier elemento que lo siga. 
+
+font-size: 25px;: Esta línea establece el tamaño de la fuente del elemento h4 a 25 píxeles. Esto puede ser útil para asegurar que el texto sea legible y esté en proporción con otros elementos en la página. 
+
+width: 90%;: Esta línea establece el ancho del elemento h4 al 90% del ancho de su contenedor. Esto significa que el elemento ocupará el 90% del ancho de su contenedor.
+
+*/
+
+.context__text p, .contact__text p {
+    font-size: 15px;
+    width: 85%;
+}
+/*
+font-size: 14px;: Esta línea establece el tamaño de la fuente del elemento p a 14 píxeles. Esto puede ser útil para asegurar que el texto sea legible y esté en proporción con otros elementos en la página. 
+
+width: 85%;: Esta línea establece el ancho del elemento p al 85% del ancho de su contenedor. Esto significa que el elemento ocupará el 85% del ancho de su contenedor.
+*/
+
+.contact__text h2 {
+    font-size: 29px;
+    width: 80%;
+    color: #529756;
+}
+/*
+font-size: 29px;: Esta línea establece el tamaño de la fuente del elemento h2 a 29 píxeles. Esto puede ser útil para asegurar que el texto sea legible y esté en proporción con otros elementos en la página. 
+
+width: 80%;: Esta línea establece el ancho del elemento h2 al 80% del ancho de su contenedor. Esto significa que el elemento ocupará el 80% del ancho de su contenedor. 
+
+color: #529756;: Esta línea establece el color del texto del elemento h2 al color hexadecimal #529756, que es un tono de verde. Esto puede ser útil para dar a los encabezados un color distintivo que se ajuste a la paleta de colores de tu página web.
+*/
+
+.contact__text ul {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+/*
+width: 400px;: Esta línea establece el ancho del elemento ul a 400 píxeles. 
+
+height: 100px;: Esta línea establece la altura del elemento ul a 100 píxeles. 
+
+display: flex;: Esta línea establece el tipo de visualización del elemento a Flexbox,que es un modelo de diseño que permite a los elementos hijos de un contenedor ser alineados y distribuidos dentro de este contenedor de manera 
+
+flexible. list-style: none;: Esta línea elimina los marcadores de lista predeterminados (como los puntos de las listas desordenadas) del elemento ul. 
+
+flex-direction: column;: Esta línea establece la dirección principal en la que se muestran los elementos hijos. En este caso,los elementos hijos se mostrarán en una columna. 
+
+justify-content: space-evenly;: Esta línea distribuye uniformemente los elementos hijos a lo largo del eje principal del elemento. En este caso,como la dirección del flex es una columna,los elementos hijos se distribuirán uniformemente a lo largo del eje vertical del elemento.
+*/
+.contact__text ul li i {
+    font-size: 24px;
+    padding-right: 10px;
+    color: #529756;
+}
+/*
+font-size: 24px;: Esta línea establece el tamaño de la fuente del elemento i a 24 píxeles. Esto puede ser útil para asegurar que el texto sea legible y esté en proporción con otros elementos en la página. 
+
+padding-right: 10px;: Esta línea añade un relleno a la derecha del elemento i. Esto puede ser útil para asegurar un espaciado adecuado entre este elemento y cualquier elemento que lo siga en la misma línea. 
+
+color: #529756;: Esta línea establece el color del texto del elemento i al color hexadecimal #529756,que es un tono de verde. Esto puede ser útil para dar al texto un color distintivo que se ajuste a la paleta de colores de tu página web.
+*/
+
+.contact__text ul li b {
+    font-size: 18px;
+}
+/*
+font-size: 18px;: Esta línea establece el tamaño de la fuente del elemento b a 18 píxeles. Esto puede ser útil para asegurar que el texto en negrita sea legible y esté en proporción con otros elementos en la página.
+*/
+
+.contact__text button {
+    width: 250px;
+    height: 50px;
+    color: white;
+    background-color: #529756;
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .4s;
+}
+/* Estilos para la sección de contacto */
+.contact {
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact__text {
+    width: 50%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.contact__text h2 {
+    margin-top: 5%;
+    font-size: 29px;
+    text-align: center;
+    width: 80%;
+    color: #529756;
+}
+
+.contact__text p {
+    font-size: 15px;
+    width: 94%;
+}
+
+.contact__text ul {
+    width: 60%;
+    height:70%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0%;
+    
+}
+
+.contact__text ul li i {
+    font-size: 20px;
+    color: #529756;
+}
+
+.contact__text ul li b {
+    font-size: 18px;
+    margin-left: 0%;
+    margin-bottom: 0%;
+}
+.contact__text small {
+    margin-left: 9%;
+}
+.contact__text button {
+    width: 250px;
+    height: 50px;
+    color: white;
+    background-color: #529756;
+    border: none;
+    border-radius: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .4s;
+    margin-left: 20%; 
+    margin-bottom: 8%;
+}
+
+.contact__text button:hover {
+    background-color: #CBDD16;
+}
+
+/* Clase Imagen de la section de contacto*/
+.contact-img {
+    width: 50%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10% 25%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative; 
+  }
+
+  .marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 0, 0, 0);
+    transform: rotate(45deg);
+    border-radius: 20px;
+  }
+
+  .marker:hover{
+    cursor: pointer;
+  }
+
+  .contact-img img {
+    width: 100%; /* Assuming you want the image to take up the full width of the container */
+    height: auto;
+    display: block;
+    border-radius: 10% 25%;
+
+  }
+  
+  /* Add styles for the marker */
+  .contact-img::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    transform: rotate(45deg);
+    border-radius: 2px;
+  }
+
+  
+  /* Add styles for the marker */
+  .contact-img::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    transform: rotate(45deg);
+    border-radius: 2px;
+  }
+.linea {
+    width: 100%;
+    height: 20px;
+    background-color: #529756;
+    border-radius: 10px 10px ;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #013117;
+    color: #ffffff;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    clear: both;
+}
+
+.item-imagenes {
+    display: inline-block;
+    margin-top: auto;
+    object-fit: cover;
+    margin-right: 4%;
+    margin-bottom: 2%;
+    
+}
+[id="terca"].item-imagenes {
+    width: 22%;
+    height: 10%;
+}
+
+#ulredes {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  
+  .item a {
+    text-decoration: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: hsl(203, 92%, 97%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border: 3px solid hsl(203, 92%, 97%);
+    overflow: hidden;
+  }
+  
+  .item a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 0;
+    scale: 1 0;
+    transform-origin: bottom;
+    transition: scale 0.5s ease;
+  }
+  
+  .item:hover a::before {
+    scale: 1 1;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    color: hsl(203, 92%, 8%);
+    transition: 0.5s ease;
+    z-index: 2;
+  }
+  
+  .item a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  .item:nth-child(1) {
+    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
+  }
+  .item:nth-child(2) {
+    --bg-color: #0077b5;
+  }
+  .item:nth-child(3) {
+    --bg-color: #ff0000;
+  }
+  .item:nth-child(4) {
+    --bg-color: #000;
+  }
+/*Hover para el copyright del footer*/
+.copyright {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.p {
+    font-size: 16px;
+    margin: 3px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: #fff;
+}
+.p:hover {
+    transform: translateY(-50px);
+    text-shadow: 0px 40px 200px #fff;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(0, 100, 0, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+
+@media(max-width:800px){
+    .hideMobile{
+        display: none;
+    }
+    .context{
+        margin: 0%;
+    }
+    .context__text,
+    .contact__text {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .contact{
+        margin: 0%;
+    }
+    #img_logo {
+        width: 130px;
+        height: 65px;
+        margin-left: 20%;
+    }
+}

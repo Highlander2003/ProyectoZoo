@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoológico de Cali</title>
+    <link rel="icon" type="image/png" href="../../Imagenes/Paw.png" sizes="32x32">
+    <link rel="stylesheet" href="../../CSS/FormStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="../../HTML/Menu/Index.html">
+            <img id="img_logo" src="../../Imagenes/zooLogo.png" ;> </img>
+        </a>
+        <h1>¡Pasion por la Vida!</h1>
+        <div class="barra">
+            <nav>
+                <input type="checkbox" name="" id="toggle">
+                <label for="toggle"> <i class="materia-icons">Menu</i></label>
+                <div class="menu">
+                    <ul>
+                        <li class="menu-item"><a href="../../HTML/Menu/Index.html"> Inicio </a></li>
+                        <li class="menu-item dropdown">
+                            <a href=""> Animales </a>
+                            <ul class="dropdown-content">
+                                <div>
+                                    <li><img src="../../Imagenes/cocodrilo.png" id="iconoMenu"><a href="../../HTML/Menu/Reptiles.html">Reptiles</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/Anfibios.png" id="iconoMenu"><a href="../../HTML/Menu/Anfibios.html">Anfibios</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/Mamiferos.png" id="iconoMenu"><a href="../../HTML/Menu/Mamiferos.html">Mamíferos</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/aves.png" id="iconoMenu"><a href="../../HTML/Menu/Aves.html">Aves</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/pescado.png" id="iconoMenu"><a href="../../HTML/Menu/Peces.html">Peces</a></li>
+                                </div>
+                            </ul>
+                        <li class="menu-item"><a href="../../HTML/Formularios/FormIngreso.html"> Visitanos </a></li>
+                        <li class="menu-item"><a href="../../HTML/Formularios/FormAnimal.html"> Formulario </a></li>
+                        <li class="menu-item"><a href="../Menu/Noticias.html">Noticias</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <!-- formulario -->
+        <form action="https://formsubmit.co/cm6562141@gmail.com" method="POST">
+
+            <h2>Ingreso Animal</h2>
+
+            <div class="input-group">
+
+                <label for="name">Nombre Animal</label>
+                <input type="text" name="name" id="name"required>
+               
+                <label for="cientifico">Nombre Científico:</label>
+                <input type="text" name="cientifico" id="cientifico"required>
+                
+
+                <div style="margin-top: 10px;">
+
+                    <label>Género:</label><br>
+
+                    <input type="radio" id="Alejado"  name="genero" value="Hembra">
+                    <label for="hembra">Hembra</label>
+
+                    <input type="radio" id="Alejado" name="genero" value="Macho">
+                    <label for="macho">Macho</label>
+
+                </div>
+
+                <label for="peso">Peso:</label>
+                <input type="number" name="peso" id="peso" placeholder="Peso kg" required min="0">
+
+                <label for="vacunas">Vacunas:</label>
+                <input type="number" name="vacunas" id="vacunas" placeholder="Vacunas" required>
+
+                <label for="rh">RH+:</label>
+                <input type="text" name="rh" id="rh" placeholder="RH+" required>
+
+                <label for="pais">País de origen:</label>
+                <input type="text" name="pais" id="pais" placeholder="País de origen" required>
+
+                <label>Habitat:</label>
+                <select id="Habitat" name="Habitat">
+                    <option value="Acuario">Acuario</option>
+                    <option value="Selva">Selva</option>
+                    <option value="Sabana">Sabana</option>
+                    <option value="Mariposario">Mariposario</option>
+                    <option value="Pantano">Pantano</option>
+                    <option value="Aviario">Aviario</option>
+                </select>
+
+                <label for="raza">Raza:</label>
+                <input type="text" name="raza" id="raza" placeholder="Raza" required>
+
+                <label>Especie:</label>
+                <select id="Especie" name="Especie">
+                    <option value="Anfibios">Anfibios</option>
+                    <option value="Aves">Aves</option>
+                    <option value="Peces">Peces</option>
+                    <option value="Reptiles">Reptiles</option>
+                    <option value="Mamíferos">Mamíferos</option>
+                </select>
+
+                <label for="tamaño">Tamaño:</label>
+                <input type="number" name="tamaño" id="tamaño" placeholder="Tamaño" required>
+
+                <label for="nacimiento">Nacimiento</label>
+                <input type="date" name="nacimiento" id="nacimiento" placeholder="Nacimiento" required>
+
+                <label for="id">ID Animal:</label>
+                <input type="number" name="id" id="id" placeholder="ID Animal" required>
+
+                <label for="jaula">Jaula:</label>
+                <input type="text" name="jaula" id="jaula" placeholder="Jaula" required>
+
+                <label>Alimentación:</label>
+                <select id="Alimentacion" name="Alimentacion">
+                    <option value="Carnívoros">Carnívoros</option>
+                    <option value="Herbívoros">Herbívoros</option>
+                    <option value="Insectívoros">Insectívoros</option>
+                    <option value="Omnívoros">Omnívoros</option>
+                </select>
+
+                
+                <div style="margin-top: 10px;">
+                    <label for="myfile"> Imagen: </label>
+                    <input type="file" class="customfile">          
+                </div>
+                
+
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" id="descripcion" cols="30" rows="5" placeholder="Descripción" required></textarea>
+
+                <div class="form-txt">
+                    
+                    <a href="#">Política de privacidad</a>
+                    <input type="checkbox" value="Aceptado" required>
+                    <a href="#">Términos y condiciones</a>
+                    <input type="checkbox" value="Aceptado" required>
+                </div>
+
+                <input class="btn" type="submit" value="Subir informe">
+
+                <input type="hidden" name="text" value="http://127.0.0.1:3002/">
+                <input type="hidden" name="_captcha" value="false">
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <img class="item-imagenes" src="../../Imagenes/footer11.webp">
+            <img class="item-imagenes" src="../../Imagenes/footer22.webp">
+            <img class="item-imagenes" src="../../Imagenes/footer33.webp">
+            <img class="item-imagenes" id="terca" src="../../Imagenes/footer44.webp">
+            <img class="item-imagenes" src="../../Imagenes/footer55.webp">
+            </div>
+            <div>
+            <ul>
+                <li class="item">
+                  <a href="https://www.instagram.com/zoologicodecali?igsh=emlobTJmNmEzNHBu">
+                    <i class="fa-brands fa-instagram icon"></i>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="https://www.linkedin.com/company/zoologico-de-cali/about/ ">
+                    <i class="fa-brands fa-linkedin icon"></i>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="https://youtube.com/@zoocalitv?si=732ITulGdolmjNxG">
+                    <i class="fa-brands fa-youtube icon"></i>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="https://x.com/zoologicodecali?t=qm3HS8i2T4NOa7rOZcLlGg&s=09">
+                    <i class="fa-brands fa-x-twitter icon"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="copyright">
+                <p class="p">&copy;</p>
+                <p class="p">2024</p>
+                <p class="p">Fundación</p>
+                <p class="p">Zoológica</p>
+                <p class="p">de</p>
+                <p class="p">Cali.</p>
+            </div>
+    </footer>
+</body>
+</html>

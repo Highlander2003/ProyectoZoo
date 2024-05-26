@@ -1,0 +1,39 @@
+.contact-img {
+    position: relative;
+}
+/*
+.contact-img: Esta es una clase de CSS. Los estilos definidos dentro de este bloque se aplicarán a todos los elementos HTML que tengan class="contact-img" .
+
+position: relative;: Esta es una declaración de CSS. position es una propiedad de CSS que especifica el tipo de método de posicionamiento utilizado para un elemento. El valor relative significa que el elemento se posicionará en relación con su posición normal. Cualquier valor de top,
+right,bottom,left y z-index aplicado a este elemento lo moverá en relación con donde normalmente se habría ubicado en el flujo del documento.
+*/.marker {
+    position: absolute;
+    width:10px; /* ajusta según el tamaño de tus botones */
+    height: 10px; /* ajusta según el tamaño de tus botones */
+    background-color: rgba(128, 128, 128, 0); /* establece el color del botón como transparente */
+    border: 1px; /* elimina el borde del botón */
+}
+
+
+#Zona {
+    width:10px;
+    height: 10px;
+    opacity: 0.2;
+    transition: all 300ms;
+    position: absolute;   
+}
+
+div #Zona:hover {
+    transform: scale(20);
+    opacity: 1;
+}
+
+/* position: absolute;: Esta es una declaración de CSS. 'position' es una propiedad de CSS que especifica el tipo de método de posicionamiento utilizado para un elemento. El valor 'absolute' significa que el elemento se posicionará en relación con el primer antecesor posicionado (en lugar de posicionado de manera estática, es decir, no posicionado en absoluto) que encuentre al subir por sus antecesores en el DOM. 
+
+width:10px;: Esta declaración establece el ancho del elemento . 
+
+height: 10px;: Esta declaración establece la altura del elemento. 
+
+background-color: rgba(128, 128, 128, 0);: Esta declaración establece el color de fondo del elemento a transparente. 'rgba' significa rojo verde azul alfa, donde alfa es la opacidad. Un alfa de 0 significa completamente transparente. 
+
+border: 1px;: Esta declaración establece el ancho del borde del elemento a 1 píxel. Sin embargo, esta declaración no es válida ya que no se especifica el estilo del borde (como 'solid', 'dotted', etc.). */

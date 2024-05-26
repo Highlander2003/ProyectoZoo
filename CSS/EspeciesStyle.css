@@ -1,0 +1,1413 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*@import: Es la regla que indica que se va a importar una hoja de estilo.
+url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"): Es la URL de la hoja de estilo que se 
+va a importar. 
+
+La URL tiene varios parámetros:
+    family=Poppins: Este parámetro indica que se va a importar la fuente “Poppins”.
+
+    wght@400;500: Este parámetro indica los pesos de la fuente que se van a importar. 
+
+    display=swap: Este parámetro indica que si la fuente no se ha cargado, se debe mostrar el texto en una fuente de respaldo.
+    Una vez que la fuente “Poppins” se haya cargado, se actualizará el texto para mostrarlo en “Poppins”.
+*/  
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+/*:root: Es un selector CSS que selecciona el elemento raíz del documento. Las variables definidas en :root son accesibles 
+globalmente en todo el documento CSS.
+
+--first-color, --title-color, --text-color, --body-color, --container-color: Estas son variables CSS personalizadas que 
+almacenan diferentes colores en formato HSL (Hue, Saturation, Lightness). Puedes usar estas variables en lugar de los valores 
+de color directos en tu CSS.
+
+--body-font: Esta variable almacena la fuente que se utilizará en el cuerpo del documento. En este caso, se utilizará la fuente
+ “Poppins”, y si no está disponible, se utilizará cualquier fuente sans-serif disponible.
+
+--h2-font-size, --small-font-size: Estas variables almacenan diferentes tamaños de fuente que se pueden utilizar en el documento. 
+Puedes usar var (--h2-font-size) para establecer el tamaño de fuente de un encabezado H2.*/
+
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+    :root {
+      --h2-font-size: 1.5rem;
+      --small-font-size: .875rem;
+    }
+  }
+/*
+@media screen and (min-width: 1120px): Esta consulta de medios se aplica a dispositivos con una pantalla y un ancho 
+de ventana de al menos 1120px. Es decir, los estilos dentro de esta consulta de medios se aplicarán solo cuando el 
+ancho de la ventana del navegador sea de 1120px o más.
+
+:root: Al igual que antes, este es un selector que selecciona el elemento raíz del documento. Las variables definidas 
+aquí son accesibles globalmente en todo el documento CSS.
+
+--h2-font-size: 1.5rem;: Esta línea actualiza el valor de la variable --h2-font-size a 1.5rem cuando la consulta de 
+medios es verdadera (es decir, cuando el ancho de la ventana del navegador es de 1120px o más).
+
+--small-font-size: .875rem;: De manera similar, esta línea actualiza el valor de la variable --small-font-size a 
+.875rem cuando la consulta de medios es verdadera.
+*/
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  /*
+  *: Este es el selector universal en CSS. Selecciona todos los elementos en el documento.
+
+  box-sizing: border-box;: Esta propiedad CSS controla el modelo de caja utilizado para calcular los tamaños de los 
+  elementos (ancho y alto). Cuando se establece en border-box, el ancho y la altura de un elemento incluyen el contenido, 
+  el relleno y el borde, pero no el margen. Esto puede hacer que sea más fácil diseñar con CSS, ya que el tamaño que 
+  estableces es el tamaño que obtienes.
+
+  padding: 0;: Esta propiedad CSS establece el relleno alrededor del contenido de todos los elementos a 0. El relleno es 
+  el espacio entre el contenido de un elemento y su borde.
+
+  margin: 0;: Esta propiedad CSS establece el margen alrededor de todos los elementos a 0. El margen es el espacio 
+  alrededor de un elemento, fuera de cualquier borde y relleno.
+
+  */
+  
+  body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--text-color);
+  }
+  /*
+  body: Este es un selector que selecciona el elemento <body> en tu documento HTML. Los estilos definidos dentro de 
+  este bloque se aplicarán a todo el contenido dentro del elemento <body>.
+  
+  font-family: var(--body-font);: Esta línea establece la fuente del texto dentro del elemento <body>. Está utilizando 
+  la función var() para referenciar la variable CSS --body-font que definiste anteriormente. En este caso, la fuente 
+  será “Poppins”, a menos que hayas cambiado el valor de --body-font en algún otro lugar de tu CSS.
+  
+  background-color: var(--body-color);: Esta línea establece el color de fondo del elemento <body>. Está utilizando 
+  la función var() para referenciar la variable CSS --body-color que definiste anteriormente.
+  
+  color: var(--text-color);: Esta línea establece el color del texto dentro del elemento <body>. Está utilizando la 
+  función var() para referenciar la variable CSS --text-color que definiste anteriormente.
+
+  */
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+/*
+img: Este es un selector que selecciona todos los elementos <img> en tu documento HTML.
+
+display: block;: Esta propiedad CSS establece cómo se debe mostrar un elemento. Cuando se establece en block, 
+el elemento genera un bloque de caja, lo que significa que crea un “bloque” en la página que tiene su propio espacio 
+en el flujo del documento. Los elementos de bloque siempre comienzan en una nueva línea y ocupan todo el ancho disponible.
+
+max-width: 100%;: Esta propiedad CSS establece el ancho máximo de un elemento. Al establecerlo en 100%, te aseguras de que 
+las imágenes nunca sean más anchas que su contenedor. Esto es útil para hacer que las imágenes sean responsivas, es decir, 
+que se redimensionen automáticamente para adaptarse al tamaño de la pantalla o al tamaño del contenedor.
+
+height: auto;: Esta propiedad CSS establece la altura de un elemento. Al establecerlo en auto, la altura de la imagen se
+escalará proporcionalmente al ancho para mantener la relación de aspecto de la imagen. Esto evita que las imágenes se 
+distorsionen a medida que cambia el tamaño de la pantalla o del contenedor.
+
+*/
+
+/* Estilos del encabezado */
+
+header {
+    background-color: #013117;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 95px;
+    top: 0;
+    z-index: 1000;
+}
+/*
+header: Este es un selector que selecciona todos los elementos <header> en tu documento HTML.
+
+background-color: #013117;: Esta propiedad CSS establece el color de fondo del elemento <header>. En este caso, es un color 
+verde oscuro.
+
+color: #ffffff;: Esta propiedad CSS establece el color del texto dentro del elemento <header>. En este caso, es blanco.
+
+display: flex;: Esta propiedad CSS establece el tipo de caja de visualización a flex, lo que permite la alineación flexible d
+e los elementos hijos en el contenedor.
+
+align-items: center;: Esta propiedad CSS alinea verticalmente los elementos hijos en el centro del contenedor flex.
+
+justify-content: space-between;: Esta propiedad CSS distribuye uniformemente los elementos hijos a lo largo del eje horizontal 
+con un espacio igual entre ellos.
+
+position: fixed;: Esta propiedad CSS posiciona el elemento <header> de manera fija en relación con la ventana del navegador. 
+Esto significa que permanecerá en la misma posición incluso si el usuario se desplaza por la página.
+
+width: 100%;: Esta propiedad CSS establece el ancho del elemento <header> al 100% del ancho de su contenedor.
+
+height: 95px;: Esta propiedad CSS establece la altura del elemento <header> a 95 píxeles.
+
+top: 0;: Esta propiedad CSS posiciona el borde superior del elemento <header> a 0 píxeles del borde superior de su contenedor 
+más cercano.
+
+z-index: 1000;: Esta propiedad CSS establece el orden de apilamiento del elemento <header>. Un valor más alto significa que el 
+elemento se apilará encima de otros elementos con un valor de z-index más bajo
+*/
+
+header h1, header h3 {
+    margin: 0 auto;
+    color: #CBDD16;
+    font-family: sans-serif;
+}
+/*
+header h1, header h3: Estos son selectores que seleccionan todos los elementos <h1> y <h3> que son hijos directos o indirectos 
+del elemento <header> en tu documento HTML.
+
+margin: 0 auto;: Esta propiedad CSS establece el margen alrededor de los elementos <h1> y <h3>. El valor 0 auto establece el 
+margen superior e inferior a 0 y los márgenes izquierdo y derecho a auto, lo que centra horizontalmente los elementos en su 
+contenedor.
+
+color: #CBDD16;: Esta propiedad CSS establece el color del texto dentro de los elementos <h1> y <h3>. En este caso, es un color 
+verde claro.
+
+font-family: sans-serif;: Esta propiedad CSS establece la fuente del texto dentro de los elementos <h1> y <h3>. En este caso, 
+se utilizará cualquier fuente sans-serif disponible.
+
+*/
+.barra {
+    margin: 0 auto;
+    padding: 1rem;
+}
+/*
+.barra: Este es un selector de clase que selecciona todos los elementos que tienen la clase barra en tu documento HTML.
+
+margin: 0 auto;: Esta propiedad CSS establece el margen alrededor de los elementos con la clase barra. El valor 0 auto 
+establece el margen superior e inferior a 0 y los márgenes izquierdo y derecho a auto, lo que centra horizontalmente los 
+elementos en su contenedor.
+
+padding: 1rem;: Esta propiedad CSS establece el relleno alrededor del contenido de los elementos con la clase barra. 
+El relleno es el espacio entre el contenido de un elemento y su borde. En este caso, el relleno es de 1rem, que es igual 
+al tamaño de la fuente base del documento (generalmente 16px).
+*/
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem; 
+}
+/*
+nav: Este es un selector que selecciona todos los elementos <nav> en tu documento HTML.
+
+display: flex;: Esta propiedad CSS establece el tipo de caja de visualización a flex, lo que permite la alineación 
+flexible de los elementos hijos en el contenedor.
+
+flex-wrap: wrap;: Esta propiedad CSS especifica si los elementos flexibles deben envolverse o no. El valor wrap permite 
+que los elementos se envuelvan en múltiples líneas, si no hay suficiente espacio en una sola línea.
+
+justify-content: space-between;: Esta propiedad CSS distribuye uniformemente los elementos hijos a lo largo del eje 
+horizontal con un espacio igual entre ellos.
+
+align-items: center;: Esta propiedad CSS alinea verticalmente los elementos hijos en el centro del contenedor flex.
+
+padding: 1rem 1.5rem;: Esta propiedad CSS establece el relleno alrededor del contenido del elemento <nav>. 
+El primer valor (1rem) se aplica a la parte superior e inferior, y el segundo valor (1.5rem) se aplica a los lados izquierdo 
+y derecho.
+*/
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+/*
+nav ul: Este es un selector que selecciona todos los elementos <ul> que son hijos directos o indirectos del elemento 
+<nav> en tu 
+documento HTML.
+
+list-style: none;: Esta propiedad CSS elimina el estilo de lista predeterminado (por ejemplo, los puntos de viñetas en 
+listas no ordenadas) de los elementos <ul>.
+
+display: flex;: Esta propiedad CSS establece el tipo de caja de visualización a flex, lo que permite la alineación flexible 
+de los elementos hijos (en este caso, los elementos <li>) en el contenedor (el elemento <ul>).
+
+gap: 2rem;: Esta propiedad CSS establece el espacio entre los elementos hijos en un contenedor flex. En este caso, 
+establece un espacio de 2rem entre los elementos <li> en el elemento <ul>
+*/
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+/*
+nav a: Este es un selector que selecciona todos los elementos <a> que son hijos directos o indirectos del elemento <nav> 
+en tu documento HTML.
+
+text-decoration: none;: Esta propiedad CSS elimina la decoración de texto predeterminada (por ejemplo, los subrayados en los enlaces) 
+de los elementos <a>.
+
+color: white;: Esta propiedad CSS establece el color del texto dentro de los elementos <a>. En este caso, es blanco.
+*/
+
+nav #toggle, nav label {
+    display: none;
+}
+/*
+nav #toggle, nav label: Estos son selectores que seleccionan el elemento con el ID toggle y todos los elementos <label> 
+que son hijos directos o indirectos del elemento <nav> en tu documento HTML.
+
+display: none;: Esta propiedad CSS establece cómo se debe mostrar un elemento. Cuando se establece en none, el elemento 
+no se mostrará en la página. Es decir, el elemento y su contenido no ocuparán ningún espacio y no serán visibles.
+*/
+
+/* Medidas */
+@media (max-width: 40.625em) {
+    nav .menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+    nav label {
+        display: inline-flex;
+        color: white;
+        cursor: pointer;
+    }
+    nav #toggle:checked ~ .menu {
+        height: 80%;
+    }
+}
+/*
+@media (max-width: 40.625em): Esta consulta de medios se aplica a dispositivos con un ancho de ventana de hasta 40.625em. 
+Es decir, los estilos dentro de esta consulta de medios se aplicarán solo cuando el ancho de la ventana del navegador sea 
+de 40.625em o menos.
+
+Dentro de esta consulta de medios, tienes varias reglas de estilo:
+    nav .menu: Selecciona cualquier elemento con la clase menu que sea un descendiente del elemento nav. Establece su ancho 
+    al 100% del contenedor, su altura a 0 y oculta cualquier contenido que se desborde.
+
+    nav ul: Selecciona cualquier elemento ul que sea un descendiente del elemento nav. Cambia la dirección del contenedor flexible 
+    a columna, centra los elementos a lo largo del eje transversal y agrega un relleno de 0.5rem en la parte superior e inferior.
+
+    nav label: Selecciona cualquier elemento label que sea un descendiente del elemento nav. Muestra el elemento como un contenedor 
+    flexible en línea, establece el color del texto en blanco y cambia el cursor a un puntero cuando se pasa el mouse sobre el elemento.
+
+    nav #toggle:checked ~ .menu: Selecciona cualquier elemento con la clase menu que sea un hermano general del elemento con el ID 
+    toggle (es decir, comparten el mismo padre), pero solo cuando #toggle está marcado. Establece la altura del elemento .menu al 
+    80% de su contenedor.
+
+
+*/
+
+#img_login {
+    width: 45px;
+    height: 45px;  
+}
+/*
+#img_login: Este es un selector de ID que selecciona el elemento con el ID img_login en tu documento HTML.
+
+width: 45px;: Esta propiedad CSS establece el ancho del elemento.
+
+height: 45px;: Esta propiedad CSS establece la altura del elemento.
+*/
+#img_logo {
+    width: 130px;
+    height: 65px; 
+    margin-left: 20%; 
+}
+/*
+#img_logo: Este es un selector de ID que selecciona el elemento con el ID img_logo en tu documento HTML.
+
+width: 130px;: Esta propiedad CSS establece el ancho del elemento .
+
+height: 65px;: Esta propiedad CSS establece la altura del elemento.
+
+margin-left: 20%;: Esta propiedad CSS establece el margen izquierdo del elemento al ancho de su contenedor.
+*/
+#iconoMenu {
+    height: 30px;
+    width: 30px;
+    margin-left: 2%;
+}
+/*
+#iconoMenu: Este es un selector de ID que selecciona el elemento con el ID iconoMenu en tu documento HTML.
+
+height: 30px;: Esta propiedad CSS establece la altura del elemento.
+
+width: 30px;: Esta propiedad CSS establece el ancho del elemento.
+
+margin-left: 2%;: Esta propiedad CSS establece el margen izquierdo del elemento al ancho de su contenedor.
+*/
+
+/*Fin del style del menu*/
+
+/* Animales dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/*
+.dropdown: Este es un selector de clase que selecciona todos los elementos que tienen la clase dropdown en tu documento HTML.
+
+position: relative;: Esta propiedad CSS establece el tipo de posicionamiento a relativo para los elementos con la clase dropdown.
+
+Esto significa que aunque el elemento se posicionará de acuerdo con el flujo normal del documento, puedes usar propiedades como top, 
+right, bottom y left para ajustar su posición relativa a su posición normal.
+
+display: inline-block;: Esta propiedad CSS establece cómo se debe mostrar un elemento. Cuando se establece en inline-block, el 
+elemento se comporta como un elemento en línea en términos de flujo de texto y alineación, pero aún puedes aplicarle anchura y 
+altura como a los elementos de bloque.
+*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+/*
+.dropdown-content: Este es un selector de clase que selecciona todos los elementos que tienen la clase dropdown-content 
+en tu documento HTML.
+
+display: none;: Esta propiedad CSS establece cómo se debe mostrar un elemento. Cuando se establece en none, el elemento no 
+se mostrará en la página. Es decir, el elemento y su contenido no ocuparán ningún espacio y no serán visibles.
+
+position: absolute;: Esta propiedad CSS posiciona el elemento de manera absoluta en relación con su contenedor más cercano 
+posicionado (que no sea static). Esto significa que puedes usar propiedades como top, right, bottom y left para posicionar 
+el elemento en cualquier lugar dentro de su contenedor.
+
+background-color: #f9f9f9;: Esta propiedad CSS establece el color de fondo del elemento a #f9f9f9, que es un color gris claro.
+
+min-width: 180px;: Esta propiedad CSS establece el ancho mínimo del elemento a 180 píxeles.
+
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);: Esta propiedad CSS aplica una sombra al elemento. La sombra se desplaza 0px a 
+la derecha, 8px hacia abajo, tiene un desenfoque de 16px y un tamaño de expansión de 0px. El color de la sombra es un negro 
+semi-transparente (rgba(0,0,0,0.2)).
+
+z-index: 1;: Esta propiedad CSS establece el orden de apilamiento del elemento. Un valor más alto significa que el elemento 
+se apilará encima de otros elementos con un valor de z-index más bajo.
+
+margin: 0;: Esta propiedad CSS establece el margen alrededor del elemento a 0.
+
+padding: 0;: Esta propiedad CSS establece el relleno alrededor del contenido del elemento a 0.
+*/
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+/*
+.dropdown-content a: Este es un selector que selecciona todos los elementos <a> que son hijos directos o indirectos de los 
+elementos con la clase dropdown-content en tu documento HTML.
+
+color: black;: Esta propiedad CSS establece el color del texto dentro de los elementos <a>. En este caso, es negro.
+
+padding: 12px 16px;: Esta propiedad CSS establece el relleno alrededor del contenido de los elementos <a>. El primer 
+valor (12px) se aplica a la parte superior e inferior, y el segundo valor (16px) se aplica a los lados izquierdo y derecho.
+
+text-decoration: none;: Esta propiedad CSS elimina la decoración de texto predeterminada (por ejemplo, los subrayados en los enlaces) 
+de los elementos <a>.
+
+display: block;: Esta propiedad CSS establece cómo se debe mostrar un elemento. Cuando se establece en block, el elemento genera un 
+bloque de caja, lo que significa que crea un “bloque” en la página que tiene su propio espacio en el flujo del documento. Los elementos 
+de bloque siempre comienzan en una nueva línea y ocupan todo el ancho disponible.
+
+transition: all 0.2s ease-in-out;: Esta propiedad CSS agrega una transición animada a todos los cambios de propiedad CSS en los 
+elementos <a>. La transición durará 0.2 segundos y usará la función de tiempo ease-in-out, que significa que la transición comenzará 
+lentamente, acelerará en el medio y luego terminará lentamente.
+*/
+.dropdown-content div:hover li{
+    color: white;
+    background-color: #3e8e41;
+    transform: scale(1.1);
+}
+/*
+.dropdown-content div:hover li: Este es un selector que selecciona todos los elementos <li> que son hijos directos o indirectos de 
+los elementos <div> que están siendo apuntados por el cursor del mouse y que son hijos directos o indirectos de los elementos con 
+la clase .dropdown-content en tu documento HTML.
+
+color: white;: Esta propiedad CSS establece el color del texto dentro de los elementos <li>. En este caso, es blanco.
+
+background-color: #3e8e41;: Esta propiedad CSS establece el color de fondo del elemento a #3e8e41, que es un color verde oscuro.
+
+transform: scale(1.1);: Esta propiedad CSS aplica una transformación de escala a los elementos <li>, lo que significa que su tamaño 
+se incrementará en un 10% (1.1 veces el tamaño original) en ambas dimensiones, ancho y alto.
+*/
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*
+.dropdown:hover .dropdown-content: Este es un selector que selecciona todos los elementos con la clase .dropdown-content que son 
+hijos directos o indirectos de los elementos con la clase .dropdown que están siendo apuntados por el cursor del mouse en tu documento HTML.
+
+display: block;: Esta propiedad CSS establece cómo se debe mostrar un elemento. Cuando se establece en block, el elemento genera un bloque 
+de caja, lo que significa que crea un “bloque” en la página que tiene su propio espacio en el flujo del documento. Los elementos de bloque 
+siempre comienzan en una nueva línea y ocupan todo el ancho disponible.
+*/
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+/*
+.dropdown:hover .dropdown-content: Este es un selector que selecciona todos los elementos con la clase .dropdown-content que son hijos 
+directos o indirectos de los elementos con la clase .dropdown que están siendo apuntados por el cursor del mouse en tu documento HTML.
+
+display: block;: Esta propiedad CSS establece cómo se debe mostrar un elemento. Cuando se establece en block, el elemento genera un bloque 
+de caja, lo que significa que crea un “bloque” en la página que tiene su propio espacio en el flujo del documento. Los elementos de bloque 
+siempre comienzan en una nueva línea y ocupan todo el ancho disponible.
+*/
+
+.dropdown-content li {
+    display: flex; /* Usar display flex para alinear elementos en línea */
+    align-items: center; /* Alinear verticalmente los elementos */
+}
+/*
+.dropdown-content li: Este es un selector que selecciona todos los elementos <li> que son hijos directos o indirectos de los elementos con 
+la clase .dropdown-content en tu documento HTML.
+
+display: flex;: Esta propiedad CSS establece el tipo de caja de visualización a flex, lo que permite la alineación flexible de los elementos
+hijos (en este caso, los elementos dentro de <li>) en el contenedor (el elemento <li>).
+
+align-items: center;: Esta propiedad CSS alinea verticalmente los elementos hijos en el centro del contenedor flex.
+*/
+
+.dropdown-content li img {
+    margin-right: 5px; /* Margen derecho para separar la imagen del texto */
+}
+/*
+.dropdown-content li img: Este es un selector que selecciona todos los elementos <img> que son hijos directos o indirectos de los 
+elementos <li> que son hijos directos o indirectos de los elementos con la clase .dropdown-content en tu documento HTML.
+
+margin-right: 5px;: Esta propiedad CSS establece el margen derecho de los elementos <img> a 5 píxeles. El margen es el espacio alrededor 
+de un elemento, fuera de cualquier borde y relleno.
+*/
+
+/* Style del Main*/
+
+.titulo_animal{
+    margin-top: 100px;
+}
+/*
+.titulo_animal: Este es un selector de clase que selecciona todos los elementos que tienen la clase titulo_animal en tu documento HTML.
+
+margin-top: 100px;: Esta propiedad CSS establece el margen superior de los elementos con la clase titulo_animal a 100 píxeles. El margen 
+es el espacio alrededor de un elemento, fuera de cualquier borde y relleno.
+*/
+
+#fuente-1 {
+    background-image: url(https://i.ibb.co/5TWFKgR/selva-bosque-vector-silueta-verde-naturaleza-tropical-fondo-selva-amazonica-paisaje-panoramico-fauna.jpg);
+    background-size: cover;
+    font-size: 90px;
+    text-align: center;
+    color: transparent; 
+    background-clip: text; 
+    background-position-y: bottom;
+    -webkit-background-clip: text; 
+    font-family: Impact, sans-serif;
+    margin: 35px;
+}
+/*
+#fuente-1: Este es un selector de ID que selecciona el elemento con el ID fuente-1 en tu documento HTML.
+
+background-image: url(...);: Esta propiedad CSS establece la imagen de fondo del elemento a la URL especificada.
+
+background-size: cover;: Esta propiedad CSS especifica que la imagen de fondo debe redimensionarse para cubrir completamente el área 
+del elemento, incluso si eso significa tener que estirar la imagen o recortarla un poco.
+
+font-size: 90px;: Esta propiedad CSS establece el tamaño de la fuente del texto dentro del elemento a 90 píxeles.
+
+text-align: center;: Esta propiedad CSS alinea el texto dentro del elemento al centro.
+
+color: transparent;: Esta propiedad CSS establece el color del texto dentro del elemento a transparente.
+
+background-clip: text;: Esta propiedad CSS especifica que el fondo solo debe pintarse dentro del texto del elemento.
+
+background-position-y: bottom;: Esta propiedad CSS posiciona la imagen de fondo en la parte inferior del elemento.
+
+-webkit-background-clip: text;: Esta es la versión de la propiedad background-clip para navegadores que usan el motor de renderizado 
+WebKit, como Safari y versiones antiguas de Chrome.
+
+font-family: Impact, sans-serif;: Esta propiedad CSS establece la fuente del texto dentro del elemento a “Impact”, y si no está 
+disponible, se utilizará cualquier fuente sans-serif disponible.
+
+margin: 35px;: Esta propiedad CSS establece el margen alrededor del elemento a 35 píxeles.
+*/
+
+#fuente-2 {
+    background-image: url(https://i.ibb.co/nMYcw3P/image.png);
+    background-size: cover;
+    font-size: 90px;
+    text-align: center;
+    color: transparent; 
+    background-clip: text; 
+    background-position-y: bottom;
+    -webkit-background-clip: text; 
+    font-family: Impact, sans-serif;
+    margin: 35px;
+}
+/*
+#fuente-2: Este es un selector de ID que selecciona el elemento con el ID fuente-2 en tu documento HTML.
+
+background-image: url(...);: Esta propiedad CSS establece la imagen de fondo del elemento a la URL especificada.
+
+background-size: cover;: Esta propiedad CSS especifica que la imagen de fondo debe redimensionarse para cubrir completamente el área 
+del elemento, incluso si eso significa tener que estirar la imagen o recortarla un poco.
+
+font-size: 90px;: Esta propiedad CSS establece el tamaño de la fuente del texto dentro del elemento a 90 píxeles.
+
+text-align: center;: Esta propiedad CSS alinea el texto dentro del elemento al centro.
+
+color: transparent;: Esta propiedad CSS establece el color del texto dentro del elemento a transparente.
+
+background-clip: text;: Esta propiedad CSS especifica que el fondo solo debe pintarse dentro del texto del elemento.
+
+background-position-y: bottom;: Esta propiedad CSS posiciona la imagen de fondo en la parte inferior del elemento.
+
+-webkit-background-clip: text;: Esta es la versión de la propiedad background-clip para navegadores que usan el motor de renderizado 
+WebKit, como Safari y versiones antiguas de Chrome.
+
+font-family: Impact, sans-serif;: Esta propiedad CSS establece la fuente del texto dentro del elemento a “Impact”, y si no está disponible, 
+se utilizará cualquier fuente sans-serif disponible.
+
+margin: 35px;: Esta propiedad CSS establece el margen alrededor del elemento a 35 píxeles.
+*/
+#fuente-3 {
+    background-image: url(https://i.ibb.co/0rJScHj/image.png);
+    background-size: cover;
+    font-size: 90px;
+    text-align: center;
+    color: transparent; 
+    background-clip: text; 
+    background-position-y: center;
+    -webkit-background-clip: text; 
+    font-family: Impact, sans-serif;
+    margin: 35px;
+}
+/*
+#fuente-3: Este es un selector de ID que selecciona el elemento HTML con el ID fuente-3.
+
+background-image: url(...);: Esta línea establece la imagen de fondo del elemento seleccionado con la imagen en la URL proporcionada.
+
+background-size: cover;: Esto hace que la imagen de fondo se redimensione para cubrir completamente el área del elemento, incluso si esto 
+significa que la imagen se recortará.
+
+font-size: 90px;: Establece el tamaño de la fuente del texto dentro del elemento a 90 píxeles.
+
+text-align: center;: Alinea el texto al centro del elemento.
+
+color: transparent;: Hace que el color del texto sea transparente.
+
+background-clip: text;: Esta es una propiedad experimental que define cómo se debe aplicar el fondo en relación con el borde del contenido, 
+el borde del padding, el borde del borde o el borde del margen. En este caso, el fondo se recorta al texto.
+
+background-position-y: center;: Esto posiciona la imagen de fondo en el centro verticalmente.
+
+-webkit-background-clip: text;: Es lo mismo que background-clip, pero con el prefijo -webkit- para garantizar la compatibilidad con los navegadores 
+webkit como Safari.
+
+font-family: Impact, sans-serif;: Establece la familia de fuentes del texto a Impact, y si no está disponible, se usará cualquier fuente sans-serif.
+
+margin: 35px;: Esto agrega un margen alrededor del elemento de 35 píxeles.
+*/
+.container {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+/*
+.container: Este es un selector de clase que selecciona todos los elementos HTML con la clase container.
+
+display: grid;: Esta línea establece el tipo de visualización del elemento a grid, lo que significa que se utilizará un diseño de cuadrícula CSS.
+
+place-items: center;: Esta es una propiedad abreviada para las propiedades align-items y justify-items, y aquí se establece en center. 
+Esto significa que los elementos de la cuadrícula se centrarán tanto vertical como horizontalmente dentro de sus celdas de cuadrícula.
+
+margin-inline: 1.5rem;: Esto establece los márgenes izquierdo y derecho del elemento a 1.5rem. 1rem es igual al tamaño de fuente del elemento raíz, 
+por lo que 1.5rem sería 1.5 veces ese tamaño.
+
+padding-block: 5rem;: Esto establece el relleno superior e inferior del elemento a 5rem. Al igual que con margin-inline, 1rem es igual al tamaño de 
+fuente del elemento raíz, por lo que 5rem sería 5 veces ese tamaño.
+*/
+.card_container{
+    display: grid;
+    row-gap: 3.5rem;
+}
+/*
+.card_container: Este es un selector de clase que selecciona todos los elementos HTML con la clase card_container.
+
+display: grid;: Esta línea establece el tipo de visualización del elemento a grid, lo que significa que se utilizará un diseño de cuadrícula CSS.
+
+row-gap: 3.5rem;: Esto establece el espacio entre las filas de la cuadrícula a 3.5rem. 1rem es igual al tamaño de fuente del elemento raíz, por lo 
+que 3.5rem sería 3.5 veces ese tamaño.
+*/
+.card_article{
+    position: relative;
+}
+/*
+.card_article: Este es un selector de clase que selecciona todos los elementos HTML con la clase card_article.
+
+position: relative;: Esta línea establece la posición del elemento a relative. Esto significa que el elemento se posicionará en relación con su 
+posición normal. Otros elementos no se ajustarán para caber en ningún espacio dejado por el elemento.
+*/
+.card_img{
+    width: 328px;
+    border-radius: 1.5rem;
+    margin: 10px;
+}
+/*
+.card_img: Este es un selector de clase que selecciona todos los elementos HTML con la clase card_img.
+
+width: 328px;: Esta línea establece el ancho del elemento a 328px.
+
+border-radius: 1.5rem;: Esto redondea las esquinas del elemento a 1.5rem. 1rem es igual al tamaño de fuente del elemento raíz, por lo 
+que 1.5rem sería 1.5 veces ese tamaño.
+
+margin: 10px;: Esto agrega un margen alrededor del elemento de 10px.
+*/
+.card_data{
+    height: 100px;
+    background-color:var(--container-color);
+    padding: 0 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+/*
+.card_data: Este es un selector de clase que selecciona todos los elementos HTML con la clase card_data.
+
+height: 100px;: Esta línea establece la altura del elemento a 100px.
+
+background-color:var(--container-color);: Esto establece el color de fondo del elemento al valor de la variable CSS --container-color.
+
+padding: 0 2rem;: Esto establece el relleno del elemento. 0 es el relleno superior e inferior, y 2rem es el relleno izquierdo y derecho.
+
+box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);: Esto agrega una sombra al elemento. La sombra es de 8px de desplazamiento vertical, 24px de 
+desenfoque, y el color de la sombra es un 15% de negro.
+
+border-radius: 1rem;: Esto redondea las esquinas del elemento a 1rem.
+
+position: absolute;: Esto posiciona el elemento en relación con el primer elemento padre posicionado (no estático).
+
+bottom: -9rem;: Esto posiciona el elemento 9rem por encima de la parte inferior del elemento padre posicionado.
+
+left: 0;: Esto posiciona el borde izquierdo del elemento en el borde izquierdo del elemento padre posicionado.
+
+right: 0;: Esto posiciona el borde derecho del elemento en el borde derecho del elemento padre posicionado.
+
+margin-inline: auto;: Esto centra horizontalmente el elemento dentro de su elemento padre.
+
+opacity: 0;: Esto hace que el elemento sea completamente transparente.
+
+transition: opacity 1s 1s;: Esto agrega una transición al elemento. La propiedad opacity cambiará durante un período de 1s después de un 
+retraso de 1s.
+*/
+.card_title{
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color: var(--title-color);
+    margin-bottom: .25rem;
+}
+/*
+.card_title: Este es un selector de clase que selecciona todos los elementos HTML con la clase card_title.
+
+font-size: var(--h2-font-size);: Esta línea establece el tamaño de la fuente del elemento al valor de la variable CSS --h2-font-size.
+
+font-weight: 500;: Esto establece el grosor de la fuente del elemento a 500, lo que corresponde a un peso de fuente medio.
+
+color: var(--title-color);: Esto establece el color del texto del elemento al valor de la variable CSS --title-color.
+
+margin-bottom: .25rem;: Esto agrega un margen en la parte inferior del elemento de .25rem. 1rem es igual al tamaño de fuente del elemento 
+raíz, por lo que .25rem sería .25 veces ese tamaño.
+*/
+.card_button{
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--first-color);
+}
+/*
+.card_button: Este es un selector de clase que selecciona todos los elementos HTML con la clase card_button.
+
+text-decoration: none;: Esta línea elimina cualquier decoración de texto (como subrayado) del elemento.
+
+font-size: var(--small-font-size);: Esta línea establece el tamaño de la fuente del elemento al valor de la variable CSS --small-font-size.
+
+font-weight: 500;: Esto establece el grosor de la fuente del elemento a 500, lo que corresponde a un peso de fuente medio.
+
+color: var(--first-color);: Esto establece el color del texto del elemento al valor de la variable CSS --first-color.
+*/
+.card_buttom:hover{
+    text-decoration: underline;
+}
+/*
+.card_button:hover: Este es un selector de clase con un pseudo-clase :hover que selecciona todos los elementos HTML con la clase 
+card_button cuando se pasa el cursor sobre ellos.
+
+text-decoration: underline;: Esta línea agrega una decoración de texto (subrayado) al elemento cuando se pasa el cursor sobre él.
+*/
+
+.card_article:hover .card_data{
+    animation:  show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+/*
+.card_article:hover .card_data: Este es un selector de clase con un pseudo-clase :hover y un selector descendiente. Selecciona 
+todos los elementos HTML con la clase card_data que son descendientes de los elementos con la clase card_article cuando se pasa el 
+cursor sobre estos últimos.
+
+animation:  show-data 1s forwards;: Esta línea aplica una animación llamada show-data al elemento. La animación dura 1s y la propiedad 
+forwards significa que el elemento retendrá el estilo del último keyframe de la animación cuando esta termine.
+
+opacity: 1;: Esto hace que el elemento sea completamente opaco cuando se pasa el cursor sobre el elemento card_article.
+
+transition: opacity .3s;: Esto agrega una transición al elemento. La propiedad opacity cambiará durante un período de .3s.
+*/
+
+.card_article:hover{
+    animation: remove-overflow 2s forwards;
+}
+/*
+.card_article:hover: Este es un selector de clase con un pseudo-clase :hover que selecciona todos los elementos HTML con la 
+clase card_article cuando se pasa el cursor sobre ellos.
+
+animation: remove-overflow 2s forwards;: Esta línea aplica una animación llamada remove-overflow al elemento. La animación dura 
+2s y la propiedad forwards significa que el elemento retendrá el estilo del último keyframe de la animación cuando esta termine.
+
+*/
+.card_article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+/*
+.card_article:not(:hover): Este es un selector de clase con un pseudo-clase :not y :hover que selecciona todos los elementos HTML 
+con la clase card_article cuando no se pasa el cursor sobre ellos.
+
+animation: show-overflow 2s forwards;: Esta línea aplica una animación llamada show-overflow al elemento. La animación dura 2s y 
+la propiedad forwards significa que el elemento retendrá el estilo del último keyframe de la animación cuando esta termine.
+*/
+.card_article:not(:hover) .card_data{
+    animation: remove-data 1s forwards;
+}
+/*
+.card_article:not(:hover) .card_data: Este es un selector de clase con un pseudo-clase :not y :hover y un selector descendiente.
+Selecciona todos los elementos HTML con la clase card_data que son descendientes de los elementos con la clase card_article cuando 
+no se pasa el cursor sobre estos últimos.
+
+animation: remove-data 1s forwards;: Esta línea aplica una animación llamada remove-data al elemento. La animación dura 1s y la 
+propiedad forwards significa que el elemento retendrá el estilo del último keyframe de la animación cuando esta termine.
+*/
+/* Card animation */
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+/*
+@keyframes show-data: Esta línea define una nueva animación llamada show-data.
+
+50%{...}: Este bloque define el estado de la animación en el punto medio (50%). En este caso, se aplica una transformación que 
+mueve el elemento 10rem hacia arriba desde su posición original.
+
+transform: translateY(-10rem);: Esta línea mueve el elemento 10rem hacia arriba en el eje Y.
+
+100%{...}: Este bloque define el estado final de la animación (100%). En este caso, se aplica una transformación que mueve el 
+elemento 7rem hacia arriba desde su posición original.
+
+transform: translateY(-7rem);: Esta línea mueve el elemento 7rem hacia arriba en el eje Y.
+*/
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+/*
+@keyframes remove-overflow: Esta línea define una nueva animación llamada remove-overflow.
+
+to{...}: Este bloque define el estado final de la animación. En este caso, se establece la propiedad overflow del elemento a initial.
+
+overflow: initial;: Esta línea restablece la propiedad overflow del elemento a su valor por defecto.
+*/
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);
+    }
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+/*
+@keyframes remove-data: Esta línea define una nueva animación llamada remove-data.
+
+0%{...}: Este bloque define el estado inicial de la animación. En este caso, se aplica una transformación que mueve el elemento 7rem 
+hacia arriba desde su posición original.
+
+transform: translateY(-7rem);: Esta línea mueve el elemento 7rem hacia arriba en el eje Y.
+
+50%{...}: Este bloque define el estado de la animación en el punto medio (50%). En este caso, se aplica una transformación que mueve 
+el elemento 10rem hacia arriba desde su posición original.
+
+transform: translateY(-10rem);: Esta línea mueve el elemento 10rem hacia arriba en el eje Y.
+
+100%{...}: Este bloque define el estado final de la animación (100%). En este caso, se aplica una transformación que mueve el elemento 
+0.5rem hacia arriba desde su posición original.
+
+transform: translateY(.5rem);: Esta línea mueve el elemento 0.5rem hacia arriba en el eje Y.
+*/
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+/*
+@keyframes show-overflow: Esta línea define una nueva animación llamada show-overflow.
+
+0%{...}: Este bloque define el estado inicial de la animación. En este caso, se establecen las propiedades overflow y pointer-events del elemento.
+
+overflow: initial;: Esta línea restablece la propiedad overflow del elemento a su valor por defecto.
+
+pointer-events: none;: Esta línea hace que el elemento no reciba eventos del puntero del ratón, como clics.
+
+50%{...}: Este bloque define el estado de la animación en el punto medio (50%). En este caso, se establece la propiedad overflow del elemento a 
+hidden.
+
+overflow: hidden;: Esta línea establece la propiedad overflow del elemento a hidden, lo que significa que cualquier contenido que se desborde 
+del elemento será ocultado.
+*/
+@media screen and (min-width: 1160px) {
+    .container {
+      width: 100%;
+      max-width: 1200px; /* Cambié 100vh por un ancho máximo para que el contenido no sea demasiado amplio */
+      margin: 0 auto; /* Centrar el contenedor en la pantalla */
+    }
+    /*
+    .container: Esta clase selecciona todos los elementos HTML con la clase container.
+
+    width: 100%;: Establece el ancho del elemento al 100% del ancho de su contenedor.
+
+    max-width: 1200px;: Establece el ancho máximo del elemento a 1200px.
+
+    margin: 0 auto;: Centra el elemento horizontalmente en la pantalla.
+    */
+  
+    .card_container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px; /* Espacio entre las tarjetas */
+    }
+    /*
+    .card_container: Esta clase selecciona todos los elementos HTML con la clase card_container.
+
+    display: grid;: Establece el tipo de visualización del elemento a grid.
+
+    grid-template-columns: repeat(3, 1fr);: Define tres columnas de igual ancho para la cuadrícula.
+
+    gap: 30px;: Establece el espacio entre las celdas de la cuadrícula a 30px.
+    */
+    .card_img {
+        max-width: 100%; /* Ancho máximo igual al ancho del contenedor */
+        max-height: 100%; /* Altura máxima igual a la altura del contenedor */
+        object-fit: cover;
+    }
+  /*.card_img: Esta clase selecciona todos los elementos HTML con la clase card_img.
+
+    max-width: 100%;: Establece el ancho máximo del elemento al 100% del ancho de su contenedor.
+
+    max-height: 100%;: Establece la altura máxima del elemento al 100% de la altura de su contenedor.
+
+    object-fit: cover;: Indica que el contenido reemplazable debe ser redimensionado para mantener su relación de aspecto mientras se llena el 
+    elemento.
+    */
+    .card_data {
+      width: 100%; /* Ancho completo para adaptarse al contenedor */
+      max-width: 500px; /* Ancho máximo de los datos de la tarjeta */
+      margin: 0 auto; /* Centrar los datos de la tarjeta */
+      padding: 20px; /* Espacio interno de los datos de la tarjeta */
+    }
+    /*
+    .card_data: Esta clase selecciona todos los elementos HTML con la clase card_data.
+
+    width: 100%;: Establece el ancho del elemento al 100% del ancho de su contenedor.
+
+    max-width: 500px;: Establece el ancho máximo del elemento a 500px.
+
+    margin: 0 auto;: Centra el elemento horizontalmente en la pantalla.
+
+    padding: 20px;: Agrega un relleno de 20px alrededor del contenido del elemento.
+    */
+  }
+  /*
+  @media screen and (min-width: 1160px) {...}: Esta es una consulta de medios que aplica los estilos CSS dentro de las llaves solo cuando el
+  dispositivo tiene una pantalla y su ancho es de al menos 1160px.
+  */
+
+  /* Animacion hover de elementos Nav superior */
+
+.menu-item {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  /*
+  .menu-item: Este es un selector de clase que selecciona todos los elementos HTML con la clase menu-item.
+
+  position: relative;: Esta línea establece la posición del elemento a relative. Esto significa que el elemento se posicionará en relación 
+  con su posición normal. Otros elementos no se ajustarán para caber en ningún espacio dejado por el elemento.
+
+  transition: color 0.3s ease;: Esto agrega una transición al elemento. La propiedad color cambiará durante un período de 0.3s y la velocidad 
+  de la transición cambiará gradualmente a lo largo de la duración de la transición, lo que se conoce como ease.
+  */
+
+  .menu-item:before,
+  .menu-item:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #CBDD16;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  /*
+  .menu-item:before, .menu-item:after: Estos son selectores de pseudo-elementos que seleccionan los pseudo-elementos :before y :after de 
+  todos los elementos HTML con la clase menu-item.
+  
+  content: "";: Esta línea es necesaria para los pseudo-elementos :before y :after. En este caso, se establece a una cadena vacía, 
+  lo que significa que no se insertará contenido.
+
+  position: absolute;: Esta línea establece la posición del pseudo-elemento a absolute. Esto significa que el pseudo-elemento se posicionará 
+  en relación con el primer elemento padre posicionado (no estático).
+
+  width: 100%;: Esta línea establece el ancho del pseudo-elemento al 100% del ancho de su contenedor.
+
+  height: 2px;: Esta línea establece la altura del pseudo-elemento a 2px.
+
+  background-color: #CBDD16;: Esto establece el color de fondo del pseudo-elemento a #CBDD16, que es un color verde claro.
+
+  transform: scaleX(0);: Esta línea aplica una transformación que escala el pseudo-elemento a lo largo del eje X a 0, lo que significa que 
+  el pseudo-elemento se reducirá a un ancho de 0.
+
+  transition: transform 0.3s ease;: Esto agrega una transición al pseudo-elemento. La propiedad transform cambiará durante un período de 
+  0.3s y la velocidad de la transición cambiará gradualmente a lo largo de la duración de la transición, lo que se conoce como ease.
+*/
+  .menu-item:before {
+    top: 0;
+    left: 0;
+    transform-origin: left;
+  }
+  /*
+  .menu-item:before: Este es un selector de pseudo-elemento que selecciona el pseudo-elemento :before de todos los elementos HTML con la 
+  clase menu-item.
+  top: 0;: Esta línea posiciona el borde superior del pseudo-elemento en el borde superior de su contenedor.
+
+  left: 0;: Esta línea posiciona el borde izquierdo del pseudo-elemento en el borde izquierdo de su contenedor.
+
+  transform-origin: left;: Esta línea establece el origen de la transformación del pseudo-elemento en el lado izquierdo. Esto significa que 
+  cualquier transformación se aplicará en relación con el lado izquierdo del pseudo-elemento.
+  */
+
+  .menu-item:after {
+    bottom: 0;
+    right: 0;
+    transform-origin: right;
+  }/*
+  .menu-item:after: Este es un selector de pseudo-elemento que selecciona el pseudo-elemento :after de todos los elementos HTML con la clase 
+  menu-item.
+  
+  bottom: 0;: Esta línea posiciona el borde inferior del pseudo-elemento en el borde inferior de su contenedor.
+  
+  right: 0;: Esta línea posiciona el borde derecho del pseudo-elemento en el borde derecho de su contenedor.
+  
+  transform-origin: right;: Esta línea establece el origen de la transformación del pseudo-elemento en el lado derecho. Esto significa que 
+  cualquier transformación se aplicará en relación con el lado derecho del pseudo-elemento.
+  */
+
+  .menu-item:hover:before,
+  .menu-item:hover:after {
+    transform: scaleX(1);
+  }
+  /*
+  .menu-item:hover:before, .menu-item:hover:after: Estos son selectores de pseudo-elementos con un pseudo-clase :hover que seleccionan los 
+  pseudo-elementos :before y :after de todos los elementos HTML con la clase menu-item cuando se pasa el cursor sobre ellos.
+  
+  transform: scaleX(1);: Esta línea aplica una transformación que escala el pseudo-elemento a lo largo del eje X a 1, lo que significa que 
+  el pseudo-elemento se expandirá a su ancho original.
+  */
+
+  .menu-item:hover {
+    color: #CBDD16;
+  }
+  /*
+  .menu-item:hover: Este es un selector de clase con un pseudo-clase :hover que selecciona todos los elementos HTML con la clase 
+  menu-item cuando se pasa el cursor sobre ellos.
+
+  color: #CBDD16;: Esta línea cambia el color del texto del elemento a #CBDD16, que es un color verde claro, cuando se pasa el cursor 
+  sobre él.
+  */
+.menu{
+    font-size: 20px;
+    font-weight: bold;
+}
+/*
+.menu: Este es un selector de clase que selecciona todos los elementos HTML con la clase menu.
+
+font-size: 20px;: Esta línea establece el tamaño de la fuente del texto dentro del elemento a 20px.
+
+font-weight: bold;: Esto establece el grosor de la fuente del texto dentro del elemento a bold, lo que significa que el texto será en negrita.
+*/
+
+/* Estilos del pie de página */
+footer {
+    background-color: #013117;
+    color: #ffffff;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    clear: both;
+}
+/*
+footer: Este es un selector que selecciona todos los elementos HTML footer.
+
+background-color: #013117;: Esta línea establece el color de fondo del elemento a #013117, que es un color verde oscuro.
+
+color: #ffffff;: Esto establece el color del texto dentro del elemento a #ffffff, que es blanco.
+
+justify-content: space-between;: Esta propiedad se usa con elementos de visualización flexibles y aquí se establece en space-between, 
+lo que significa que los elementos hijos del footer se distribuirán de manera uniforme en la línea con un espacio entre ellos.
+
+text-align: center;: Esto alinea el texto al centro del elemento.
+
+padding: 20px 0;: Esto agrega un relleno de 20px en la parte superior e inferior del contenido del elemento y 0 en los lados izquierdo y derecho.
+
+width: 100%;: Esta línea establece el ancho del elemento al 100% del ancho de su contenedor.
+
+clear: both;: Esta propiedad se utiliza para controlar el flujo de elementos flotantes. Aquí se establece en both, lo que significa que no se 
+permiten elementos flotantes a la izquierda ni a la derecha del footer.
+*/
+.item-imagenes {
+    display: inline-block;
+    margin-top: auto;
+    object-fit: cover;
+    margin-right: 4%;
+    margin-bottom: 2%;
+    
+}
+/*
+.item-imagenes: Este es un selector de clase que selecciona todos los elementos HTML con la clase item-imagenes.
+
+display: inline-block;: Esta línea establece el tipo de visualización del elemento a inline-block, lo que significa que el elemento se comportará 
+como un elemento en línea, pero permitirá la configuración de propiedades de bloque como el ancho y la altura.
+
+margin-top: auto;: Esto establece el margen superior del elemento a auto, lo que significa que el navegador calculará el margen.
+
+object-fit: cover;: Esta propiedad se aplica a contenido reemplazable, como imágenes o videos. El valor cover significa que el contenido reemplazable 
+se redimensionará para mantener su relación de aspecto mientras llena el elemento por completo.
+
+margin-right: 4%;: Esto establece el margen derecho del elemento al 4% del ancho del contenedor.
+
+margin-bottom: 2%;: Esto establece el margen inferior del elemento al 2% del ancho del contenedor.
+*/
+[id="terca"].item-imagenes {
+    width: 20%;
+    height: 10%;
+}
+/*
+#terca .item-imagenes: Este es un selector de CSS que selecciona todos los elementos con la clase .item-imagenes que están dentro 
+de un elemento con el id #terca.
+
+width: 20%;: Esta propiedad establece el ancho del elemento seleccionado al 20% del ancho de su elemento contenedor.
+
+height: 10%;: Esta propiedad establece la altura del elemento seleccionado al 10% de la altura de su elemento contenedor.
+*/
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+  }/*
+  ul: Este es un selector que selecciona todos los elementos HTML ul.
+
+  display: flex;: Esta línea establece el tipo de visualización del elemento a flex, permitiendo la alineación y distribución flexibles de los elementos hijos.
+  
+  list-style: none;: Esto elimina el estilo de lista (como viñetas o números) de los elementos de la lista.
+  
+  gap: 2.5rem;: Esto establece el espacio entre los elementos de la lista a 2.5rem.
+  
+  align-items: center; y justify-content: center;: Estas líneas centran los elementos hijos del ul tanto horizontal como verticalmente.
+  
+  padding-bottom: 15px;: Esto agrega un relleno de 15px en la parte inferior del contenido del elemento.*/
+  
+  .item a {
+    text-decoration: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: hsl(203, 92%, 97%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border: 3px solid hsl(203, 92%, 97%);
+    overflow: hidden;
+  }
+  /*
+  .item a: Este es un selector que selecciona todos los enlaces (a) dentro de los elementos HTML con la clase item.
+  
+  text-decoration: none;: Esta línea elimina cualquier decoración de texto (como subrayado) de los enlaces.
+  
+  width: 3rem; y height: 3rem;: Estas líneas establecen el ancho y la altura del enlace a 3rem.
+  
+  background-color: hsl(203, 92%, 97%);: Esto establece el color de fondo del enlace a un color claro (según la notación HSL).
+  
+  border-radius: 50%;: Esto redondea las esquinas del enlace, dándole una forma circular.
+  
+  display: flex;: Esto establece el tipo de visualización del enlace a flex, permitiendo la alineación y distribución flexibles de los elementos hijos.
+  
+  justify-content: center; y align-items: center;: Estas líneas centran los elementos hijos del enlace tanto horizontal como verticalmente.
+  
+  position: relative;: Esto establece la posición del enlace a relative, lo que significa que se posicionará en relación con su posición normal.
+  
+  z-index: 1;: Esto establece el nivel de apilamiento del enlace a 1. Los elementos con un z-index más alto se apilan encima de los elementos con un z-index más bajo.
+  
+  border: 3px solid hsl(203, 92%, 97%);: Esto agrega un borde sólido de 3px alrededor del enlace con el mismo color que el fondo.
+  
+  overflow: hidden;: Esto oculta cualquier contenido del enlace que se desborde de su caja de contenido.
+  */
+  
+  .item a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 0;
+    scale: 1 0;
+    transform-origin: bottom;
+    transition: scale 0.5s ease;
+  }
+  /*
+  .item a::before: Este es un selector de pseudo-elemento que selecciona el pseudo-elemento ::before de todos los elementos <a>
+   dentro de los elementos con la clase .item. El pseudo-elemento ::before se usa para insertar contenido antes del contenido del 
+   elemento seleccionado.
+  
+  content: "";: Esta propiedad se usa con los pseudo-elementos ::before y ::after, y es obligatoria para que estos pseudo-elementos 
+  se muestren. En este caso, se establece en una cadena vacía, lo que significa que no se insertará ningún contenido.
+  
+  position: absolute;: Esta propiedad establece el tipo de posicionamiento del elemento a absoluto. Un elemento posicionado de manera 
+  absoluta se posiciona en relación con el ancestro posicionado más cercano.
+  
+  width: 100%; height: 100%;: Estas propiedades establecen el ancho y la altura del pseudo-elemento en el 100% del ancho y la altura 
+  de su elemento padre.
+  
+  background: var(--bg-color);: Esta propiedad establece el color de fondo del pseudo-elemento en el valor de la variable CSS --bg-color.
+  
+  z-index: 0;: Esta propiedad establece el nivel de apilamiento del pseudo-elemento. Un z-index más alto significa que el elemento se 
+  apilará encima de los elementos con un z-index más bajo.
+  
+  scale: 1 0;: Esta es una función de transformación que cambia el tamaño del elemento a lo largo del eje X y el eje Y. En este caso, 
+  no cambia el tamaño a lo largo del eje X (1) y reduce el tamaño a 0 a lo largo del eje Y.
+  
+  transform-origin: bottom;: Esta propiedad establece el punto de origen para las transformaciones del pseudo-elemento. En este caso, 
+  se establece en bottom, lo que significa que las transformaciones se originarán desde la parte inferior del pseudo-elemento.
+  
+  transition: scale 0.5s ease;: Esta propiedad es una forma abreviada para establecer varias propiedades de transición a la vez. 
+  En este caso, se aplica una transición a la propiedad scale durante un período de 0.5s y la velocidad de la transición se establece 
+  en ease, lo que significa que la transición comienza lentamente, luego se acelera y finalmente termina lentamente.
+  */
+  .item:hover a::before {
+    scale: 1 1;
+  }
+  /*
+  .item:hover a::before: Este es un selector de pseudo-elemento que selecciona el pseudo-elemento ::before de todos los elementos 
+  <a> dentro de los elementos con la clase .item cuando se pasa el mouse sobre ellos.
+  
+  scale: 1 1;: Esta es una función de transformación que cambia el tamaño del elemento a lo largo del eje X y el eje Y. En este caso,
+  no cambia el tamaño a lo largo del eje X (1) y a lo largo del eje Y (1).
+  */
+  
+  .icon {
+    font-size: 2rem;
+    color: hsl(203, 92%, 8%);
+    transition: 0.5s ease;
+    z-index: 2;
+  }
+  /*
+  .icon: Este es un selector de clase que selecciona todos los elementos con la clase .icon.
+  
+  font-size: 2rem;: Esta propiedad establece el tamaño de la fuente del texto dentro de los elementos seleccionados a 2rem. 
+  rem es una unidad de medida en CSS que representa el tamaño de la fuente del elemento raíz del documento. Por lo tanto, 2rem 
+  sería el doble del tamaño de la fuente del elemento raíz.
+  
+  color: hsl(203, 92%, 8%);: Esta propiedad establece el color del texto dentro de los elementos seleccionados. El color se 
+  especifica utilizando el modelo de color HSL (Hue, Saturation, Lightness), donde 203 es el tono (un grado en el círculo de color), 
+  92% es la saturación (la intensidad del color) y 8% es la luminosidad (qué tan claro u oscuro es el color).
+  
+  transition: 0.5s ease;: Esta propiedad es una forma abreviada para establecer varias propiedades de transición a la vez. En este caso, 
+  se aplica una transición a todas las propiedades modificables durante un período de 0.5s y la velocidad de la transición se establece 
+  en ease, lo que significa que la transición comienza lentamente, luego se acelera y finalmente termina lentamente.
+  
+  z-index: 2;: Esta propiedad establece el nivel de apilamiento del elemento. Un z-index más alto significa que el elemento se apilará 
+  encima de los elementos con un z-index más bajo. En este caso, se establece en 2, por lo que el elemento se apilará encima de cualquier 
+  elemento con un z-index de 1 o 0.
+  */
+  
+  .item a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }/*
+  .item a:hover .icon: Este es un selector de CSS que selecciona todos los elementos con la clase .icon que están dentro de los elementos 
+  <a> cuando se pasa el mouse sobre ellos y están dentro de los elementos con la clase .item.
+  
+  color: #fff;: Esta propiedad establece el color del texto dentro de los elementos seleccionados. El color se especifica utilizando el 
+  modelo de color hexadecimal, donde #fff es blanco.
+  
+  transform: rotateY(360deg);: Esta es una función de transformación que rota el elemento alrededor del eje Y. En este caso, rota el 
+  elemento 360 grados alrededor del eje Y.
+  */
+  
+  .item:nth-child(1) {
+    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
+  }
+  /*
+  .item:nth-child(1): Este es un selector de CSS que selecciona el primer elemento hijo que tiene la clase .item.
+  
+  --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);: Esta es una declaración de propiedad CSS que define una 
+  variable --bg-color. El valor de esta variable es un gradiente lineal que va de la esquina inferior derecha a la esquina superior izquierda. 
+  El gradiente comienza con el color #f9ce34 (un tono de amarillo), cambia al color #ee2a7b (un tono de rosa) y termina con el color #6228d7 (un tono de azul).
+  */
+  .item:nth-child(2) {
+    --bg-color: #0077b5;
+  }
+  /*
+  .item:nth-child(2): Este es un selector de CSS que selecciona el primer elemento hijo que tiene la clase .item.
+
+  --bg-color: #0077b5;: Esta es una declaración de propiedad CSS que define una variable --bg-color. El valor de esta variable es 
+  #0077b5, que es un tono de azul.
+  */
+  .item:nth-child(3) {
+    --bg-color: #ff0000;
+  }
+  /*
+  .item:nth-child(3): Este es un selector de CSS que selecciona el primer elemento hijo que tiene la clase .item.
+
+  --bg-color: #ff0000;: Esta es una declaración de propiedad CSS que define una variable --bg-color. El valor de esta variable es 
+  #ff0000, que es rojo.
+  */
+  .item:nth-child(4) {
+    --bg-color: #000;
+  }
+  /*
+  .item:nth-child(4): Este es un selector de CSS que selecciona el primer elemento hijo que tiene la clase .item.
+
+  --bg-color: #000;: Esta es una declaración de propiedad CSS que define una variable --bg-color. El valor de esta variable es 
+  #000, que es negro.
+  */
+/*Hover para el copyright del footer*/
+.copyright {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.p {
+    font-size: 16px;
+    margin: 3px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: #fff;
+}
+.p:hover {
+    transform: translateY(-50px);
+    text-shadow: 0px 40px 200px #fff;
+}
+ 
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(0, 100, 0, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+
+@media(max-width:800px){
+    .hideMobile{
+        display: none;
+    }
+    
+    #img_logo {
+        width: 130px;
+        height: 65px;
+        margin-left: 20%;
+    }
+}

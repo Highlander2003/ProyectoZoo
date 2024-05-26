@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!-- 
+    <!DOCTYPE>: Esta es una declaración de tipo de documento (DTD). Le dice al navegador qué versión de HTML el documento está utilizando. Esto es importante porque HTML ha cambiado mucho a lo largo de los años y los navegadores necesitan saber qué versión del lenguaje estás usando.
+    
+    html: Este es el identificador del tipo de documento. En este caso, indica que el documento es un documento HTML5.
+-->
+<html lang="es">
+<!--
+    <html>: Esta es la etiqueta raíz de una página HTML. Todo el contenido de la página web se encuentra dentro de esta etiqueta.
+    
+    lang="es": Este es un atributo de la etiqueta HTML que define el idioma principal del contenido. En este caso, es indica que el contenido está principalmente en español. Este atributo es importante para la accesibilidad, ya que ayuda a los lectores de pantalla a pronunciar correctamente el contenido, y también puede ayudar a los motores de búsqueda a entender el contenido de la página.
+ -->
+<head>
+<!--
+    <head>: Esta etiqueta contiene información sobre el documento HTML que no se muestra en la ventana del navegador. Esta información puede incluir el título de la página (que se muestra en la barra de título del navegador), enlaces a archivos CSS y JS, metadatos como la descripción de la página y las palabras clave para los motores de búsqueda, entre otros.
+-->
+    <meta charset="UTF-8">
+    <!-- 
+        <meta>: Esta es una etiqueta que se utiliza para proporcionar metadatos sobre el documento HTML. Los metadatos no se muestran en la página, pero son máquina legibles. Los motores de búsqueda o los navegadores.
+        
+        charset="UTF-8": Este es un atributo que define la codificación de caracteres para la página web. UTF-8 es una codificación de caracteres Unicode que incluye casi todos los caracteres de todos los sistemas de escritura humanos. Es la codificación de caracteres más comúnmente utilizada en la web hoy en día.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        <meta>: Esta es una etiqueta que se utiliza para proporcionar metadatos sobre el documento HTML. Los metadatos no se muestran en la página, pero son máquina legibles. Los motores de búsqueda o los navegadores.
+        
+        name="viewport": Este es un atributo que define instrucciones para el control de vista del navegador. El control de vista es el área visible del navegador.
+        
+        content="width=device-width, initial-scale=1.0": Este es un atributo que establece las propiedades del control de vista. width=device-width hace que el ancho de la página siga el ancho de la pantalla del dispositivo (que variará dependiendo del dispositivo). 
+        
+        initial-scale=1.0 establece el nivel inicial de zoom cuando la página se carga por primera vez por el navegador.
+    -->
+    <title>Zoológico de Cali</title>
+    <!--
+        <title>: Esta es una etiqueta que se utiliza para especificar el título del documento. El título es el texto que se muestra en la barra de título del navegador y en los resultados de búsqueda.
+     -->
+    <link rel=" shortcut icon" type="image/png" href="../../Imagenes/Paw.png" sizes="32x32">
+    <!-- 
+        <link>: Esta es una etiqueta que se utiliza para vincular recursos externos al documento HTML. En este caso, se utiliza para vincular un favicon a la página web.
+        
+        rel="shortcut icon": Este es un atributo que define la relación entre el documento HTML y el recurso externo. En este caso, shortcut icon indica que el recurso vinculado es un favicon.
+        
+        type="image/png": Este es un atributo que define el tipo de medio del recurso vinculado. En este caso, image/png indica que el favicon es una imagen PNG.
+        
+        href="../../Imagenes/zooLogo.png": Este es un atributo que proporciona la ubicación del recurso vinculado. En este caso, ../../Imagenes/zooLogo.png es la ruta al archivo de imagen del favicon.
+        
+        sizes="32x32": Este es un atributo que define el tamaño del favicon. En este caso, 32x32 indica que el favicon tiene un tamaño de 32x32 píxeles.
+    -->
+    <link rel="stylesheet" href="../../CSS/Style.css">
+    <!-- 
+        rel="stylesheet": Este es un atributo que define la relación entre el documento HTML y el recurso externo. En este caso, stylesheet indica que el recurso vinculado es una hoja de estilos.
+        
+        href="CSS/Estilos.css": Este es un atributo que proporciona la ubicación del recurso vinculado. En este caso, CSS/Estilos.css es la ruta al archivo de la hoja de estilos CSS.
+    -->
+    <link rel="stylesheet" href="../../CSS/CarruselStyle.css">
+    <!-- 
+        rel="stylesheet": Este es un atributo que define la relación entre el documento HTML y el recurso externo. En este caso, stylesheet indica que el recurso vinculado es una hoja de estilos.
+        
+        href="CSS/CrrucelStyle.css": Este es un atributo que proporciona la ubicación del recurso vinculado. En este caso, CSS/CrrucelStyle.css es la ruta al archivo de la hoja de estilos CSS.
+    -->
+    <link rel="stylesheet" href="../../CSS/MapStyle.css">
+    <!-- 
+        rel="stylesheet": Este es un atributo que define la relación entre el documento HTML y el recurso externo. En este caso, stylesheet indica que el recurso vinculado es una hoja de estilos.
+        
+        href="CSS/MapStyle.css": Este es un atributo que proporciona la ubicación del recurso vinculado. En este caso, CSS/MapStyle.css es la ruta al archivo de la hoja de estilos CSS.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- 
+        <link>: Esta es una etiqueta que se utiliza para vincular recursos externos al documento HTML. En este caso, se utiliza para vincular una hoja de estilos CSS a la página web.
+        
+        rel="stylesheet": Este es un atributo que define la relación entre el documento HTML y el recurso externo. En este caso, stylesheet indica que el recurso vinculado es una hoja de estilos.
+        
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css": Este es un atributo que proporciona la ubicación del recurso vinculado. En este caso, la URL es la ruta al archivo de la hoja de estilos CSS.
+    -->
+    <script src="../../JavaScript/main.js"></script>
+</head>
+<body>
+<!-- 
+    <body>: Esta es la etiqueta que contiene todo el contenido principal de la página web que se muestra en el navegador. Esto puede incluir texto, imágenes, videos, formularios, enlaces y más.
+-->
+
+    <header>
+    <!-- 
+        <header>: Esta es una etiqueta que se utiliza para contener contenido de encabezado. El contenido de encabezado generalmente contiene elementos de título (<h1> a <h6>), pero también puede contener otros elementos como un logotipo, un menú de navegación, un formulario de búsqueda, y más.
+    -->
+        <a href="Index.html">
+            <img id="img_logo" src="../../../../Imagenes/zooLogo.png" ;> </img>
+        </a>
+        <!--
+            <a href="Index.html">: Esta es una etiqueta de anclaje que se utiliza para crear un enlace a otra página web. El atributo href especifica la URL de la página a la que se enlaza. En este caso, Index.html es la página a la que se enlaza.
+            
+            <img id="img_logo" src="../../Imagenes/zooLogo.png" ;>: Esta es una etiqueta de imagen que se utiliza para insertar una imagen en la página web. El atributo src especifica la ubicación de la imagen. En este caso, ../../Imagenes/zooLogo.png es la ruta al archivo de imagen. El atributo id se utiliza para asignar un identificador único a la imagen, que puede ser útil para referenciar la imagen en CSS o JavaScript.
+            
+            </img>: Esta es la etiqueta de cierre para la etiqueta de imagen. Sin embargo, en HTML5, la etiqueta <img> es una etiqueta vacía, lo que significa que no requiere una etiqueta de cierre. Por lo tanto, </img> no es necesario y puede ser omitido.
+            
+            </a>: Esta es la etiqueta de cierre para la etiqueta de anclaje. Todo lo que se coloca entre la etiqueta de apertura <a> y la etiqueta de cierre </a> se convierte en el contenido del enlace.
+        -->
+        <h1 class="hideMobile">¡Pasion por la Vida!</h1>
+        <!-- 
+            <h1>: Esta es una etiqueta de encabezado que se utiliza para definir el encabezado más importante o de nivel superior en la página web. Los encabezados son importantes para la estructura del contenido y ayudan a los motores de búsqueda a entender de qué trata la página.
+        -->
+        <div class="barra">
+        <!-- 
+            <div>: Esta es una etiqueta que se utiliza para agrupar otros elementos y contenido en un bloque. Las etiquetas <div> son contenedores de bloque que se utilizan para organizar y dar estilo a secciones de la página web.
+            
+            class="barra": Este es un atributo que asigna una clase a la etiqueta <div>. Las clases se utilizan en CSS y JavaScript para seleccionar y acceder a elementos específicos. La clase “barra” probablemente se refiere a un conjunto de estilos definidos en una hoja de estilos CSS.
+        -->
+            <nav>
+            <!-- 
+              <nav>: Esta es una etiqueta que se utiliza para contener una sección de navegación en la página web. Las secciones de navegación suelen contener enlaces a otras páginas o a diferentes partes de la misma página. Es una etiqueta semántica en HTML5, lo que significa que indica el tipo de contenido que contiene. 
+            -->
+                <input type="checkbox" name="" id="toggle">
+                <!-- 
+                    <input>: Esta es una etiqueta que se utiliza para crear un elemento de entrada en un formulario HTML. Los elementos de entrada se utilizan para recoger la entrada del usuario.
+                    
+                    type="checkbox": Este es un atributo que define el tipo de elemento de entrada. En este caso, checkbox indica que el elemento de entrada es una casilla de verificación. Las casillas de verificación permiten al usuario seleccionar una o más opciones de un conjunto de opciones.
+                    
+                    name="": Este es un atributo que se utiliza para dar un nombre al elemento de entrada. El nombre se utiliza para identificar el elemento de entrada en el código del lado del servidor o en JavaScript. En este caso, el atributo name está vacío, lo que significa que este elemento de entrada no tiene un nombre.
+                    
+                    id="toggle": Este es un atributo que se utiliza para asignar un identificador único al elemento de entrada. Los identificadores son útiles para referenciar elementos específicos en CSS y JavaScript. En este caso, toggle es el identificador del elemento de entrada.
+                -->
+                <label for="toggle"> <i class="materia-icons hideMobile">Menu</i></label>
+                <!-- 
+                    <label for="toggle">: Esta es una etiqueta que se utiliza para definir una etiqueta para un elemento de entrada en un formulario HTML. El atributo for especifica a qué elemento de entrada está asociada la etiqueta. En este caso, toggle es el identificador del elemento de entrada al que está asociada esta etiqueta.
+                    
+                    <i class="materia-icons">Menu</i>: Esta es una etiqueta que se utiliza para definir un icono. La etiqueta <i> se utiliza a menudo para especificar un estilo de texto itálico, pero en este caso se utiliza para insertar un icono de la biblioteca de iconos Material Icons. El atributo class especifica la clase del icono, y el texto Menu dentro de la etiqueta especifica qué icono de la biblioteca se debe mostrar.
+                    
+                    </label>: Esta es la etiqueta de cierre para la etiqueta <label>.
+                -->
+                <div class="menu">
+                <!-- 
+                    <div>: Esta es una etiqueta que se utiliza para agrupar otros elementos y contenido en un bloque. Las etiquetas <div> son contenedores de bloque que se utilizan para organizar y dar estilo a secciones de la página web.
+                    
+                    class="menu": Este es un atributo que asigna una clase a la etiqueta <div>. Las clases se utilizan en CSS y JavaScript para seleccionar y acceder a elementos específicos. La clase “menu” probablemente se refiere a un conjunto de estilos definidos en una hoja de estilos CSS.
+                -->
+                    <ul>
+                    <!-- 
+                        <ul>: Esta es una etiqueta que se utiliza para crear una lista desordenada. Las listas desordenadas son listas en las que el orden de los elementos no importa, y cada elemento de la lista se marca típicamente con una viñeta.
+                    -->
+                        <li class="menu-item">
+                            <a href="../../HTML/Menu/Index.html"> Inicio </a></li>
+                        <li class="menu-item dropdown">
+                        <!--
+                            <li class="menu-item">: Esta es una etiqueta que se utiliza para definir un elemento de una lista. La etiqueta <li> se utiliza dentro de las etiquetas de lista <ul> (lista desordenada) o <ol> (lista ordenada). El atributo class asigna una clase al elemento de la lista, que puede ser utilizada para dar estilo al elemento con CSS.
+                            
+                            <a href="Index.html"> Inicio </a>: Esta es una etiqueta de anclaje que se utiliza para crear un enlace a otra página web. El atributo href especifica la URL de la página a la que se enlaza. En este caso, Index.html es la página a la que se enlaza. El texto Inicio dentro de la etiqueta de anclaje es el texto que se mostrará para el enlace en la página web.
+                            
+                            <li class="menu-item dropdown">: Esta es otra etiqueta <li> con dos clases asignadas, menu-item y dropdown. La clase dropdown probablemente se utiliza para indicar que este elemento de la lista contiene un menú desplegable.
+                        -->
+                            <a href=""> Animales </a>
+                            <!-- 
+                                <a>: Esta es una etiqueta de anclaje que se utiliza para crear un enlace a otra página web.
+                                
+                                href="": Este es un atributo que especifica la URL de la página a la que se enlaza. En este caso, el atributo href está vacío, lo que significa que este enlace no lleva a ninguna página.
+                            -->
+                            <ul class="dropdown-content">
+                                <div>
+                                    <li><img src="../../Imagenes/cocodrilo.png" id="iconoMenu"><a href="Reptiles.html">Reptiles</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/Anfibios.png" id="iconoMenu"><a href="Anfibios.html">Anfibios</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/Mamiferos.png" id="iconoMenu"><a href="Mamiferos.html">Mamíferos</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/aves.png" id="iconoMenu"><a href="Aves.html">Aves</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/pescado.png" id="iconoMenu"><a href="Peces.html">Peces</a></li>
+                                </div>
+                            </ul>
+                            <!-- 
+                                <ul class="dropdown-content">: Esta es una etiqueta que se utiliza para crear una lista desordenada. La clase “dropdown-content” se refiere a un conjunto de estilos definidos en una hoja de estilos CSS que se aplican a esta lista.
+                            
+                                <div>: Esta es una etiqueta que se utiliza para agrupar otros elementos y contenido en un bloque. En este caso, se utiliza para agrupar cada elemento de la lista individualmente.
+                                
+                                <li><img src="../../Imagenes/cocodrilo.png" id="iconoMenu"><a href=" ****.html ">...</a></li>: Este es un elemento de lista que contiene una imagen y un enlace. La imagen se especifica con la etiqueta <img> y el enlace con la etiqueta <a>. El atributo src de la etiqueta <img> especifica la ubicación de la imagen, y el atributo href de la etiqueta <a> especifica la URL de la página a la que se enlaza.
+                            -->
+                        <li class="menu-item"><a href="Visita.html">Visitanos</a></li>
+                        <li class="menu-item"><a href="./../Formularios/FormAnimal.html">Formulario</a></li>
+                        <li class="menu-item"><a href="Noticias.html">Noticias</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <nav>
+            <ul class="sidebar">
+                <li><a onClick="hideSidebar()"><img src="../../Imagenes/CloseSide.svg"></a></li>
+                <li><a href="../../HTML/Menu/Reptiles.html">Reptiles</a></li>
+                <li><a href="../../HTML/Menu/Anfibios.html">Anfibios</a></li>
+                <li><a href="../../HTML/Menu/Mamiferos.html">Mamíferos</a></li>
+                <li><a href="../../HTML/Menu/Aves.html">Aves</a></li>
+                <li><a href="../../HTML/Menu/Peces.html">Peces</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+    <!-- 
+        <main>: Esta es una etiqueta que se utiliza para especificar el contenido principal o único de un documento. El contenido dentro de la etiqueta <main> debe ser único al documento, excluyendo contenido que se repite a través de un conjunto de documentos como encabezados del sitio o navegación del sitio.
+        
+        class="main": Este es un atributo que asigna una clase a la etiqueta <main>. Las clases se utilizan en CSS y JavaScript para seleccionar y acceder a elementos específicos. La clase “main” probablemente se refiere a un conjunto de estilos definidos en una hoja de estilos CSS.
+    -->
+        <div class="carousel hideMobile">
+            <div class="slide"><img src="../../Imagenes/Azulejo.png" alt=" "></div>
+            <div class="slide"><img src="../../Imagenes/Tigres.png" alt=" "></div>
+            <div class="slide"><img src="../../Imagenes/Hipopotamo.png" alt=" "></div>
+        </div>
+        <!-- 
+            <div class="carousel">: Esta es una etiqueta <div> con la clase “carousel”. Las clases se utilizan en CSS y JavaScript para seleccionar y acceder a elementos específicos. La clase “carousel”  se refiere a un conjunto de estilos y/o funcionalidades definidos en una hoja de estilos CSS.
+            
+            <div class="slide"><img src="../../Imagenes/Azulejo.png" alt=" "></div>: Este es un elemento de lista en el carrusel que contiene una imagen. La etiqueta <div> con la clase “slide” probablemente se utiliza para aplicar estilos y/o funcionalidades a cada elemento del carrusel. La etiqueta <img> se utiliza para insertar una imagen en la página web. El atributo src especifica la ubicación de la imagen, y el atributo alt proporciona un texto alternativo para la imagen que se muestra si la imagen no puede ser cargada.
+        -->
+        <section class="context">
+        <!-- 
+            <section>: Esta es una etiqueta que se utiliza para definir una sección en un documento HTML. Las secciones son bloques de contenido que están relacionados temáticamente y deben ser identificados por encabezados.
+            
+            class="context": Este es un atributo que asigna una clase a la etiqueta <section>. Las clases se utilizan en CSS y JavaScript para seleccionar y acceder a elementos específicos. La clase “context” probablemente se refiere a un conjunto de estilos definidos en una hoja de estilos CSS.
+        -->
+            <div class="context__img hideMobile">
+                <img src="../../Imagenes/Entrada.jpg" alt="bar">
+            </div>
+            <div class="context__text">
+                <h4> Historia </h4>
+                <!-- 
+                    <h4>: Esta es una etiqueta de encabezado que se utiliza para definir un encabezado de nivel 4 en la página web. Los encabezados son importantes para la estructura del contenido y ayudan a los motores de búsqueda a entender de qué trata la página.
+                -->
+                <p>La historia del Zoológico de Cali, ha sido escrita con el esfuerzo de personas extraordinarias   que han dejado lo mejor de sí en su paso por la organización. Desde hace más de 40 años la Fundación Zoológica de Cali (FZC) asumió el reto de hacer de este  sueño llamado Zoológico de Cali  una organización reconocida a nivel internacional, por ser líder en el fomento del patrimonio natural y cultural de nuestro país.</p>
+                <br>
+                <p>Nuestra historia nos enseñó que el liderazgo implica responsabilidad, y que las instituciones líderes no son las más grandes, sino aquellas que son coherentes con sus principios y consecuentes con su misión.</p>
+                <!-- 
+                    <p>: Esta es una etiqueta que se utiliza para crear un párrafo. Los párrafos son bloques de texto y la etiqueta <p> se utiliza para agruparlos.
+                    
+                    <br>: Esta es una etiqueta que se utiliza para insertar un salto de línea. En HTML, los saltos de línea no son reconocidos automáticamente y deben ser insertados con la etiqueta <br>.
+                -->
+            </div>
+        </section>
+
+        <div class="divfrase">
+            <div class="frase">
+                <h3>"Sumérgete en un <span id="fuente">mundo salvaje de maravillas </span>donde la naturaleza cobra vida y los 
+                    encuentros con animales te dejarán sin aliento. ¡Descubre la magia del <span id="fuente">Zoológico 
+                    de Cali, </span> donde cada visita es una aventura inolvidable!"
+                </h3>
+            </div>
+        </div>
+
+        <section class="contact">
+            <div class="contact__text">
+                <h2> Planea tu visita </h2>
+                <p>"¡Únete a nosotros en un emocionante recorrido por el Zoológico de Cali! Explora la diversidad de la vida salvaje, desde la selva tropical hasta el hábitat marino. Descubre animales fascinantes y conecta con la naturaleza en una experiencia inolvidable."</p>
+                <ul>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <b>(032) 892 7474</b>
+                    </li>
+                    <!-- 
+                        <li>: Esta es una etiqueta que se utiliza para definir un elemento de una lista. Los elementos de la lista se utilizan dentro de las etiquetas de lista <ul> (lista desordenada) o <ol> (lista ordenada).
+                        
+                        <i class="fas fa-phone"></i>: Esta es una etiqueta que se utiliza para definir un icono. La etiqueta <i> se utiliza a menudo para especificar un estilo de texto itálico, pero en este caso se utiliza para insertar un icono de la biblioteca de iconos Font Awesome. El atributo class especifica la clase del icono, y en este caso, fas fa-phone indica que el icono es un icono de teléfono.
+                        
+                        <b>(032) 892 7474</b>: Esta es una etiqueta que se utiliza para definir texto en negrita.
+                    -->          
+                    <li>
+                        <i class="fas fa-home"></i>
+                        <b>Carrera 2 Oeste Calle 14 esquina</b>
+                        <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Santa Teresita.</b>
+                    </li>
+                    <!-- 
+                        <li>: Esta es una etiqueta que se utiliza para definir un elemento de una lista. Los elementos de la lista se utilizan dentro de las etiquetas de lista <ul> (lista desordenada) o <ol> (lista ordenada).
+                        
+                        <i class="fas fa-home"></i>: Esta es una etiqueta que se utiliza para definir un icono. La etiqueta <i> se utiliza a menudo para especificar un estilo de texto itálico, pero en este caso se utiliza para insertar un icono de la biblioteca de iconos Font Awesome. El atributo class especifica la clase del icono, y en este caso, fas fa-home indica que el icono es un icono de casa.
+                    -->
+                    <li>
+                        <i class="fas fa-envelopes-bulk"></i>
+                        <b>zoologicocali@fzc.com.co</b>
+                        <br>
+                        <small>&nbsp;Julián Garay SAS.</small>
+                    </li>
+                    <!-- 
+                        <li>: Esta es la etiqueta de elemento de lista. Se utiliza para definir un elemento de una lista, que puede ser una lista ordenada (<ol>) o una lista desordenada (<ul>).
+                        
+                        <i>: Esta es la etiqueta de cursiva. Se utiliza para definir un texto en cursiva. Sin embargo, en este caso, se utiliza junto con la clase “fas fa-envelopes-bulk” para mostrar un icono de Font Awesome.
+                        
+                        class="fas fa-envelopes-bulk": Este es un atributo de clase. Se utiliza para asignar una clase al elemento HTML para su uso con CSS o JavaScript. En este caso, “fas fa-envelopes-bulk” es una clase de Font Awesome que muestra un icono de sobres.
+                            
+                        <b>: Esta es la etiqueta de negrita. Se utiliza para definir un texto en negrita. En este caso, se utiliza para resaltar la dirección de correo electrónico.
+                            
+                        <br>: Esta es la etiqueta de salto de línea. Se utiliza para insertar un salto de línea.
+                        
+                        <small>: Esta es la etiqueta de texto pequeño. Se utiliza para definir un texto más pequeño que el texto normal. En este caso, se utiliza para mostrar el nombre “Julián Garay SAS.” en un tamaño de fuente más pequeño.
+                    -->
+                </ul>  
+                <a href="../../HTML/Menu/Visita.html"><button>Registrar</button></a> 
+                
+            </div>
+            <div class="contact-img hideMobile">
+                <img src="../../Imagenes/mapa.jpg">
+                <img src="../../Imagenes/Zona1.webp" class="marker" id="Zona" style="top: 83.777%; left: 89.7%;" alt="zona1">
+                <img src="../../Imagenes/Zona2.jpg" class="marker" id="Zona" style="top: 82.23%; left: 80.72%;" alt="zona2">   
+                <img src="../../Imagenes/Zona3.jpg" class="marker" id="Zona" style="top: 82.41%; left: 71.778%;" alt="zona3">
+                <img src="../../Imagenes/Zona4.jpg" class="marker" id="Zona" style="top: 73.82%; left: 68.755%;" alt="zona4">
+                <img src="../../Imagenes/Zona5.jpg" class="marker" id="Zona" style="top: 62.29%; left: 58.23%;" alt="zona5">
+                <img src="../../Imagenes/Zona6.jpg" class="marker" id="Zona" style="top: 59%; left: 41.1%;" alt="zona6">
+                <img src="../../Imagenes/Zona7.jpg" class="marker" id="Zona" style="top: 37%; left: 36.889%;" alt="zona7">
+                <img src="../../Imagenes/Zona8.jpg" class="marker" id="Zona" style="top: 29%; left: 47.69%;" alt="zona8">
+                <img src="../../Imagenes/Zona9.jpg" class="marker" id="Zona" style="top: 43.6%; left: 88.8%;" alt="zona9">
+                <img src="../../Imagenes/Zona10.jpg" class="marker" id="Zona" style="top: 37.3%; left: 41%;" alt="zona10">
+                <img src="../../Imagenes/Zona11.jpg" class="marker" id="Zona" style="top: 41.6%; left: 38.69%;" alt="zona11">
+                <img src="../../Imagenes/Zona12.jpg" class="marker" id="Zona" style="top: 41.19%; left: 63%;" alt="zona12">
+            </div>
+            <!-- 
+                <div class="contact-img">: Esta es la etiqueta de división. Se utiliza para agrupar contenido y para propósitos de estilo. El atributo class="contact-img" se utiliza para asignar una clase al div para su uso con CSS o JavaScript.
+                    
+                <img src="../../Imagenes/mapa.jpg">: Esta es la etiqueta de imagen. Se utiliza para insertar una imagen en la página web. El atributo src="../../Imagenes/mapa.jpg" especifica la ubicación de la imagen.
+                    
+                <a href="../../Imagenes/Aguila.jpg" class="marker zona1" style="top: 83.777%; left: 89.7%;" alt="zona1"></a>: Esta es la etiqueta de anclaje. Se utiliza para crear un enlace a otra página web, un archivo, una ubicación en la misma página, etc. 
+                
+                El atributo href="../../Imagenes/Aguila.jpg" especifica la ubicación del archivo al que se enlaza. 
+                
+                El atributo class="marker zona1" se utiliza para asignar una clase al enlace para su uso con CSS o JavaScript. 
+                
+                El atributo style="top: 83.777%; left: 89.7%;" se utiliza para aplicar estilos CSS directamente al elemento. 
+                
+                El atributo alt="zona1" proporciona un texto alternativo para el enlace.
+
+                <button class="marker" style="top: 82.23%; left: 80.72%;" alt="zona2"></button>: Esta es la etiqueta de botón. Se utiliza para crear un botón clickeable. Los atributos class, style y alt funcionan de la misma manera que en la etiqueta de anclaje.
+            -->
+        </section>
+        <div class="linea">
+           
+        </div>
+        <section class="context">
+            <div class="context__img hideMobile">
+                <img src="../../Imagenes/Tiger-blanco.png" alt="bar">
+            </div>
+            <div class="context__text">
+                <h4> Misión </h4>
+                <p>¿Qué hacemos? Garantizamos el bienestar y la conservación de la fauna silvestre, conectando a la sociedad con la naturaleza y contagiando nuestra pasión por la vida.</p>
+                <br>
+                <h4> Visión </h4>
+                <p>¿Qué queremos ser? Para el año 2028, ser reconocidos por la UICN como un centro de supervivencia de especies amenazadas, liderando 5 proyectos de conservación y siendo referentes en procesos de  bienestar animal, investigación y educación a nivel mundial, garantizando ingresos de 600.000 visitantes.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>
+            <img class="item-imagenes" src="../../Imagenes/footer11.webp">
+            <img class="item-imagenes" src="../../Imagenes/footer22.webp">
+            <img class="item-imagenes" src="../../Imagenes/footer33.webp">
+            <img class="item-imagenes" id="terca" src="../../Imagenes/footer44.webp">
+            <img class="item-imagenes" id="terca1" src="../../Imagenes/footer55.webp">
+            </div>
+            <div>
+            <ul id="ulredes">
+                <li class="item">
+                  <a href="https://www.instagram.com/zoologicodecali?igsh=emlobTJmNmEzNHBu">
+                    <i class="fa-brands fa-instagram icon"></i>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="https://www.linkedin.com/company/zoologico-de-cali/about/ ">
+                    <i class="fa-brands fa-linkedin icon"></i>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="https://youtube.com/@zoocalitv?si=732ITulGdolmjNxG">
+                    <i class="fa-brands fa-youtube icon"></i>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="https://x.com/zoologicodecali?t=qm3HS8i2T4NOa7rOZcLlGg&s=09">
+                    <i class="fa-brands fa-x-twitter icon"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div> 
+            </div>
+            <div class="copyright">
+                <p class="p">&copy;</p>
+                <p class="p">2024</p>
+                <p class="p">Fundación</p>
+                <p class="p">Zoológica</p>
+                <p class="p">de</p>
+                <p class="p">Cali.</p>
+            </div>
+    </footer>
+</body>
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none' 
+    }
+</script>
+</html>

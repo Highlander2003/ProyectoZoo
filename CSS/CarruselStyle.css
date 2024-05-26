@@ -1,0 +1,115 @@
+.carousel {
+	width: 100%;
+	height: 476px;
+	margin-top: 0px;
+	overflow: hidden;
+	position: relative;
+    -webkit-box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.75);
+}
+/*
+.carousel: Este es un selector de clase que selecciona todos los elementos con la clase .carousel.
+
+width: 100%;: Esta propiedad establece el ancho del elemento seleccionado al 100% del ancho de su elemento contenedor.
+
+height: 476px;: Esta propiedad establece la altura del elemento seleccionado a 476px.
+
+margin-top: 0px;: Esta propiedad establece el margen superior del elemento seleccionado a 0px.
+
+overflow: hidden;: Esta propiedad establece lo que sucede si el contenido se desborda del cuadro del elemento. hidden 
+significa que el contenido desbordado se recortará y no se mostrarán barras de desplazamiento.
+
+position: relative;: Esta propiedad establece el tipo de posicionamiento del elemento a relativo. Un elemento posicionado 
+de manera relativa se posiciona en relación con su posición normal.
+
+-webkit-box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.75);: Esta propiedad agrega una sombra al elemento. El valor 
+0px 10px 20px 2px rgba(0,0,0,0.75) significa que la sombra se desplaza 0px a la derecha, 10px hacia abajo, tiene un 
+desenfoque de 20px, un spread de 2px y el color de la sombra es rgba(0,0,0,0.75) (un tono de negro con 75% de opacidad). 
+-webkit- es un prefijo del proveedor que asegura que la propiedad funcione en navegadores basados en WebKit como Safari y Chrome.
+
+-moz-box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.75);: Esta es la misma propiedad de sombra, pero con el prefijo del proveedor 
+-moz- para asegurar la compatibilidad con los navegadores basados en Mozilla como Firefox.
+
+box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.75);: Esta es la misma propiedad de sombra, pero sin ningún prefijo del proveedor.
+ Se utiliza para los navegadores que siguen las especificaciones de CSS3.
+*/
+ 
+.slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	animation: slideShow 12s infinite;
+	opacity: 0;
+}
+/*
+
+.slide: Este es un selector de clase que selecciona todos los elementos con la clase .slide.
+
+width: 100%; height: 100%;: Estas propiedades establecen el ancho y la altura del elemento seleccionado al 100% del ancho 
+y la altura de su elemento contenedor.
+
+position: absolute;: Esta propiedad establece el tipo de posicionamiento del elemento a absoluto. Un elemento posicionado 
+de manera absoluta se posiciona en relación con el ancestro posicionado más cercano.
+
+animation: slideShow 12s infinite;: Esta propiedad es una forma abreviada para establecer varias propiedades de animación 
+a la vez. En este caso, se aplica una animación llamada slideShow que dura 12s y se repite infinitamente.
+
+opacity: 0;: Esta propiedad establece la opacidad del elemento seleccionado. 0 significa que el elemento es completamente transparente.
+*/
+
+.slide:nth-child(1) {
+	animation-delay: 0s;
+}
+/*
+.slide:nth-child(1): Este es un selector de CSS que selecciona el primer elemento hijo que tiene la clase .slide.
+
+animation-delay: 0s;: Esta propiedad establece cuánto tiempo debe esperar el navegador antes de comenzar a ejecutar 
+la animación después de que se haya cambiado la propiedad de animación. 0s significa que la animación comenzará inmediatamente.
+*/
+
+.slide:nth-child(2) {
+	animation-delay: 4s;
+}
+/*
+.slide:nth-child(2): Este es un selector de CSS que selecciona el primer elemento hijo que tiene la clase .slide.
+
+animation-delay: 4s;: Esta propiedad establece cuánto tiempo debe esperar el navegador antes de comenzar a ejecutar 
+la animación después de que se haya cambiado la propiedad de animación. 0s significa que la animación comenzará inmediatamente.
+*/
+
+.slide:nth-child(3) {
+	animation-delay: 8s;
+}
+/*
+.slide:nth-child(3): Este es un selector de CSS que selecciona el primer elemento hijo que tiene la clase .slide.
+
+animation-delay: 8s;: Esta propiedad establece cuánto tiempo debe esperar el navegador antes de comenzar a ejecutar 
+la animación después de que se haya cambiado la propiedad de animación. 0s significa que la animación comenzará inmediatamente.
+*/
+
+@keyframes slideShow {
+	0% {opacity: 0;}
+	8% {opacity: 1;}
+	33% {opacity: 1;}
+	41% {opacity: 0;}
+	100% {opacity: 0;}
+}
+/*
+@keyframes slideShow: Esta es una regla @keyframes que define la animación llamada slideShow.
+
+0% {opacity: 0;}: Al comienzo de la animación (0% del tiempo de animación), la opacidad del elemento es 0, lo que 
+significa que el elemento es completamente transparente.
+
+8% {opacity: 1;}: En el 8% del tiempo de animación, la opacidad del elemento es 1, lo que significa que el elemento 
+es completamente opaco.
+
+33% {opacity: 1;}: En el 33% del tiempo de animación, la opacidad del elemento sigue siendo 1, por lo que el elemento 
+permanece completamente opaco durante este período.
+
+41% {opacity: 0;}: En el 41% del tiempo de animación, la opacidad del elemento vuelve a ser 0, por lo que el elemento 
+se vuelve completamente transparente nuevamente.
+
+100% {opacity: 0;}: Al final de la animación (100% del tiempo de animación), la opacidad del elemento sigue siendo 0, 
+por lo que el elemento permanece completamente transparente.
+*/

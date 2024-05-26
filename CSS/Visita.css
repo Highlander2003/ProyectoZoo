@@ -1,0 +1,202 @@
+body {
+    background-color: rgba(0, 128, 0, 0.702);
+    background-image: url(../Imagenes/Carpintero.png);
+    background-size: cover;
+    /* Para cubrir todo el área del cuerpo */
+    background-repeat: no-repeat;
+    /* Para que no se repita la imagen */
+    background-attachment: fixed;
+    font-weight: bold;
+}
+
+ 
+/*
+body: Este es un selector de CSS que selecciona el elemento <body> del documento HTML. Los estilos definidos dentro de este bloque se aplicarán al cuerpo del documento. 
+
+background-color: rgba(0, 128, 0, 0.702);: Esta declaración establece el color de fondo del cuerpo del documento. El valor rgba representa los valores de rojo,verde,azul y alfa (opacidad),respectivamente. 
+
+background-image: url( );: Esta declaración establece la imagen de fondo del cuerpo del documento. La imagen se carga desde la ruta especificada. 
+
+background-size: cover;: Esta declaración hace que la imagen de fondo se redimensione para cubrir completamente el área del cuerpo, incluso si eso significa tener que estirar la imagen o cortar una parte de ella. 
+
+background-repeat: no-repeat;: Esta declaración evita que la imagen de fondo se repita. Por defecto, las imágenes de fondo se repiten tanto vertical como horizontalmente. 
+
+background-attachment: fixed;: Esta declaración hace que la imagen de fondo se fije en una posición específica en la pantalla. Cuando se desplaza la página, la imagen de fondo no se mueve con el resto del contenido de la página. 
+
+border-image: fill 0 lineal-gradient(#0001, #000);: Esta declaración parece estar intentando establecer una imagen de borde utilizando un gradiente lineal. Sin embargo, parece que hay un error en la sintaxis. La función linear-gradient debería usarse en lugar de lineal-gradient, y los valores del gradiente parecen estar incompletos o incorrectos.
+*/
+.main-visita{
+    color: white;
+}
+
+.main-visita h2{
+    color: #CBDD16;
+}
+
+.schedule-visit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #044a22af;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    text-align: center;
+
+
+    
+
+}
+
+.schedule-visit-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.schedule-visit-form p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.schedule-visit-form form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.schedule-visit-form label {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white ;
+    font-size: 15px;
+    font-weight: 600;
+    
+            
+}
+
+.schedule-visit-form input,
+.schedule-visit-form textarea {
+    display: flex;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    resize: vertical;
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    color: black;
+    outline: none;
+
+
+}
+
+.schedule-visit-form select {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.schedule-visit-form button {
+    padding: 10px 20px;
+    background-color: #51D94C;
+    color: #ffffff;
+    border:0;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 0 20px rgba(25, 254,0, 0.4);
+}
+
+
+.schedule-visit-form button:hover {
+    background-color: #3e8e41;
+}
+
+.schedule-visit-form input:focus,
+.schedule-visit-form textarea:focus,
+.schedule-visit-form select:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-visit-form input::placeholder,
+.schedule-visit-form textarea::placeholder {
+    color: #ccc;
+}
+
+.schedule-visit-form fieldset {
+    margin: 20px 0;
+    border: none;
+}
+
+.schedule-visit-form legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.schedule-visit-form input[type="radio"],
+.schedule-visit-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.schedule-visit-form .date-time-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.schedule-visit-form .date-time-container label {
+    width: 20%;
+}
+
+.schedule-visit-form .date-time-container input,
+.schedule-visit-form .date-time-container select {
+    width: 30%;
+}
+
+.schedule-visit-form .visitors-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.schedule-visit-form .visitors-container label {
+    width: 20%;
+}
+
+.schedule-visit-form .visitors-container input {
+    width: 20%;
+}
+
+.schedule-visit-form .visitors-container input:nth-child(2) {
+    width: 20%;
+    margin-left: 10px;
+}
+
+.schedule-visit-form .visitors-container input:nth-child(3) {
+    width: 20%;
+    margin-left: 10px;
+}
+
+.BtnAsigVista{
+    width: 208%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

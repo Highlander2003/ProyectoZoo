@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoológico de Cali</title>
+    <link rel="shortcut icon" type="image/png" href="../../Imagenes/Paw.png" sizes="32x32">
+    <link rel="stylesheet" href="../../CSS/Style.css">
+    <link rel="stylesheet" href="../../CSS/Visita.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="Index.html">
+            <img id="img_logo" src="../../Imagenes/zooLogo.png">
+        </a>
+        <h1>¡Pasión por la Vida!</h1>
+        <div class="barra">
+            <nav>
+                <input type="checkbox" name="" id="toggle">
+                <label for="toggle"><i class="material-icons">menu</i></label>
+                <div class="menu">
+                    <ul>
+                        <li class="menu-item"><a href="Index.html">Inicio</a></li>
+                        <li class="menu-item dropdown">
+                            <a href="#">Animales</a>
+                            <ul class="dropdown-content">
+                                <div>
+                                    <li><img src="../../Imagenes/cocodrilo.png" id="iconoMenu"><a href="Reptiles.html">Reptiles</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/Anfibios.png" id="iconoMenu"><a href="Anfibios.html">Anfibios</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/Mamiferos.png" id="iconoMenu"><a href="Mamiferos.html">Mamíferos</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/aves.png" id="iconoMenu"><a href="Aves.html">Aves</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/pescado.png" id="iconoMenu"><a href="Peces.html">Peces</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="#">Visítanos</a></li>
+                        <li class="menu-item"><a href="../../HTML/Formularios/FormAnimal.html">Formulario</a></li>
+                        <li class="menu-item"><a href="Noticias.html">Noticias</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+<!--Fomulario-->
+<main class="main-visita">
+    <div class="schedule-visit-form">
+        <h2>¡Planea tu Visita!</h2>
+        <p>Nos emociona que visites el Zoológico de Cali! Para asegurarte una emocionante y segura experiencia para todos, por favor completa este formulario para agendar tu visita.</p>
+
+        <form id="visitForm" onsubmit="return validateVisitForm()">
+            <label for="visit-date">Fecha de la Visita:</label>
+            <input type="date" id="visit-date" name="visit-date" required>
+
+            <label for="hora">Hora de la Visita:</label>
+            <input type="time" id="hora" name="hora">
+
+            <label for="adults">Número de Visitantes:</label>
+            <input type="number" id="adults" name="adults" min="0" value="0"> Adultos (Edades 13+) <br>
+            <input type="number" id="children" name="children" min="0" value="0"> Niños (Edades 3-12) <br>
+            <input type="number" id="infants" name="infants" min="0" value="0"> Infantes (Edades 0-2) <br>
+
+            <label for="first-name">Información de Contacto:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Nombre" required>
+            <input type="text" id="last-name" name="last-name" placeholder="Apellido" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Número" required>
+
+            <label for="additional-requests">Información adicional:</label>
+            <textarea id="additional-requests" name="additional-requests" placeholder=""></textarea>
+
+
+        </form>
+            <div class="BtnAsigVista">
+                <button  type="submit" onclick="mostrarLista()" id="BtnAsigVista">Mostrar lista en consola</button>   
+            </div>
+
+        <a href="../../HTML/Formularios/database.html" target="_blank">
+            <button type="button" onclick="mostrarLista()" id="BtnLista">Lista</button>
+        </a>
+    </div>
+</main>
+<!--Fin formulario-->
+    <footer>
+        <div>
+            <img class="item-imagenes" src="../../Imagenes/footer11.webp">
+            <img class="item-imagenes" src="../../Imagenes/footer22.webp">
+            <img class="item-imagenes" src="../../Imagenes/footer33.webp">
+            <img class="item-imagenes" id="terca" src="../../Imagenes/footer44.webp">
+            <img class="item-imagenes" id="terca1" src="../../Imagenes/footer55.webp">
+        </div>
+        <div>
+            <ul id="ulredes">
+                <li class="item">
+                    <a href="https://www.instagram.com/zoologicodecali?igsh=emlobTJmNmEzNHBu">
+                        <i class="fa-brands fa-instagram icon"></i>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="https://www.linkedin.com/company/zoologico-de-cali/about/">
+                        <i class="fa-brands fa-linkedin icon"></i>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="https://youtube.com/@zoocalitv?si=732ITulGdolmjNxG">
+                        <i class="fa-brands fa-youtube icon"></i>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="https://x.com/zoologicodecali?t=qm3HS8i2T4NOa7rOZcLlGg&s=09">
+                        <i class="fa-brands fa-x-twitter icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div></div>
+        <div class="copyright">
+            <p class="p">&copy;</p>
+            <p class="p">2024</p>
+            <p class="p">Fundación</p>
+            <p class="p">Zoológica</p>
+            <p class="p">de</p>
+            <p class="p">Cali.</p>
+        </div>
+    </footer>
+</body>
+<script src="../../JavaScript/main.js"></script>
+</html>

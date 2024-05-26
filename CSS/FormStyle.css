@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/* Estilos generales */
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 100px;
+    background-image: url('../Imagenes/froges.png'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
+    background-size: cover; /* Para cubrir todo el área del cuerpo */
+    background-repeat: no-repeat; /* Para que no se repita la imagen */
+    background-attachment: fixed; /* Para que la imagen de fondo permanezca fija */
+    padding-top: 120px;
+    padding-bottom: 300px;
+    margin: 0;
+    opacity: 5; 
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(210, 155, 141, 0.5); /* Cambia el último valor para ajustar la opacidad */
+
+}
+
+.container {
+    width: 7000%;
+    margin: 100px;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #013117;
+    color: #ffffff;
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 95px;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1, header h3 {
+    
+    margin: 0 auto;
+    color: #CBDD16;
+    font-family: sans-serif;
+}
+.barra{
+    margin: 0 auto;
+    padding: 1rem;
+    
+}
+
+li{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav #toggle,
+nav label {
+display: none;
+}
+@media (max-width: 40.625em) {
+nav .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+nav label {
+    display: inline-flex;
+    color: white;
+    cursor: pointer;
+}
+nav #toggle:checked ~ .menu {
+    height: 80%;
+}
+}
+#img_login {
+    width: 45px;
+    height: 45px;  
+}
+#img_logo {
+    width: 130px;
+    height: 65px; 
+    margin-left: 20%; 
+}
+#iconoMenu {
+    height: 30px;
+    width: 30px;
+    margin-left: 2%;
+}
+/*Fin del style del menu*/
+
+/* Animacion hover de elementos Nav superior */
+
+.menu-item {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .menu-item:before,
+  .menu-item:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #CBDD16;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .menu-item:before {
+    top: 0;
+    left: 0;
+    transform-origin: left;
+  }
+
+  .menu-item:after {
+    bottom: 0;
+    right: 0;
+    transform-origin: right;
+  }
+
+  .menu-item:hover:before,
+  .menu-item:hover:after {
+    transform: scaleX(1);
+  }
+
+  .menu-item:hover {
+    color: #CBDD16;
+  }
+/* Animales dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+.dropdown-content div:hover li{
+    color: white;
+    background-color: #3e8e41;
+    transform: scale(1.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.dropdown-content li {
+    display: flex; /* Usar display flex para alinear elementos en línea */
+    align-items: center; /* Alinear verticalmente los elementos */
+}
+
+.dropdown-content li img {
+    margin-right: 5px; /* Margen derecho para separar la imagen del texto */
+}
+
+/* estilos formulario*/
+form{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 100px;
+    box-shadow: 0 0 20px rgba(0, 0,0, 0.2);
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    width: 440px; 
+    margin: auto; /* Centramos el formulario horizontalmente */
+    background-color: rgba(39, 76, 49, 0.5); /* Cambia el último valor para ajustar la opacidad */
+    margin-bottom: 40px;
+    margin-top: 40px;
+    }
+
+
+.input-group{
+    padding-top: 30Px;
+    display:flex;
+    flex-direction:column;
+    text-align: left;
+
+    }
+
+h2{
+    color: white;
+    font-size: 35px;
+    margin: auto; 
+      
+    }
+
+label{
+    color: white ;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+            
+    } 
+
+    input,textarea{
+        padding: 17px 25px;
+        border-radius: 25px;
+        margin-bottom: 20px;
+        color: black;
+        outline: none;
+        
+        }
+
+input::placeholder,textarea::placeholder{
+color: #b5cab6;
+
+}
+
+.form-txt{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+    }
+
+    .form-txt a {
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        
+        }
+            
+        .btn{
+            font-size: 16px;
+            color: #FFFFFF;
+            border: 0;
+            border-radius: 25px;
+            background-color: #51D94C;
+            box-shadow: 0 0 20px rgba(25, 254,0, 0.4);
+            cursor: pointer;
+        
+        }    
+
+        .btn:hover{
+            background-color: #50E04B;
+        }        
+        
+        @media(max-width:991px){
+
+            body{
+                padding: 30px;
+            }
+        
+            form{
+                padding: 50px 30px;
+                width: 100%;
+            }
+        
+            input{
+                padding: 15px;
+            }
+        }
+
+        select {
+            padding: 17px 25px; /* Aplicamos el mismo relleno que en las otras entradas */
+            border-radius: 25px;
+            margin-bottom: 20px;
+            background-color: #EDFFF0;
+            border: 2px solid color(210,155,141,0.5);
+            color: #283629;
+            outline: none;
+            appearance: none; /* Quitamos el estilo nativo del sistema operativo */
+            cursor: pointer;
+        }
+        
+        /* Agregamos un estilo para el ícono de la flecha en el select */
+        select::-ms-expand {
+            display: none;
+        }
+        
+        #Alejado{
+            margin-left: 50px;
+        }
+
+        .customfile{
+            font-size: 15px;
+            color: black;
+            background: white;
+            border-radius: 50px;
+            box-shadow: 5px 5px 10px black;
+            padding: 1px;
+        }
+
+        .customfile::-webkit-file-upload-button{
+            background: #206a5d;
+            padding: 10px;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 1px 0 1px #6b4559;
+        }
+        .customfile::-webkit-file-upload-button:hover{
+            background-color: #438a5e;
+        }
+
+        
+
+/* Estilos del pie de página */
+footer {
+    background-color: #013117;
+    color: #ffffff;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    clear: both;
+}
+
+.item-imagenes {
+    display: inline-block;
+    margin-top: auto;
+    object-fit: cover;
+    margin-right: 4%;
+    margin-bottom: 2%;
+    
+}
+[id="terca"].item-imagenes {
+    width: 20%;
+    height: 10%;
+}
+ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+
+.item a {
+    text-decoration: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: hsl(203, 92%, 97%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border: 3px solid hsl(203, 92%, 97%);
+    overflow: hidden;
+  }
+  
+  .item a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 0;
+    scale: 1 0;
+    transform-origin: bottom;
+    transition: scale 0.5s ease;
+  }
+  
+  .item:hover a::before {
+    scale: 1 1;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    color: hsl(203, 92%, 8%);
+    transition: 0.5s ease;
+    z-index: 2;
+  }
+  
+  .item a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  .item:nth-child(1) {
+    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
+  }
+  .item:nth-child(2) {
+    --bg-color: #0077b5;
+  }
+  .item:nth-child(3) {
+    --bg-color: #ff0000;
+  }
+  .item:nth-child(4) {
+    --bg-color: #000;
+  }
+/*Hover para el copyright del footer*/
+.copyright {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.p {
+    font-size: 16px;
+    margin: 3px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: #fff;
+}
+.p:hover {
+    transform: translateY(-50px);
+    text-shadow: 0px 40px 200px #fff;
+}
+

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoológico de Cali</title>
+    <link rel="icon" type="image/png" href="Imagenes/Paw.png" sizes="32x32">
+    <link rel="stylesheet" href="../../CSS/EspeciesStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="../../HTML/Menu/Index.html">
+            <img id="img_logo" src="../../Imagenes/zooLogo.png" ;> </img>
+        </a>
+        <h1 class="hideMobile">¡Pasion por la Vida!</h1>
+        <div class="barra">
+            <nav>
+                <input type="checkbox" name="" id="toggle">
+                <label for="toggle"> <i class="materia-icons hideMobile">Menu</i></label>
+                <div class="menu">
+                    <ul>
+                        <li class="menu-item"><a href="../../HTML/Menu/Index.html"> Inicio </a></li>
+                        <li class="menu-item dropdown">
+                            <a href=""> Animales </a>
+                            <ul class="dropdown-content">
+                                <div>
+                                    <li><img src="../../Imagenes/cocodrilo.png" id="iconoMenu"><a href="Reptiles.html">Reptiles</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/Anfibios.png" id="iconoMenu"><a href="Anfibios.html">Anfibios</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/Mamiferos.png" id="iconoMenu"><a href="Mamiferos.html">Mamíferos</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/aves.png" id="iconoMenu"><a href="Aves.html">Aves</a></li>
+                                </div>
+                                <div>
+                                    <li><img src="../../Imagenes/pescado.png" id="iconoMenu"><a href="Peces.html">Peces</a></li>
+                                </div>
+                            </ul>
+                        <li class="menu-item"><a href="Visita.html"> Visitanos </a></li>
+                        <li class="menu-item"><a href="FormAnimal1.2.html"> Formulario </a></li>
+                        <li class="menu-item"><a href="Noticias.html">Noticias</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <nav>
+            <a onclick="showSidebar()">
+                <img id="img_login" src="../../Imagenes/MenuSide.svg"></img>
+            </a>
+            <ul class="sidebar">
+                <li><a onClick="hideSidebar()"><img src="../../Imagenes/CloseSide.svg"></a></li>
+                <li><a href="Reptiles.html">Reptiles</a></li>
+                <li><a href="Anfibios.html">Anfibios</a></li>
+                <li><a href="Mamiferos.html">Mamíferos</a></li>
+                <li><a href="Aves.html">Aves</a></li>
+                <li><a href="Peces.html">Peces</a></li>
+            </ul>
+        </nav>
+    </header>
+       
+
+    <main>
+        
+        <div class="container">
+            <div class="titulo_Animal">
+                <h1 id="fuente-2"> AVES </h1>
+            </div>
+
+            <div class="card_container">
+                <article class="card_article">
+                    <img src="../../Imagenes/Agapornis_Roseicollis.jpg" alt="image" class="card_img">
+                    <div class="card_data">
+                        <h2 class="card_title"> Agapornis Roseicollis </h2>
+                        <a href="Agapornis.html" class="card_button">Leer más...</a>
+                    </div>
+                </article>
+
+                <article class="card_article">
+                    <img src="../../Imagenes/Condor1.jpg" alt="image" class="card_img">
+                    <div class="card_data">
+                        <h2 class="card_title"> Condor </h2>
+                        <a href="Condor.html" class="card_button">Leer más...</a>
+                    </div>
+                </article>
+
+                <article class="card_article">
+                    <img src="../../Imagenes/Halcon.jpg" alt="image" class="card_img">
+                    <div class="card_data">
+                        <h2 class="card_title"> Halcon </h2>
+                        <a href="Halcon.html" class="card_button">Leer más...</a>
+                    </div>
+                </article>
+
+                <article class="card_article">
+                    <img src="../../Imagenes/Buho.jpg" alt="image" class="card_img">
+                    <div class="card_data">
+                        <h2 class="card_title"> Buho </h2>
+                        <a href="Buho.html" class="card_button">Leer más...</a>
+                    </div>
+                </article>
+
+                <article class="card_article">
+                    <img src="../../Imagenes/Flamenco.jpg" alt="image" class="card_img">
+                    <div class="card_data">
+                        <h2 class="card_title"> Flamenco </h2>
+                        <a href="Flamenco.html" class="card_button">Leer más...</a>
+                    </div>
+                </article>
+
+                <article class="card_article">
+                    <img src="../../Imagenes/Sisne.jpg" alt="image" class="card_img">
+                    <div class="card_data">
+                        <h2 class="card_title"> Cisne </h2>
+                        <a href="Cisne.html" class="card_button">Leer más...</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+       
+    </main>
+
+    <footer>
+        <div>
+            <img class="item-imagenes" src="../../Imagenes/footer11.webp">
+            <img class="item-imagenes" src="../../Imagenes/footer22.webp">
+            <img class="item-imagenes" src="../../Imagenes/footer33.webp">
+            <img class="item-imagenes" id="terca" src="../../Imagenes/footer44.webp">
+            <img class="item-imagenes" src="../../Imagenes/footer55.webp">
+            </div>
+            <div>
+            <ul>
+                <li class="item">
+                  <a href="https://www.instagram.com/zoologicodecali?igsh=emlobTJmNmEzNHBu">
+                    <i class="fa-brands fa-instagram icon"></i>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="https://www.linkedin.com/company/zoologico-de-cali/about/ ">
+                    <i class="fa-brands fa-linkedin icon"></i>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="https://youtube.com/@zoocalitv?si=732ITulGdolmjNxG">
+                    <i class="fa-brands fa-youtube icon"></i>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="https://x.com/zoologicodecali?t=qm3HS8i2T4NOa7rOZcLlGg&s=09">
+                    <i class="fa-brands fa-x-twitter icon"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">
+                <p class="p">&copy;</p>
+                <p class="p">2024</p>
+                <p class="p">Fundación</p>
+                <p class="p">Zoológica</p>
+                <p class="p">de</p>
+                <p class="p">Cali.</p>
+            </div>
+    </footer>
+</body>
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none' 
+    }
+</script>
+</html>

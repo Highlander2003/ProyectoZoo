@@ -10,8 +10,10 @@
     
     lang="es": Este es un atributo de la etiqueta HTML que define el idioma principal del contenido. En este caso, es indica que el contenido está principalmente en español. Este atributo es importante para la accesibilidad, ya que ayuda a los lectores de pantalla a pronunciar correctamente el contenido, y también puede ayudar a los motores de búsqueda a entender el contenido de la página.
  -->
-<head>
-<!--
+
+ <head>
+
+    <!--
     <head>: Esta etiqueta contiene información sobre el documento HTML que no se muestra en la ventana del navegador. Esta información puede incluir el título de la página (que se muestra en la barra de título del navegador), enlaces a archivos CSS y JS, metadatos como la descripción de la página y las palabras clave para los motores de búsqueda, entre otros.
 -->
     <meta charset="UTF-8">
@@ -30,7 +32,12 @@
         
         initial-scale=1.0 establece el nivel inicial de zoom cuando la página se carga por primera vez por el navegador.
     -->
+    
+    
+    
     <title>Zoológico de Cali</title>
+    
+    
     <!--
         <title>: Esta es una etiqueta que se utiliza para especificar el título del documento. El título es el texto que se muestra en la barra de título del navegador y en los resultados de búsqueda.
      -->
@@ -65,7 +72,6 @@
         href="CSS/MapStyle.css": Este es un atributo que proporciona la ubicación del recurso vinculado. En este caso, CSS/MapStyle.css es la ruta al archivo de la hoja de estilos CSS.
     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
     <!-- 
         <link>: Esta es una etiqueta que se utiliza para vincular recursos externos al documento HTML. En este caso, se utiliza para vincular una hoja de estilos CSS a la página web.
         
@@ -75,18 +81,23 @@
     -->
     <script src="../../JavaScript/main.js"></script>
 </head>
+
 <body>
-<!-- 
+
+
+    <!-- 
     <body>: Esta es la etiqueta que contiene todo el contenido principal de la página web que se muestra en el navegador. Esto puede incluir texto, imágenes, videos, formularios, enlaces y más.
 -->
 
     <header>
-    <!-- 
+    
+        <!-- 
         <header>: Esta es una etiqueta que se utiliza para contener contenido de encabezado. El contenido de encabezado generalmente contiene elementos de título (<h1> a <h6>), pero también puede contener otros elementos como un logotipo, un menú de navegación, un formulario de búsqueda, y más.
     -->
         <a href="Index.html">
             <img id="img_logo" src="../../../../Imagenes/zooLogo.png" ;> </img>
         </a>
+
         <!--
             <a href="Index.html">: Esta es una etiqueta de anclaje que se utiliza para crear un enlace a otra página web. El atributo href especifica la URL de la página a la que se enlaza. En este caso, Index.html es la página a la que se enlaza.
             
@@ -197,17 +208,23 @@
             </ul>
         </nav>
     </header>
+
+
     <main class="main">
+
     <!-- 
         <main>: Esta es una etiqueta que se utiliza para especificar el contenido principal o único de un documento. El contenido dentro de la etiqueta <main> debe ser único al documento, excluyendo contenido que se repite a través de un conjunto de documentos como encabezados del sitio o navegación del sitio.
         
         class="main": Este es un atributo que asigna una clase a la etiqueta <main>. Las clases se utilizan en CSS y JavaScript para seleccionar y acceder a elementos específicos. La clase “main” probablemente se refiere a un conjunto de estilos definidos en una hoja de estilos CSS.
     -->
+    
         <div class="carousel hideMobile">
             <div class="slide"><img src="../../Imagenes/Azulejo.png" alt=" "></div>
             <div class="slide"><img src="../../Imagenes/Tigres.png" alt=" "></div>
             <div class="slide"><img src="../../Imagenes/Hipopotamo.png" alt=" "></div>
         </div>
+
+
         <!-- 
             <div class="carousel">: Esta es una etiqueta <div> con la clase “carousel”. Las clases se utilizan en CSS y JavaScript para seleccionar y acceder a elementos específicos. La clase “carousel”  se refiere a un conjunto de estilos y/o funcionalidades definidos en una hoja de estilos CSS.
             
@@ -330,8 +347,16 @@
             -->
         </section>
         <div class="linea">
-           
         </div>
+        <br>
+        <div class="container-mapa">
+            <h1 id="text-map">Como llegar!!</h1>
+            <br>
+         <div class = "map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.595473607401!2d-76.55941212456558!3d3.448107596526361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a5d22362f7f1%3A0x2c05ed4ac5063ab3!2sZool%C3%B3gico%20de%20Cali!5e0!3m2!1ses-419!2sco!4v1716686604946!5m2!1ses-419!2sco" width="1080" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+        </div>
+        <br>
         <section class="context">
             <div class="context__img hideMobile">
                 <img src="../../Imagenes/Tiger-blanco.png" alt="bar">
@@ -346,6 +371,7 @@
         </section>
 
     </main>
+
 
     <footer>
         <div>

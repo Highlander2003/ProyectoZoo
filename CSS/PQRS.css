@@ -1,92 +1,92 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif; /* Define la familia de fuentes para el texto */
+    min-height: 100vh; /* Establece la altura mínima del cuerpo a 100% de la altura del viewport */
+    display: flex; /* Activa Flexbox para centrar el contenido */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
 }
 
 form{
-    padding: 50px 55px;
-    box-shadow: 0 0 20 rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    text-align: center;
-    width: 340px;
-
+    padding: 50px 55px; /* Agrega espacio interno al formulario: 50px en la parte superior e inferior, 55px en los lados */
+    box-shadow: 0 0 20 rgba(0, 0, 0, 0.2); /* Añade una sombra alrededor del formulario con un desenfoque de 20px y un color negro con 20% de opacidad */
+    border-radius: 20px; /* Redondea las esquinas del formulario con un radio de 20px */
+    text-align: center; /* Centra el texto dentro del formulario */
+    width: 340px; /* Establece el ancho del formulario en 340px */
 }
 
 .input-group{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+    display: flex; /* Activa Flexbox para la disposición de los elementos dentro del grupo de entrada */
+    flex-direction: column; /* Ordena los elementos hijos en una columna */
+    text-align: left; /* Alinea el texto a la izquierda dentro del grupo de entrada */
 }
 
 h2{
-    color: #283629;
-    font-size: 35px;
+    color: #283629; /* Define el color del texto del encabezado h2 */
+    font-size: 35px; /* Establece el tamaño de fuente del encabezado h2 en 35px */
 }
 
 label{
-    color: #283629;
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 15px;
+    color: #283629; /* Define el color del texto del label */
+    font-size: 15px; /* Establece el tamaño de fuente del label en 15px */
+    font-weight: 600; /* Define el grosor de la fuente del label en 600 (semi-negrita) */
+    margin-bottom: 15px; /* Agrega un margen inferior de 15px al label */
 }
 
 input, textarea{
-    padding: 17px 25px;
-    border-radius: 25px;
-    margin-bottom: 20px;
-    background-color: #EDFFF0;
-    border: 2px solid #F0FAF1;
-    color: #283629;
-    outline: none;
+    padding: 17px 25px; /* Agrega espacio interno: 17px en la parte superior e inferior, 25px en los lados */
+    border-radius: 25px; /* Redondea las esquinas de los elementos de entrada con un radio de 25px */
+    margin-bottom: 20px; /* Agrega un margen inferior de 20px a los elementos de entrada */
+    background-color: #EDFFF0; /* Define el color de fondo de los elementos de entrada */
+    border: 2px solid #F0FAF1; /* Establece un borde de 2px de ancho y color #F0FAF1 */
+    color: #283629; /* Define el color del texto dentro de los elementos de entrada */
+    outline: none; /* Elimina el borde de enfoque predeterminado del navegador cuando el elemento está enfocado */
 }
 
-input::placeholder , textarea::placeholder{
-    color: #b5cab6;
-}
 
-.form-txt{
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
+input::placeholder, textarea::placeholder{
+    color: #b5cab6; /* Define el color del texto de los marcadores de posición (placeholders) en los elementos input y textarea */
 }
 
 .form-txt{
-    color: #76b28e;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
+    margin-bottom: 30px; /* Agrega un margen inferior de 30px */
+    display: flex; /* Activa Flexbox para la disposición de los elementos dentro de .form-txt */
+    justify-content: space-between; /* Distribuye los elementos hijos con espacio igual entre ellos */
+    text-align: center; /* Centra el texto dentro de .form-txt */
+}
+
+.form-txt{
+    color: #76b28e; /* Define el color del texto */
+    font-size: 14px; /* Establece el tamaño de fuente en 14px */
+    font-weight: 600; /* Define el grosor de la fuente en 600 (semi-negrita) */
+    text-decoration: none; /* Elimina cualquier decoración de texto (como subrayado) */
 }
 
 .btn{
-    font-size: 16px;
-    color: #ffffff;
-    border: 0;
-    border-radius: 25px;
-    background-color: #51d94c;
-    box-shadow: 0 0 20px rgba(25, 254, 0, 0.4);
-    cursor: pointer;
+    font-size: 16px; /* Establece el tamaño de fuente en 16px */
+    color: #ffffff; /* Define el color del texto en blanco */
+    border: 0; /* Elimina cualquier borde */
+    border-radius: 25px; /* Redondea las esquinas del botón con un radio de 25px */
+    background-color: #51d94c; /* Define el color de fondo del botón */
+    box-shadow: 0 0 20px rgba(25, 254, 0, 0.4); /* Añade una sombra alrededor del botón con un desenfoque de 20px y un color verde con 40% de opacidad */
+    cursor: pointer; /* Cambia el cursor a un puntero (mano) cuando se pasa sobre el botón */
 }
 
 .btn:hover{
-    background-color: #50e04b;
+    background-color: #50e04b; /* Cambia el color de fondo del botón cuando se pasa el cursor sobre él */
 }
 
 @media(max-width:991px){
 
     body{
-        padding: 30px;
+        padding: 30px; /* Agrega un padding de 30px al cuerpo cuando el ancho de la pantalla es de 991px o menos */
     }
 
     form{
-        padding: 50px 30px;
-        width: 100%;
+        padding: 50px 30px; /* Agrega un padding de 50px en la parte superior e inferior y 30px en los lados al formulario cuando el ancho de la pantalla es de 991px o menos */
+        width: 100%; /* Establece el ancho del formulario al 100% del contenedor cuando el ancho de la pantalla es de 991px o menos */
     }
 
     input{
-        padding: 15px;
+        padding: 15px; /* Reduce el padding a 15px en todos los lados para los elementos de entrada cuando el ancho de la pantalla es de 991px o menos */
     }
 }

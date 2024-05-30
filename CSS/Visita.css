@@ -25,178 +25,170 @@ background-attachment: fixed;: Esta declaración hace que la imagen de fondo se 
 
 border-image: fill 0 lineal-gradient(#0001, #000);: Esta declaración parece estar intentando establecer una imagen de borde utilizando un gradiente lineal. Sin embargo, parece que hay un error en la sintaxis. La función linear-gradient debería usarse en lugar de lineal-gradient, y los valores del gradiente parecen estar incompletos o incorrectos.
 */
+
 .main-visita{
-    color: white;
+    color: white; /* Define el color del texto en blanco para el contenedor principal */
 }
 
 .main-visita h2{
-    color: #CBDD16;
+    color: #CBDD16; /* Define el color del texto para los elementos h2 en el contenedor principal */
 }
 
 .schedule-visit-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 600px;
-    padding: 20px;
-    background-color: #044a22af;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin: 50px auto;
-    text-align: center;
-
-
-    
-
+    display: flex; /* Activa Flexbox para la disposición de los elementos dentro de .schedule-visit-form */
+    flex-direction: column; /* Ordena los elementos hijos en una columna */
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    justify-content: center; /* Centra los elementos hijos verticalmente */
+    max-width: 600px; /* Establece el ancho máximo del formulario en 600px */
+    padding: 20px; /* Agrega un padding de 20px */
+    background-color: #044a22af; /* Define el color de fondo del formulario con un color verde semitransparente */
+    border-radius: 10px; /* Redondea las esquinas del formulario con un radio de 10px */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra alrededor del formulario con un desenfoque de 10px y un color negro con 10% de opacidad */
+    margin: 50px auto; /* Agrega un margen de 50px arriba y abajo, y centra el formulario horizontalmente */
+    text-align: center; /* Centra el texto dentro del formulario */
 }
 
 .schedule-visit-form h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Establece el tamaño de fuente en 2rem para los elementos h2 dentro del formulario */
+    margin-bottom: 1rem; /* Agrega un margen inferior de 1rem */
 }
 
 .schedule-visit-form p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: 1.1rem; /* Establece el tamaño de fuente en 1.1rem para los párrafos dentro del formulario */
+    margin-bottom: 2rem; /* Agrega un margen inferior de 2rem */
 }
 
 .schedule-visit-form form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    width: 100%;
+    display: grid; /* Utiliza el sistema de cuadrícula (grid) para la disposición de los elementos del formulario */
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas iguales en el grid */
+    grid-gap: 20px; /* Añade un espacio de 20px entre los elementos del grid */
+    width: 100%; /* Establece el ancho del formulario al 100% del contenedor */
 }
 
 .schedule-visit-form label {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: white ;
-    font-size: 15px;
-    font-weight: 600;
-    
-            
+    display: flex; /* Activa Flexbox para la disposición de los elementos dentro de los labels */
+    justify-content: center; /* Centra horizontalmente los elementos hijos dentro de los labels */
+    margin-top: 15px; /* Agrega un margen superior de 15px */
+    margin-bottom: 15px; /* Agrega un margen inferior de 15px */
+    color: white; /* Define el color del texto en blanco */
+    font-size: 15px; /* Establece el tamaño de fuente en 15px */
+    font-weight: 600; /* Define el grosor de la fuente en 600 (semi-negrita) */
 }
 
 .schedule-visit-form input,
 .schedule-visit-form textarea {
-    display: flex;
-    width: 100%;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    resize: vertical;
-    padding: 17px 25px;
-    border-radius: 25px;
-    margin-bottom: 20px;
-    color: black;
-    outline: none;
-
-
+    display: flex; /* Activa Flexbox para la disposición de los elementos dentro de los inputs y textareas */
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    border: 1px solid #ddd; /* Define un borde de 1px de ancho y color #ddd */
+    font-size: 1rem; /* Establece el tamaño de fuente en 1rem */
+    resize: vertical; /* Permite redimensionar verticalmente los textareas */
+    padding: 17px 25px; /* Agrega espacio interno de 17px en la parte superior e inferior y 25px en los lados */
+    border-radius: 25px; /* Redondea las esquinas de los inputs y textareas con un radio de 25px */
+    margin-bottom: 20px; /* Agrega un margen inferior de 20px */
+    color: black; /* Define el color del texto en negro */
+    outline: none; /* Elimina el borde de enfoque predeterminado del navegador cuando el elemento está enfocado */
 }
 
 .schedule-visit-form select {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-    margin-bottom: 10px;
+    display: flex; /* Activa Flexbox para la disposición de los elementos dentro de los selects */
+    flex-direction: row; /* Ordena los elementos hijos en una fila */
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    padding: 12px; /* Agrega un padding de 12px */
+    border: 1px solid #ddd; /* Define un borde de 1px de ancho y color #ddd */
+    border-radius: 4px; /* Redondea las esquinas de los selects con un radio de 4px */
+    font-size: 1rem; /* Establece el tamaño de fuente en 1rem */
+    margin-bottom: 10px; /* Agrega un margen inferior de 10px */
 }
 
 .schedule-visit-form button {
-    padding: 10px 20px;
-    background-color: #51D94C;
-    color: #ffffff;
-    border:0;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-    box-shadow: 0 0 20px rgba(25, 254,0, 0.4);
+    padding: 10px 20px; /* Agrega un padding de 10px en la parte superior e inferior y 20px en los lados */
+    background-color: #51D94C; /* Define el color de fondo del botón */
+    color: #ffffff; /* Define el color del texto en blanco */
+    border: 0; /* Elimina cualquier borde */
+    border-radius: 25px; /* Redondea las esquinas del botón con un radio de 25px */
+    font-size: 16px; /* Establece el tamaño de fuente en 16px */
+    cursor: pointer; /* Cambia el cursor a un puntero (mano) cuando se pasa sobre el botón */
+    transition: background-color 0.3s ease; /* Agrega una transición suave para el cambio de color de fondo */
+    margin-top: 10px; /* Agrega un margen superior de 10px */
+    box-shadow: 0 0 20px rgba(25, 254, 0, 0.4); /* Añade una sombra alrededor del botón con un desenfoque de 20px y un color verde con 40% de opacidad */
 }
 
-
 .schedule-visit-form button:hover {
-    background-color: #3e8e41;
+    background-color: #3e8e41; /* Cambia el color de fondo del botón cuando se pasa el cursor sobre él */
 }
 
 .schedule-visit-form input:focus,
 .schedule-visit-form textarea:focus,
 .schedule-visit-form select:focus {
-    outline: none;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    outline: none; /* Elimina el borde de enfoque predeterminado del navegador cuando el elemento está enfocado */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra alrededor del elemento enfocado con un desenfoque de 5px y un color negro con 10% de opacidad */
 }
 
 .schedule-visit-form input::placeholder,
 .schedule-visit-form textarea::placeholder {
-    color: #ccc;
+    color: #ccc; /* Define el color del texto de los marcadores de posición (placeholders) en los elementos input y textarea */
 }
 
 .schedule-visit-form fieldset {
-    margin: 20px 0;
-    border: none;
+    margin: 20px 0; /* Agrega un margen superior e inferior de 20px */
+    border: none; /* Elimina el borde del fieldset */
 }
 
 .schedule-visit-form legend {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 1.2rem; /* Establece el tamaño de fuente en 1.2rem */
+    font-weight: bold; /* Define el grosor de la fuente en negrita */
+    margin-bottom: 10px; /* Agrega un margen inferior de 10px */
 }
 
 .schedule-visit-form input[type="radio"],
 .schedule-visit-form input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 10px; /* Agrega un margen derecho de 10px */
 }
 
 .schedule-visit-form .date-time-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    display: flex; /* Activa Flexbox para la disposición de los elementos dentro de .date-time-container */
+    justify-content: space-between; /* Distribuye los elementos hijos con espacio igual entre ellos */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+    margin-bottom: 10px; /* Agrega un margen inferior de 10px */
 }
 
 .schedule-visit-form .date-time-container label {
-    width: 20%;
+    width: 20%; /* Establece el ancho de los labels en el 20% del contenedor */
 }
 
 .schedule-visit-form .date-time-container input,
 .schedule-visit-form .date-time-container select {
-    width: 30%;
+    width: 30%; /* Establece el ancho de los inputs y selects en el 30% del contenedor */
 }
 
 .schedule-visit-form .visitors-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    display: flex; /* Activa Flexbox para la disposición de los elementos dentro de .visitors-container */
+    justify-content: space-between; /* Distribuye los elementos hijos con espacio igual entre ellos */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+    margin-bottom: 10px; /* Agrega un margen inferior de 10px */
 }
 
 .schedule-visit-form .visitors-container label {
-    width: 20%;
+    width: 20%; /* Establece el ancho de los labels en el 20% del contenedor */
 }
 
 .schedule-visit-form .visitors-container input {
-    width: 20%;
+    width: 20%; /* Establece el ancho de los inputs en el 20% del contenedor */
 }
 
 .schedule-visit-form .visitors-container input:nth-child(2) {
-    width: 20%;
-    margin-left: 10px;
+    width: 20%; /* Establece el ancho del segundo input en el 20% del contenedor */
+    margin-left: 10px; /* Agrega un margen izquierdo de 10px */
 }
 
 .schedule-visit-form .visitors-container input:nth-child(3) {
-    width: 20%;
-    margin-left: 10px;
+    width: 20%; /* Establece el ancho del tercer input en el 20% del contenedor */
+    margin-left: 10px; /* Agrega un margen izquierdo de 10px */
 }
 
 .BtnAsigVista{
-    width: 208%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 208%; /* Establece el ancho en 208% */
+    display: flex; /* Activa Flexbox para la disposición de los elementos dentro de .BtnAsigVista */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+    justify-content: center; /* Centra los elementos hijos horizontalmente */
 }

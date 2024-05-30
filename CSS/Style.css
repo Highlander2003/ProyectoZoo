@@ -518,332 +518,333 @@ font-size: 18px;: Esta línea establece el tamaño de la fuente del elemento b a
 */
 
 .contact__text button {
-    width: 250px;
-    height: 50px;
-    color: white;
-    background-color: #529756;
-    border: none;
-    border-radius: 20px;
-    font-size: 17px;
-    cursor: pointer;
-    transition: .4s;
+    width: 250px; /* Ancho del botón */
+    height: 50px; /* Altura del botón */
+    color: white; /* Color del texto */
+    background-color: #529756; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Esquinas redondeadas */
+    font-size: 17px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    transition: .4s; /* Transición suave al pasar el cursor */
 }
+
 /* Estilos para la sección de contacto */
 .contact {
-    width: 1200px;
-    height: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
+    width: 1200px; /* Ancho de la sección de contacto */
+    height: 500px; /* Altura de la sección de contacto */
+    margin: 0 auto; /* Centra la sección horizontalmente */
+    display: flex; /* Flexbox para la disposición */
+    flex-direction: row; /* Elementos en fila */
 }
 
 .contact__text {
-    width: 50%;
-    height: 95%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    width: 50%; /* Ancho del contenedor de texto */
+    height: 95%; /* Altura del contenedor de texto */
+    display: flex; /* Flexbox para la disposición */
+    flex-direction: column; /* Elementos en columna */
+    row-gap: 20px; /* Espacio entre filas */
 }
 
 .contact__text h2 {
-    margin-top: 5%;
-    font-size: 29px;
-    text-align: center;
-    width: 80%;
-    color: #529756;
+    margin-top: 5%; /* Margen superior */
+    font-size: 29px; /* Tamaño de fuente */
+    text-align: center; /* Alineación centrada */
+    width: 80%; /* Ancho del texto */
+    color: #529756; /* Color del texto */
 }
 
 .contact__text p {
-    font-size: 15px;
-    width: 94%;
+    font-size: 15px; /* Tamaño de fuente */
+    width: 94%; /* Ancho del párrafo */
 }
 
 .contact__text ul {
-    width: 60%;
-    height:70%;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin: 0%;
-    
+    width: 60%; /* Ancho de la lista */
+    height: 70%; /* Altura de la lista */
+    display: flex; /* Flexbox para la disposición */
+    flex-direction: column; /* Elementos en columna */
+    list-style: none; /* Sin estilo de lista */
+    margin: 0%; /* Sin margen */
 }
 
 .contact__text ul li i {
-    font-size: 20px;
-    color: #529756;
+    font-size: 20px; /* Tamaño de fuente de los íconos */
+    color: #529756; /* Color de los íconos */
 }
 
 .contact__text ul li b {
-    font-size: 18px;
-    margin-left: 0%;
-    margin-bottom: 0%;
+    font-size: 18px; /* Tamaño de fuente */
+    margin-left: 0%; /* Sin margen izquierdo */
+    margin-bottom: 0%; /* Sin margen inferior */
 }
+
 .contact__text small {
-    margin-left: 9%;
+    margin-left: 9%; /* Margen izquierdo */
 }
+
 .contact__text button {
-    width: 250px;
-    height: 50px;
-    color: white;
-    background-color: #529756;
-    border: none;
-    border-radius: 20px;
-    font-size: 25px;
-    cursor: pointer;
-    transition: .4s;
-    margin-left: 20%; 
-    margin-bottom: 8%;
+    width: 250px; /* Ancho del botón */
+    height: 50px; /* Altura del botón */
+    color: white; /* Color del texto */
+    background-color: #529756; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Esquinas redondeadas */
+    font-size: 25px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    transition: .4s; /* Transición suave al pasar el cursor */
+    margin-left: 20%; /* Margen izquierdo */
+    margin-bottom: 8%; /* Margen inferior */
 }
 
 .contact__text button:hover {
-    background-color: #CBDD16;
+    background-color: #CBDD16; /* Color de fondo al pasar el cursor */
 }
 
-/* Clase Imagen de la section de contacto*/
+/* Clase Imagen de la sección de contacto */
 .contact-img {
-    width: 50%;
-    height: 90%;
-    object-fit: cover;
-    border-radius: 10% 25%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    position: relative; 
-  }
+    width: 50%; /* Ancho del contenedor de imagen */
+    height: 90%; /* Altura del contenedor de imagen */
+    object-fit: cover; /* Ajusta la imagen */
+    border-radius: 10% 25%; /* Esquinas redondeadas */
+    display: flex; /* Flexbox para la disposición */
+    justify-content: start; /* Alinea los elementos al inicio */
+    align-items: center; /* Alinea los elementos al centro */
+    position: relative; /* Posicionamiento relativo */
+}
 
-  .marker {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 0, 0, 0);
-    transform: rotate(45deg);
-    border-radius: 20px;
-  }
+.marker {
+    position: absolute; /* Posicionamiento absoluto */
+    width: 12px; /* Ancho del marcador */
+    height: 12px; /* Altura del marcador */
+    background-color: rgba(255, 0, 0, 0); /* Color de fondo transparente */
+    transform: rotate(45deg); /* Rotación de 45 grados */
+    border-radius: 20px; /* Esquinas redondeadas */
+}
 
-  .marker:hover{
-    cursor: pointer;
-  }
+.marker:hover {
+    cursor: pointer; /* Cambia el cursor a puntero al pasar sobre el marcador */
+}
 
-  .contact-img img {
-    width: 100%; /* Assuming you want the image to take up the full width of the container */
-    height: auto;
-    display: block;
-    border-radius: 10% 25%;
+.contact-img img {
+    width: 100%; /* Ancho completo de la imagen */
+    height: auto; /* Altura automática */
+    display: block; /* Mostrar como bloque */
+    border-radius: 10% 25%; /* Esquinas redondeadas */
+}
 
-  }
-  
-  /* Add styles for the marker */
-  .contact-img::after {
-    content: "";
-    position: absolute;
-    background-color: red;
-    transform: rotate(45deg);
-    border-radius: 2px;
-  }
+/* Estilos para el marcador */
+.contact-img::after {
+    content: ""; /* Contenido vacío */
+    position: absolute; /* Posicionamiento absoluto */
+    background-color: red; /* Color de fondo rojo */
+    transform: rotate(45deg); /* Rotación de 45 grados */
+    border-radius: 2px; /* Esquinas redondeadas */
+}
 
-  
-  /* Add styles for the marker */
-  .contact-img::after {
-    content: "";
-    position: absolute;
-    background-color: red;
-    transform: rotate(45deg);
-    border-radius: 2px;
-  }
 .linea {
-    width: 100%;
-    height: 20px;
-    background-color: #529756;
-    border-radius: 10px 10px ;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    width: 100%; /* Ancho completo */
+    height: 20px; /* Altura de 20px */
+    background-color: #529756; /* Color de fondo */
+    border-radius: 10px 10px; /* Esquinas redondeadas */
+    display: flex; /* Flexbox para la disposición */
+    justify-content: center; /* Centrar horizontalmente */
+    text-align: center; /* Alinear el texto al centro */
 }
 
 /* Estilos del pie de página */
 footer {
-    background-color: #013117;
-    color: #ffffff;
-    justify-content: space-between;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    clear: both;
+    background-color: #013117; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    justify-content: space-between; /* Espacio entre elementos */
+    text-align: center; /* Alineación centrada */
+    padding: 20px 0; /* Padding superior e inferior */
+    width: 100%; /* Ancho completo */
+    clear: both; /* Limpiar floats */
 }
 
 .item-imagenes {
-    display: inline-block;
-    margin-top: auto;
-    object-fit: cover;
-    margin-right: 4%;
-    margin-bottom: 2%;
-    
+    display: inline-block; /* Mostrar como bloque en línea */
+    margin-top: auto; /* Margen superior automático */
+    object-fit: cover; /* Ajustar imagen */
+    margin-right: 4%; /* Margen derecho */
+    margin-bottom: 2%; /* Margen inferior */
 }
+
 [id="terca"].item-imagenes {
-    width: 22%;
-    height: 10%;
+    width: 22%; /* Ancho del elemento */
+    height: 10%; /* Altura del elemento */
 }
 
 #ulredes {
-    display: flex;
-    list-style: none;
-    gap: 2.5rem;
-    align-items: flex-start;
-    justify-content: center;
-    padding-bottom: 15px;
-  }
-  
-  .item a {
-    text-decoration: none;
-    width: 3rem;
-    height: 3rem;
-    background-color: hsl(203, 92%, 97%);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    border: 3px solid hsl(203, 92%, 97%);
-    overflow: hidden;
-  }
-  
-  .item a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    z-index: 0;
-    scale: 1 0;
-    transform-origin: bottom;
-    transition: scale 0.5s ease;
-  }
-  
-  .item:hover a::before {
-    scale: 1 1;
-  }
-  
-  .icon {
-    font-size: 2rem;
-    color: hsl(203, 92%, 8%);
-    transition: 0.5s ease;
-    z-index: 2;
-  }
-  
-  .item a:hover .icon {
-    color: #fff;
-    transform: rotateY(360deg);
-  }
-  
-  .item:nth-child(1) {
-    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
-  }
-  .item:nth-child(2) {
-    --bg-color: #0077b5;
-  }
-  .item:nth-child(3) {
-    --bg-color: #ff0000;
-  }
-  .item:nth-child(4) {
-    --bg-color: #000;
-  }
-/*Hover para el copyright del footer*/
+    display: flex; /* Flexbox para la disposición */
+    list-style: none; /* Sin estilo de lista */
+    gap: 2.5rem; /* Espacio entre elementos */
+    align-items: flex-start; /* Alinear al inicio */
+    justify-content: center; /* Centrar horizontalmente */
+    padding-bottom: 15px; /* Padding inferior */
+}
+
+.item a {
+    text-decoration: none; /* Sin subrayado */
+    width: 3rem; /* Ancho del enlace */
+    height: 3rem; /* Altura del enlace */
+    background-color: hsl(203, 92%, 97%); /* Color de fondo */
+    border-radius: 50%; /* Bordes redondeados */
+    display: flex; /* Flexbox para la disposición */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    position: relative; /* Posicionamiento relativo */
+    z-index: 1; /* Nivel de apilamiento */
+    border: 3px solid hsl(203, 92%, 97%); /* Borde */
+    overflow: hidden; /* Ocultar desbordamiento */
+}
+
+.item a::before {
+    content: ""; /* Contenido vacío */
+    position: absolute; /* Posicionamiento absoluto */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background: var(--bg-color); /* Color de fondo variable */
+    z-index: 0; /* Nivel de apilamiento */
+    scale: 1 0; /* Escala inicial */
+    transform-origin: bottom; /* Origen de la transformación */
+    transition: scale 0.5s ease; /* Transición suave */
+}
+
+.item:hover a::before {
+    scale: 1 1; /* Escala completa al pasar el cursor */
+}
+
+.icon {
+    font-size: 2rem; /* Tamaño de fuente */
+    color: hsl(203, 92%, 8%); /* Color del ícono */
+    transition: 0.5s ease; /* Transición suave */
+    z-index: 2; /* Nivel de apilamiento */
+}
+
+.item a:hover .icon {
+    color: #fff; /* Color del ícono al pasar el cursor */
+    transform: rotateY(360deg); /* Rotación al pasar el cursor */
+}
+
+.item:nth-child(1) {
+    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7); /* Gradiente de fondo */
+}
+
+.item:nth-child(2) {
+    --bg-color: #0077b5; /* Color de fondo */
+}
+
+.item:nth-child(3) {
+    --bg-color: #ff0000; /* Color de fondo */
+}
+
+.item:nth-child(4) {
+    --bg-color: #000; /* Color de fondo */
+}
+
+/* Hover para el copyright del footer */
 .copyright {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    width: 100%; /* Ancho completo */
+    height: 50px; /* Altura de 50px */
+    display: flex; /* Flexbox para la disposición */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
 }
+
 .p {
-    font-size: 16px;
-    margin: 3px;
-    font-weight: 500;
-    color: #fff;
-    transition: 0.5s;
-    text-shadow: #fff;
-}
-.p:hover {
-    transform: translateY(-50px);
-    text-shadow: 0px 40px 200px #fff;
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 3px; /* Margen */
+    font-weight: 500; /* Grosor de fuente */
+    color: #fff; /* Color del texto */
+    transition: 0.5s; /* Transición suave */
+    text-shadow: #fff; /* Sombra del texto */
 }
 
+.p:hover {
+    transform: translateY(-50px); /* Trasladar verticalmente */
+    text-shadow: 0px 40px 200px #fff; /* Sombra del texto al pasar el cursor */
+}
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(0, 100, 0, 0.7);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 50px;
-    font-size: 20px;
-    font-weight: bolder;
-}
-.sidebar li{
-    width: 100%;
-}
-.sidebar a{
-    width: 100%;
+    position: fixed; /* Posicionamiento fijo */
+    top: 0; /* Superior de la ventana */
+    right: 0; /* Derecha de la ventana */
+    height: 100vh; /* Altura completa de la ventana */
+    width: 250px; /* Ancho de la barra lateral */
+    z-index: 999; /* Nivel de apilamiento */
+    background-color: rgba(0, 100, 0, 0.7); /* Color de fondo con transparencia */
+    backdrop-filter: blur(10px); /* Filtro de desenfoque */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    display: none; /* No mostrar por defecto */
+    flex-direction: column; /* Elementos en columna */
+    align-items: flex-start; /* Alinear al inicio */
+    justify-content: flex-start; /* Justificar al inicio */
+    padding: 50px; /* Padding */
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: bolder; /* Grosor de fuente */
 }
 
-@media(max-width:800px){
-    .hideMobile{
-        display: none;
+.sidebar li {
+    width: 100%; /* Ancho completo */
+}
+
+.sidebar a {
+    width: 100%; /* Ancho completo */
+}
+
+@media(max-width:800px) {
+    .hideMobile {
+        display: none; /* Ocultar en móviles */
     }
-    .context{
-        margin: 0%;
+    
+    .context {
+        margin: 0%; /* Sin margen */
     }
+    
     .context__text,
     .contact__text {
-        width: 40%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        width: 40%; /* Ancho en móviles */
+        height: 100%; /* Altura completa */
+        display: flex; /* Flexbox para la disposición */
+        flex-direction: column; /* Elementos en columna */
+        align-items: center; /* Alinear al centro */
+        justify-content: center; /* Justificar al centro */
     }
 
-
-    .contact{
-        margin: 0%;
+    .contact {
+        margin: 0%; /* Sin margen */
     }
+    
     #img_logo {
-        width: 130px;
-        height: 65px;
-        margin-left: 20%;
+        width: 130px; /* Ancho del logo */
+        height: 65px; /* Altura del logo */
+        margin-left: 20%; /* Margen izquierdo */
     }
 }
 
-.container-mapa{
-    position: relative;
-    background-color: rgba(23, 106, 23, 0.7);
-}
-.map{
-  width: 20%;
-  height: 40%;
-  position: relative;
-  top: 50%;
-  left: 25%;
-  margin: -25px 0 0 -25px;
+.container-mapa {
+    position: relative; /* Posicionamiento relativo */
+    background-color: rgba(23, 106, 23, 0.7); /* Color de fondo con transparencia */
 }
 
-#text-map{
-    color: #fff;
-    text-shadow: #000;
-    width: 20%;
-    height: 40%;
-    position: relative;
-    top: 50%;
-    left: 10%;
-    margin: -25px 0 0 -25px; 
+.map {
+    width: 20%; /* Ancho del mapa */
+    height: 40%; /* Altura del mapa */
+    position: relative; /* Posicionamiento relativo */
+    top: 50%; /* Posicionamiento vertical */
+    left: 25%; /* Posicionamiento horizontal */
+    margin: -25px 0 0 -25px; /* Margen negativo */
+}
+
+#text-map {
+    color: #fff; /* Color del texto */
+    text-shadow: #000; /* Sombra del texto */
+    width: 20%; /* Ancho del texto */
+    height: 40%; /* Altura del texto */
+    position: relative; /* Posicionamiento relativo */
+    top: 50%; /* Posicionamiento vertical */
+    left: 10%; /* Posicionamiento horizontal */
+    margin: -25px 0 0 -25px; /* Margen negativo */
 }

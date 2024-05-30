@@ -1,108 +1,121 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/* Esta línea importa una fuente de Google Fonts llamada “Poppins” con dos pesos de fuente (400 y 500) y la muestra en la página. La URL especificada
+ es la ubicación del archivo CSS de la fuente. */
+
+
 /* Estilos generales */
   * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* establece el modelo de caja para incluir el relleno y el borde en el ancho y alto totales del elemento. */
     padding: 0;
     margin: 0;
+    /*eliminan el relleno y los márgenes predeterminados en todos los elementos.*/
   }
   
   body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding-top: 100px;
-    background-image: url('../Imagenes/froges.png'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
-    background-size: cover; /* Para cubrir todo el área del cuerpo */
+    font-family: Arial, sans-serif; /*establece la fuente predeterminada para todo el contenido del cuerpo.*/
+    margin: 0;/*elimina los márgenes predeterminados del cuerpo.*/
+    padding-top: 100px; /*agrega un espacio de 100 píxeles en la parte superior del cuerpo.*/
+    background-image: url('../Imagenes/froges.png'); /*  establece una imagen de fondo para el cuerpo. Asegúrate de reemplazar 'ruta_de_la_imagen.jpg'
+     con la ruta correcta de tu imagen. */
+    background-size: cover; /* ajusta la imagen de fondo para cubrir todo el área del cuerpo. */
     background-repeat: no-repeat; /* Para que no se repita la imagen */
-    background-attachment: fixed; /* Para que la imagen de fondo permanezca fija */
-    padding-top: 120px;
-    padding-bottom: 300px;
+    background-attachment: fixed; /*  mantiene la imagen de fondo fija mientras se desplaza la página. */
+    padding-top: 120px; /*agrega más espacio en la parte superior del cuerpo.*/
+    padding-bottom: 300px; /* agrega espacio en la parte inferior del cuerpo.*/
     margin: 0;
-    opacity: 5; 
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(210, 155, 141, 0.5); /* Cambia el último valor para ajustar la opacidad */
+    opacity: 5; /* establece la opacidad del cuerpo al 50% (5/10).*/
+    height: 100vh;/* establece la altura del cuerpo al 100% de la ventana gráfica.*/
+    justify-content: center;/*centra verticalmente el contenido dentro del cuerpo.*/
+    align-items: center;/*centra horizontalmente el contenido dentro del cuerpo.*/
+    background-color: rgba(210, 155, 141, 0.5); /*  establece un color de fondo semitransparente utilizando valores RGB y el último valor para 
+    ajustar la opacidad */
 
 }
 
 .container {
-    width: 7000%;
-    margin: 100px;
-    padding: 25px 30px;
-    border-radius: 5px;
+    width: 7000%;/* establece un ancho del 7000% para el contenedor.  Normalmente, los valores de ancho se expresan en porcentajes más pequeños
+     (por ejemplo, 100% para que el contenedor ocupe todo el ancho disponible)*/
+    margin: 100px; /*agrega un margen de 100 píxeles alrededor del contenedor.*/
+    padding: 25px 30px;/*establece un relleno de 25 píxeles en la parte superior e inferior y 30 píxeles en los lados izquierdo y derecho del contenedor.*/
+    border-radius: 5px;/* agrega bordes redondeados al contenedor con un radio de 5 píxeles.*/
 }
 
 /* Estilos del encabezado */
 header {
-    background-color: #013117;
-    color: #ffffff;
-    display: flex;
-    font-family: "Poppins", sans-serif;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    height: 95px;
-    top: 0;
-    z-index: 1000;
+    background-color: #013117; /* establece un color de fondo verde oscuro para el encabezado.*/
+    color: #ffffff;/*establece el color del texto en blanco */
+    display: flex;/*utiliza el modelo de diseño flexible (Flexbox) para organizar los elementos secundarios del encabezado.*/
+    font-family: "Poppins", sans-serif;/* especifica la fuente “Poppins”  o una fuente genérica sans-serif si “Poppins” no está disponible.*/
+    align-items: center;/*centra verticalmente los elementos secundarios dentro del encabezado.*/
+    justify-content: space-between;/* distribuye los elementos secundarios con espacio entre ellos.*/
+    position: fixed;/*fija el encabezado en la parte superior de la ventana gráfica.*/
+    width: 100%;/*asegura que el encabezado ocupe todo el ancho disponible.*/
+    height: 95px;/*establece una altura de 95 píxeles para el encabezado.*/
+    top: 0;/* coloca el encabezado en la parte superior de la ventana gráfica.*/
+    z-index: 1000;/* establece un índice de apilamiento alto para asegurar que el encabezado esté por encima de otros elementos.*/
 }
 
 header h1, header h3 {
     
-    margin: 0 auto;
-    color: #CBDD16;
-    font-family: sans-serif;
+    margin: 0 auto;/*centra horizontalmente los encabezados dentro de su contenedor.*/
+    color: #CBDD16;/*establece el color del texto en un tono amarillo verdoso */
+    font-family: sans-serif;/*utiliza una fuente genérica sans-serif para los encabezados.*/
 }
 .barra{
-    margin: 0 auto;
-    padding: 1rem;
+    margin: 0 auto;/*centra horizontalmente los elementos con la clase*/
+    padding: 1rem;/*agrega un relleno de 1 rem (16 píxeles) alrededor de los elementos con esta clase.*/
     
 }
 
 li{
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: bold;/*establece un peso de fuente en negrita para los elementos de lista.*/
+    font-size: 20px;/* define un tamaño de fuente de 20 píxeles para los elementos de lista*/
 }
 
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
+    display: flex;/*utiliza Flexbox para organizar los elementos secundarios de la navegación.*/
+    flex-wrap: wrap;/* permite que los elementos secundarios se envuelvan a la siguiente línea si no caben en una sola fila.*/
+    justify-content: space-between;/* distribuye los elementos secundarios con espacio entre ellos.*/
+    align-items: center;/*centra verticalmente los elementos secundarios dentro de la navegación.*/
+    padding: 1rem 1.5rem;/* agrega un relleno de 1 rem en la parte superior e inferior y 1.5 rem en los lados izquierdo y derecho de la navegación.*/
 }
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
+    list-style: none;/*elimina los marcadores de lista predeterminados.*/
+    display: flex;/* utiliza Flexbox para organizar los elementos secundarios de la lista.*/
+    gap: 2rem;/*establece un espacio de 2 rem (32 píxeles) entre los elementos de la lista.*/
 }
-nav a {
-    text-decoration: none;
-    color: white;
+nav a { /*Estilos para los enlaces */
+    text-decoration: none;/*elimina la decoración de subrayado de los enlaces.*/
+    color: white;/* establece el color del texto en blanco.*/
 }
-nav #toggle,
+nav #toggle,/*menu desplegable*/
 nav label {
-display: none;
+display: none;/*oculta el interruptor de menú y la etiqueta (probablemente utilizados para un menú desplegable en dispositivos móviles).*/
 }
-@media (max-width: 40.625em) {
-nav .menu {
-    width: 100%;
-    height: 0;
-    overflow: hidden;
+@media (max-width: 40.625em) {/*Estilos para dispositivos móviles */
+nav .menu { /*Estilos para el menú desplegable*/
+    width: 100%;/* asegura que el menú ocupe todo el ancho disponible.*/
+    height: 0;/*inicialmente, el menú está oculto (altura cero).*/
+    overflow: hidden;/*oculta cualquier contenido que exceda el área del menú.*/
 }
-nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0;
+nav ul { /*Estilos para la lista de navegación*/
+    flex-direction: column;/* Esto establece que los elementos de la lista se organizarán en una columna vertical. En otras palabras, los enlaces se
+     mostrarán uno debajo del otro en lugar de en una fila horizontal.*/
+    align-items: center;/*Esto centra los elementos de la lista verticalmente en el contenedor. Los enlaces estarán alineados en el centro verticalmente.*/
+    padding: 0.5rem 0;/*Agrega un espacio de relleno de 0.5 unidades de medida (por ejemplo, píxeles o rem) en la parte superior e inferior de la lista.*/
 }
-nav label {
-    display: inline-flex;
-    color: white;
-    cursor: pointer;
+nav label { /*Estilos para las etiquetas*/
+    display: inline-flex;/* Esto hace que las etiquetas se muestren como elementos flexibles en línea. Puede ser útil para alinear elementos dentro de las etiquetas.*/
+    color: white;/* Establece el color del texto de las etiquetas en blanco.*/
+    cursor: pointer;/*Cambia el cursor del mouse a una mano cuando se coloca sobre las etiquetas, indicando que son clicables.*/
 }
-nav #toggle:checked ~ .menu {
-    height: 80%;
+nav #toggle:checked ~ .menu {/*Estilos para el selector*/
+    /* nav #toggle:checked :Esto se aplica cuando el elemento con el id toggle dentro del elemento nav está marcado (por ejemplo, un interruptor de alternancia).
+    ~ .menu: Selecciona el elemento con la clase .menu que sigue al elemento con el id toggle. En otras palabras, cuando el interruptor está marcado,
+     se aplicarán estilos al elemento con la clase .menu.*/
+    height: 80%;/*Establece la altura del elemento .menu al 80% de la altura del contenedor.*/
 }
 }
 #img_login {
@@ -118,25 +131,28 @@ nav #toggle:checked ~ .menu {
     height: 30px;
     width: 30px;
     margin-left: 2%;
-}
+}/*#img_login, #img_logo y #iconoMenu son selectores para elementos con los respectivos ids.
+Se establecen las dimensiones (ancho y alto) para cada uno de estos elementos, así como un margen izquierdo para img_logo.*/
+
 /*Fin del style del menu*/
 
 /* Animacion hover de elementos Nav superior */
 
 .menu-item {
-    position: relative;
-    transition: color 0.3s ease;
+    position: relative; /*Esto establece que el elemento con la clase .menu-item se posicionará de acuerdo a su posición normal 
+    en el flujo del documento, pero puede ser desplazado utilizando las propiedades top, right, bottom y left.*/
+    transition: color 0.3s ease;/* Esto aplica una transición suave de 0.3 segundos al color del texto cuando cambia (por ejemplo, al pasar el cursor sobre el elemento).*/
   }
 
   .menu-item:before,
-  .menu-item:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #CBDD16;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+  .menu-item:after { /*.menu-item:before y .menu-item:after: Estos se utilizan para crear líneas horizontales antes y después del texto del elemento .menu-item.*/
+    content: "";/*Esto crea un pseudo-elemento vacío antes y después del contenido del elemento.*/
+    position: absolute;/* Establece la posición absoluta para los pseudo-elementos.*/
+    width: 100%;/*Define el ancho y la altura de las líneas.*/
+    height: 2px;/**/
+    background-color: #CBDD16;/* Establece el color de fondo de las líneas en amarillo */
+    transform: scaleX(0);/* Inicialmente, las líneas están completamente colapsadas en la dirección horizontal.*/
+    transition: transform 0.3s ease;/*: Aplica una transición suave de 0.3 segundos a la transformación de escala en el eje X.*/
   }
 
   .menu-item:before {
@@ -154,48 +170,55 @@ nav #toggle:checked ~ .menu {
   .menu-item:hover:before,
   .menu-item:hover:after {
     transform: scaleX(1);
-  }
+  }/*.menu-item:before se coloca en la parte superior izquierda y .menu-item:after en la parte inferior derecha del elemento.
+  Cuando se pasa el cursor sobre .menu-item, las líneas se expanden horizontalmente (transform: scaleX(1);).*/
 
   .menu-item:hover {
     color: #CBDD16;
-  }
+  }/**Cuando el cursor se coloca sobre .menu-item, se aplican los siguientes estilos:
+color: #CBDD16;: Cambia el color del texto a amarillo (#CBDD16)./
 /* Animales dropdown menu */
-.dropdown {
-    position: relative;
-    display: inline-block;
+
+.dropdown {/*Estilos para el menú desplegable*/
+    position: relative;/* Similar al primer elemento, establece la posición relativa para el menú desplegable.*/
+    display: inline-block;/*Hace que el menú desplegable se muestre como un bloque en línea.*/
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 180px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin: 0;
+    display: none; /*Inicialmente, el contenido del menú desplegable no se muestra.*/
+    position: absolute;/*Establece la posición absoluta para el contenido del menú.*/
+    background-color: #f9f9f9;/*: Define el color de fondo del contenido del menú.*/
+    min-width: 180px;/*Establece un ancho mínimo para el contenido del menú.*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);/* Agrega una sombra alrededor del contenido del menú.*/
+    z-index: 1;/*Define el orden de apilamiento (superposición) del contenido del menú.*/
+    margin: 0;/* Elimina los márgenes y rellenos predeterminados.*/
     padding: 0;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: all 0.2s ease-in-out;
+.dropdown-content a { /*Estilos para los enlaces dentro del menú desplegable*/
+    color: black;/*Establece el color del texto de los enlaces en negro.*/
+    padding: 12px 16px;/*Agrega un espacio de relleno de 12 píxeles en la parte superior e inferior y 16 píxeles en los lados izquierdo y derecho de los enlaces.*/
+    text-decoration: none;/*Elimina la decoración de subrayado de los enlaces.*/
+    display: block;/*Hace que los enlaces se muestren como bloques, ocupando todo el ancho disponible.*/
+    transition: all 0.2s ease-in-out;/* Aplica una transición suave de 0.2 segundos a todos los cambios de estilo en los enlaces.*/
 }
-.dropdown-content div:hover li{
-    color: white;
-    background-color: #3e8e41;
-    transform: scale(1.1);
+.dropdown-content div:hover li{/*Estilos para los elementos li dentro de .dropdown-content div:hover*/
+    /*Cuando el cursor se coloca sobre un elemento div dentro de .dropdown-content, se aplican los siguientes estilos a los elementos li:*/
+    color: white;/*Cambia el color del texto a blanco.*/
+    background-color: #3e8e41;/*Establece un color de fondo verde*/
+    transform: scale(1.1);/* Escala los elementos li al 110% de su tamaño original.*/
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block;/*.dropdown:hover .dropdown-content: Cuando el cursor se coloca sobre el elemento con la clase .dropdown,
+     se muestra el contenido del menú desplegable (.dropdown-content).*/
 }
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
-}
+}/*.dropdown:hover .dropbtn: Cuando el cursor se coloca sobre el elemento con la clase .dropdown, se cambia el color de fondo del botón a verde */
+
+
 .dropdown-content li {
     display: flex; /* Usar display flex para alinear elementos en línea */
     align-items: center; /* Alinear verticalmente los elementos */
@@ -206,255 +229,263 @@ nav #toggle:checked ~ .menu {
 }
 
 /* estilos formulario*/
+
 form{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 80px 100px;
-    box-shadow: 0 0 20px rgba(0, 0,0, 0.2);
-    border-radius: 20px;
-    justify-content: center;
-    text-align: center;
-    width: 440px; 
+    display: flex;/*Esto establece que el formulario se mostrará como un contenedor flexible, lo que permite organizar los elementos internos en una fila o columna.*/
+    flex-wrap: wrap;/*Si los elementos dentro del formulario no caben en una sola línea, se envolverán a la siguiente línea.*/
+    padding: 80px 100px;/*Agrega un espacio de relleno de 80 píxeles en la parte superior e inferior y 100 píxeles en los lados izquierdo y derecho del formulario.*/
+    box-shadow: 0 0 20px rgba(0, 0,0, 0.2);/*Aplica una sombra alrededor del formulario con un desplazamiento horizontal y vertical de 0 píxeles y un radio
+     de desenfoque de 20 píxeles. El color de la sombra es un tono gris con una opacidad del 20%.*/
+    border-radius: 20px;/*Establece un radio de borde de 20 píxeles para redondear las esquinas del formulario.*/
+    justify-content: center;/*Centra los elementos dentro del formulario horizontalmente.*/
+    text-align: center;/*Centra el texto dentro del formulario.*/
+    width: 440px; /*Establece un ancho fijo de 440 píxeles para el formulario.*/
     margin: auto; /* Centramos el formulario horizontalmente */
-    background-color: rgba(39, 76, 49, 0.5); /* Cambia el último valor para ajustar la opacidad */
+    background-color: rgba(39, 76, 49, 0.5); /*  Establece un color de fondo para el formulario con un valor RGBA (rojo, verde, azul, alfa). En este caso, el
+     color es un tono verde oscuro con una opacidad del 50%. Cambia el último valor para ajustar la opacidad */
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 40px;/*: Agrega márgenes en la parte superior e inferior del formulario.*/
     }
 
 
-.input-group{
-    padding-top: 30Px;
+.input-group{/*Estilos para el grupo de entrada*/
+    padding-top: 30Px;/* Agrega un espacio de relleno de 30 píxeles en la parte superior del grupo de entrada.*/
     display:flex;
-    flex-direction:column;
-    text-align: left;
+    flex-direction:column;/*Organiza los elementos dentro del grupo de entrada en una columna vertical.*/
+    text-align: left;/*Alinea el texto dentro del grupo de entrada a la izquierda.*/
 
     }
 
-h2{
-    color: white;
-    font-size: 35px;
-    margin: auto; 
+h2{/*Estilos para los encabezados*/
+    color: white;/*Establece el color del texto de los encabezados en blanco.*/
+    font-size: 35px;/* Define el tamaño de fuente de los encabezados a 35 píxeles.*/
+    margin: auto; /*Centra los encabezados horizontalmente.*/
       
     }
 
 label{
-    color: white ;
+    color: white ;/*Establece el color del texto de las etiquetas en blanco.*/
     font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-weight: 600;/* Define el tamaño de fuente de las etiquetas a 15 píxeles y les da un peso de fuente de 600 (negrita).*/
+    margin-bottom: 15px;/*Agrega un margen inferior de 15 píxeles a las etiquetas.*/
             
     } 
 
-    input,textarea{
-        padding: 17px 25px;
-        border-radius: 25px;
+    input,textarea{/*Estilos para los campos de entrada*/
+        padding: 17px 25px;/* Agrega un espacio de relleno de 17 píxeles en la parte superior e inferior y 25 píxeles en los lados izquierdo y
+         derecho de los campos de entrada.*/
+        border-radius: 25px;/* Establece un radio de borde de 25 píxeles para redondear las esquinas de los campos de entrada.*/
         margin-bottom: 20px;
-        color: black;
-        outline: none;
+        color: black;/*: Establece el color del texto en negro.*/
+        outline: none;/* Elimina el contorno predeterminado al hacer clic en los campos de entrada.*/
         
         }
 
-input::placeholder,textarea::placeholder{
-color: #b5cab6;
+input::placeholder,textarea::placeholder{ /*Estilos para los marcadores de posición*/
+color: #b5cab6;/*Define el color del texto del marcador de posición en un tono gris claro*/
 
 }
 
-.form-txt{
-    margin-bottom: 30px;
+.form-txt{/*Estilos para el texto adiciona*/
+    margin-bottom: 30px;/*Agrega un margen inferior de 30 píxeles al texto adicional.*/
     display: flex;
-    justify-content: space-between;
-    text-align: center;
+    justify-content: space-between;/* Organiza los elementos dentro del texto adicional en una fila flexible y distribuye el espacio entre ellos de manera uniforme.*/
+    text-align: center;/*Centra el texto dentro del contenedor del texto adicional.*/
     
+}
+
+
+
+
+.form-txt a { /*Estilos para los enlaces dentro del elemento con la clase*/
+    color: white;/*Establece el color del texto de los enlaces en blanco.*/
+    font-size: 14px;/*Define el tamaño de fuente de los enlaces a 14 píxeles.*/
+    font-weight: 600;/*Establece un peso de fuente de 600 (negrita) para los enlaces.*/
+    text-decoration: none;/*Elimina la decoración de subrayado de los enlaces.*/
+        
+}
+            
+.btn{/*Estilos para el botón con la clase */
+    font-size: 16px;/*Define el tamaño de fuente del botón a 16 píxeles.*/
+    color: #FFFFFF;/*Establece el color del texto del botón en blanco.*/
+    border: 0;/*Elimina el borde del botón.*/
+    border-radius: 25px;/*Establece un radio de borde de 25 píxeles para redondear las esquinas del botón.*/
+    background-color: #51D94C;/*Define un color de fondo verde para el botón.*/
+    box-shadow: 0 0 20px rgba(25, 254,0, 0.4);/*Agrega una sombra alrededor del botón con un desplazamiento horizontal y vertical de 0 píxeles
+        y un radio de desenfoque de 20 píxeles. El color de la sombra es un tono verde claro con una opacidad del 40%.*/
+    cursor: pointer;/*Cambia el cursor del mouse a una mano cuando se coloca sobre el botón, indicando que es clicable.*/
+
+}    
+
+.btn:hover {
+    background-color: #50E04B; /* Cambio de color al pasar el cursor */
+}
+
+@media(max-width:991px) {
+    body {
+        padding: 30px; /* Padding del cuerpo en dispositivos de ancho máximo de 991px */
     }
 
-    .form-txt a {
-        color: white;
-        font-size: 14px;
-        font-weight: 600;
-        text-decoration: none;
-        
-        }
-            
-        .btn{
-            font-size: 16px;
-            color: #FFFFFF;
-            border: 0;
-            border-radius: 25px;
-            background-color: #51D94C;
-            box-shadow: 0 0 20px rgba(25, 254,0, 0.4);
-            cursor: pointer;
-        
-        }    
+    form {
+        padding: 50px 30px; /* Padding del formulario en dispositivos de ancho máximo de 991px */
+        width: 100%; /* Ancho completo */
+    }
 
-        .btn:hover{
-            background-color: #50E04B;
-        }        
-        
-        @media(max-width:991px){
+    input {
+        padding: 15px; /* Relleno de las entradas */
+    }
+}
 
-            body{
-                padding: 30px;
-            }
-        
-            form{
-                padding: 50px 30px;
-                width: 100%;
-            }
-        
-            input{
-                padding: 15px;
-            }
-        }
+select {
+    padding: 17px 25px; /* Relleno de las entradas */
+    border-radius: 25px; /* Esquinas redondeadas */
+    margin-bottom: 20px; /* Margen inferior */
+    background-color: #EDFFF0; /* Color de fondo */
+    border: 2px solid rgba(210, 155, 141, 0.5); /* Borde con transparencia */
+    color: #283629; /* Color del texto */
+    outline: none; /* Sin contorno */
+    appearance: none; /* Sin estilo nativo del sistema operativo */
+    cursor: pointer; /* Cursor de puntero */
+}
 
-        select {
-            padding: 17px 25px; /* Aplicamos el mismo relleno que en las otras entradas */
-            border-radius: 25px;
-            margin-bottom: 20px;
-            background-color: #EDFFF0;
-            border: 2px solid color(210,155,141,0.5);
-            color: #283629;
-            outline: none;
-            appearance: none; /* Quitamos el estilo nativo del sistema operativo */
-            cursor: pointer;
-        }
-        
-        /* Agregamos un estilo para el ícono de la flecha en el select */
-        select::-ms-expand {
-            display: none;
-        }
-        
-        #Alejado{
-            margin-left: 50px;
-        }
+select::-ms-expand {
+    display: none; /* Ocultar flecha en IE */
+}
 
-        .customfile{
-            font-size: 15px;
-            color: black;
-            background: white;
-            border-radius: 50px;
-            box-shadow: 5px 5px 10px black;
-            padding: 1px;
-        }
+#Alejado {
+    margin-left: 50px; /* Margen izquierdo */
+}
 
-        .customfile::-webkit-file-upload-button{
-            background: #206a5d;
-            padding: 10px;
-            border: none;
-            border-radius: 50px;
-            box-shadow: 1px 0 1px #6b4559;
-        }
-        .customfile::-webkit-file-upload-button:hover{
-            background-color: #438a5e;
-        }
+.customfile {
+    font-size: 15px; /* Tamaño de fuente */
+    color: black; /* Color del texto */
+    background: white; /* Color de fondo */
+    border-radius: 50px; /* Esquinas redondeadas */
+    box-shadow: 5px 5px 10px black; /* Sombra */
+    padding: 1px; /* Relleno */
+}
 
-        
+.customfile::-webkit-file-upload-button {
+    background: #206a5d; /* Color de fondo */
+    padding: 10px; /* Relleno */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* Esquinas redondeadas */
+    box-shadow: 1px 0 1px #6b4559; /* Sombra */
+}
+
+.customfile::-webkit-file-upload-button:hover {
+    background-color: #438a5e; /* Cambio de color al pasar el cursor */
+}
 
 /* Estilos del pie de página */
 footer {
-    background-color: #013117;
-    color: #ffffff;
-    justify-content: space-between;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    clear: both;
+    background-color: #013117; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    justify-content: space-between; /* Espaciado entre elementos */
+    text-align: center; /* Alineación centrada */
+    padding: 20px 0; /* Padding superior e inferior */
+    width: 100%; /* Ancho completo */
+    clear: both; /* Limpiar floats */
 }
 
 .item-imagenes {
-    display: inline-block;
-    margin-top: auto;
-    object-fit: cover;
-    margin-right: 4%;
-    margin-bottom: 2%;
-    
+    display: inline-block; /* Mostrar como bloque en línea */
+    margin-top: auto; /* Margen superior automático */
+    object-fit: cover; /* Ajustar imagen */
+    margin-right: 4%; /* Margen derecho */
+    margin-bottom: 2%; /* Margen inferior */
 }
+
 [id="terca"].item-imagenes {
-    width: 20%;
-    height: 10%;
+    width: 20%; /* Ancho del elemento */
+    height: 10%; /* Altura del elemento */
 }
+
 ul {
-    display: flex;
-    list-style: none;
-    gap: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 15px;
-  }
+    display: flex; /* Flexbox para la disposición */
+    list-style: none; /* Sin estilo de lista */
+    gap: 2.5rem; /* Espacio entre elementos */
+    align-items: center; /* Alinear al centro verticalmente */
+    justify-content: center; /* Justificar al centro horizontalmente */
+    padding-bottom: 15px; /* Padding inferior */
+}
 
 .item a {
-    text-decoration: none;
-    width: 3rem;
-    height: 3rem;
-    background-color: hsl(203, 92%, 97%);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    border: 3px solid hsl(203, 92%, 97%);
-    overflow: hidden;
-  }
-  
-  .item a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    z-index: 0;
-    scale: 1 0;
-    transform-origin: bottom;
-    transition: scale 0.5s ease;
-  }
-  
-  .item:hover a::before {
-    scale: 1 1;
-  }
-  
-  .icon {
-    font-size: 2rem;
-    color: hsl(203, 92%, 8%);
-    transition: 0.5s ease;
-    z-index: 2;
-  }
-  
-  .item a:hover .icon {
-    color: #fff;
-    transform: rotateY(360deg);
-  }
-  
-  .item:nth-child(1) {
-    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
-  }
-  .item:nth-child(2) {
-    --bg-color: #0077b5;
-  }
-  .item:nth-child(3) {
-    --bg-color: #ff0000;
-  }
-  .item:nth-child(4) {
-    --bg-color: #000;
-  }
+    text-decoration: none; /* Sin subrayado */
+    width: 3rem; /* Ancho del enlace */
+    height: 3rem; /* Altura del enlace */
+    background-color: hsl(203, 92%, 97%); /* Color de fondo */
+    border-radius: 50%; /* Esquinas redondeadas */
+    display: flex; /* Flexbox para la disposición */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    position: relative; /* Posicionamiento relativo */
+    z-index: 1; /* Nivel de apilamiento */
+    border: 3px solid hsl(203, 92%, 97%); /* Borde */
+    overflow: hidden; /* Ocultar desbordamiento */
+}
+
+.item a::before {
+    content: ""; /* Contenido vacío */
+    position: absolute; /* Posicionamiento absoluto */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background: var(--bg-color); /* Color de fondo variable */
+    z-index: 0; /* Nivel de apilamiento */
+    scale: 1 0; /* Escala inicial */
+    transform-origin: bottom; /* Origen de la transformación */
+    transition: scale 0.5s ease; /* Transición suave */   
+}
+
+.item:hover a::before {
+    scale: 1 1; /* Escala completa al pasar el cursor */
+}
+
+.icon {
+    font-size: 2rem; /* Tamaño del ícono */
+    color: hsl(203, 92%, 8%); /* Color del ícono */
+    transition: 0.5s ease; /* Transición suave */
+    z-index: 2; /* Índice de apilamiento */
+}
+
+.item a:hover .icon {
+    color: #fff; /* Cambio de color al pasar el cursor */
+    transform: rotateY(360deg); /* Rotación al pasar el cursor */
+}
+
+.item:nth-child(1) {
+    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7); /* Primer elemento */
+}
+.item:nth-child(2) {
+    --bg-color: #0077b5; /* Segundo elemento */
+}
+.item:nth-child(3) {
+    --bg-color: #ff0000; /* Tercer elemento */
+}
+.item:nth-child(4) {
+    --bg-color: #000; /* Cuarto elemento */
+}
+
 /*Hover para el copyright del footer*/
 .copyright {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    width: 100%; /* Ancho completo */
+    height: 50px; /* Altura de 50px */
+    display: flex; /* Flexbox para la disposición */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
 }
+
 .p {
-    font-size: 16px;
-    margin: 3px;
-    font-weight: 500;
-    color: #fff;
-    transition: 0.5s;
-    text-shadow: #fff;
-}
-.p:hover {
-    transform: translateY(-50px);
-    text-shadow: 0px 40px 200px #fff;
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 3px; /* Margen */
+    font-weight: 500; /* Peso de la fuente */
+    color: #fff; /* Color del texto */
+    transition: 0.5s; /* Transición suave */
+    text-shadow: #fff; /* Sombra de texto */
 }
 
+.p:hover {
+    transform: translateY(-50px); /* Desplazamiento vertical al pasar el cursor */
+    text-shadow: 0px 40px 200px #fff; /* Sombra de texto al pasar el cursor */
+}
+         

@@ -51,6 +51,18 @@
     <main class="main">
         <!-- formulario -->
         <form action="https://formsubmit.co/cm6562141@gmail.com" method="POST">
+            <!--
+                <form>: Este es el elemento que define un formulario en HTML. Es un contenedor para diferentes tipos 
+                    de elementos de entrada, como campos de texto, botones, casillas de verificación, etc.
+
+                    action="https://formsubmit.co/cm6562141@gmail.com": El atributo action especifica la URL a la que se e
+                    nviarán los datos del formulario cuando se envíe. En este caso, se está utilizando el servicio FormSubmit, 
+                    que permite enviar los datos del formulario directamente a un correo electrónico sin necesidad de un backend.
+
+                    method="POST": El atributo method define el método HTTP que se utilizará al enviar el formulario. 
+                    POST es uno de los métodos más comunes y se utiliza para enviar datos que pueden contener información sensible, 
+                    ya que los datos se envían en el cuerpo de la solicitud y no en la URL.
+            -->
 
             <h2>Ingreso Animal</h2>
 
@@ -58,6 +70,28 @@
 
                 <label for="name">Nombre Animal</label>
                 <input type="text" name="name" id="name"required>
+                <!-- 
+                    <label for="name">Nombre Animal</label>: Esta etiqueta <label> define una etiqueta para el campo de entrada del nombre 
+                    del animal. El atributo for debe coincidir con el atributo id del elemento <input> correspondiente para asociar 
+                    la etiqueta con el campo de entrada.
+                        
+                    <input type="text" name="name" id="name" required>: Este es un elemento <input> que define un campo de texto. 
+                    Los atributos son:
+                        
+                    type="text": Indica que el campo es para texto.
+
+                    name="name": El nombre del campo, que se utiliza para identificar los datos en el formulario cuando se envía.
+
+                    id="name": Un identificador único para el campo, que se utiliza para asociarlo con su etiqueta <label>.
+
+                    required: Especifica que el campo debe ser llenado antes de enviar el formulario.
+
+                    <label for="cientifico">Nombre Científico:</label>: Similar a la primera etiqueta <label>, esta define una etiqueta para el 
+                    campo de entrada del nombre científico del animal.
+                        
+                    <input type="text" name="cientifico" id="cientifico" required>: Otro campo de texto para el nombre científico, con los mismos 
+                    atributos que el anterior, pero con diferentes valores para name e id para diferenciarlos.
+                -->
                
                 <label for="cientifico">Nombre Científico:</label>
                 <input type="text" name="cientifico" id="cientifico"required>

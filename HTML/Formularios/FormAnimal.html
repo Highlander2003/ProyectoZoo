@@ -131,6 +131,24 @@
                     <option value="Aviario">Aviario</option>
                 </select>
 
+                <!-- 
+                    <label>: Representa una etiqueta para el siguiente elemento de control, en este caso, el menú desplegable <select>.
+                    
+                    <select>: Es el elemento que crea un menú desplegable. Los atributos importantes son:
+                    
+                    id="Habitat": Proporciona un identificador único para el elemento, que puede ser utilizado por CSS y JavaScript.
+                    
+                    name="Habitat": Define el nombre del menú desplegable, que se utiliza para identificar los datos del formulario 
+                    cuando se envía a un servidor1.
+                    
+                    <option>: Define las opciones individuales dentro del menú desplegable. Cada etiqueta <option> tiene un atributo value,
+                    que es el valor que se enviará al servidor si esa opción es seleccionada.
+                    
+                    value="Acuario": El valor que se enviará al servidor si se selecciona “Acuario”.
+                    
+                    Las siguientes opciones funcionan de manera similar, cambiando el valor enviado según la selección del usuario.
+                -->
+
                 <label for="raza">Raza:</label>
                 <input type="text" name="raza" id="raza" placeholder="Raza" required>
 
@@ -148,6 +166,24 @@
 
                 <label for="nacimiento">Nacimiento</label>
                 <input type="date" name="nacimiento" id="nacimiento" placeholder="Nacimiento" required>
+
+                <!-- 
+                    type="date": Especifica que el campo debe ser una fecha. Esto permite que los navegadores muestren 
+                    un control de selector de fecha adecuado.
+                    
+                    name="nacimiento": Define el nombre del campo de entrada, que se utiliza para identificar los datos 
+                    del formulario cuando se envía a un servidor.
+                    
+                    id="nacimiento": Proporciona un identificador único para el campo de entrada, que se utiliza en conjunto 
+                    con el atributo for de la etiqueta <label> para asociar la etiqueta con este campo de entrada.
+                    
+                    placeholder="Nacimiento": Muestra un texto de sugerencia dentro del campo de entrada antes de que se ingrese 
+                    cualquier dato. Este texto no se envía como parte del formulario. Sin embargo, es importante señalar que el 
+                    atributo placeholder no tiene efecto en los campos de tipo date.
+                    
+                    required: Es un atributo booleano que indica que el campo de entrada es obligatorio y debe completarse antes 
+                    de enviar el formulario.
+                -->
 
                 <label for="id">ID Animal:</label>
                 <input type="number" name="id" id="id" placeholder="ID Animal" required>
@@ -168,7 +204,19 @@
                     <label for="myfile"> Imagen: </label>
                     <input type="file" class="customfile">          
                 </div>
-                
+                <!-- 
+                    <div>: Es un contenedor genérico para contenido de flujo. El atributo style se utiliza aquí para aplicar
+                    estilos CSS directamente en el elemento. En este caso, margin-top: 10px; añade un margen superior de 10 píxeles 
+                    al <div>, lo que crea espacio por encima del contenedor.
+                    
+                    <label>: Representa una etiqueta para un elemento de entrada. El atributo for se utiliza para asociar la etiqueta 
+                    con el campo de entrada cuyo id es “myfile”. Esto mejora la accesibilidad, ya que al hacer clic en la etiqueta, 
+                    el navegador enfocará y activará el control de formulario correspondiente.
+                    
+                    <input type="file">: Crea un campo de entrada que permite a los usuarios seleccionar un archivo de su dispositivo 
+                    para cargarlo. El atributo class se utiliza para asignar una clase CSS al elemento, lo que permite aplicar estilos 
+                    específicos definidos en una hoja de estilos3.
+                -->
 
                 <label for="descripcion">Descripción:</label>
                 <textarea name="descripcion" id="descripcion" cols="30" rows="5" placeholder="Descripción" required></textarea>

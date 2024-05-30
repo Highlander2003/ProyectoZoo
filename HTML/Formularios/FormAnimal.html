@@ -220,7 +220,24 @@
 
                 <label for="descripcion">Descripción:</label>
                 <textarea name="descripcion" id="descripcion" cols="30" rows="5" placeholder="Descripción" required></textarea>
-
+                <!-- 
+                    name="descripcion": Define el nombre del área de texto, que se utiliza para identificar los datos del formulario 
+                    cuando se envía a un servidor.
+                    
+                    id="descripcion": Proporciona un identificador único para el área de texto, que se utiliza en conjunto con el 
+                    atributo for de la etiqueta <label> para asociar la etiqueta con este área de texto.
+                    
+                    cols="30": Especifica el ancho visible del área de texto en términos de número promedio de caracteres. Si no se especifica, 
+                    el valor predeterminado es 20.
+                    
+                    rows="5": Especifica el número visible de líneas en el área de texto.
+                    
+                    placeholder="Descripción": Muestra un texto de sugerencia dentro del área de texto antes de que se ingrese cualquier dato. 
+                    Este texto no se envía como parte del formulario.
+                    
+                    required: Es un atributo booleano que indica que el área de texto es obligatoria y debe completarse antes de enviar el
+                    formulario.
+                -->
                 <div class="form-txt">
                     
                     <a href="#">Política de privacidad</a>
@@ -228,6 +245,15 @@
                     <a href="#">Términos y condiciones</a>
                     <input type="checkbox" value="Aceptado" required>
                 </div>
+                <!-- 
+                    <input type="checkbox">: Crea una casilla de verificación que permite a los usuarios seleccionar una opción. 
+                    Los atributos importantes son:
+                    
+                    value="Aceptado": Define el valor que se enviará al servidor cuando se envíe el formulario si la casilla está marcada.
+                    
+                    required: Es un atributo booleano que indica que la casilla de verificación es obligatoria y debe marcarse antes de 
+                    enviar el formulario.
+                -->
 
                 <input class="btn" type="submit" value="Subir informe">
 
